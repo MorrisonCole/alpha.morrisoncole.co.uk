@@ -725,14 +725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@types/mdx@npm:2.0.1"
-  checksum: 521ee9f976af45859a4dd60b159e1cc09109de49ec5570fe70f34cddb0a7b5472b87c1bea743429270398207a997821dec34fd7bd63cbc2a1e5f2f6c701dd1c2
-  languageName: node
-  linkType: hard
-
-"@types/mdx@npm:^2.0.0":
+"@types/mdx@npm:2.0.3, @types/mdx@npm:^2.0.0":
   version: 2.0.3
   resolution: "@types/mdx@npm:2.0.3"
   checksum: 41deb51c29535913af01d25f0e1414cfb5a6948d0e60e77e4aca895694de48bf0ac69c5a81fe2d9617d726cb253001ef82a65b683d5ef51987d15aa1931d086b
@@ -5833,7 +5826,7 @@ __metadata:
     "@lhci/cli": 0.10.0
     "@types/css": 0.0.33
     "@types/eslint": 8.4.10
-    "@types/mdx": 2.0.1
+    "@types/mdx": 2.0.3
     "@types/node": 18.11.18
     "@types/prettier": 2.7.2
     "@types/react": 18.0.26
@@ -5850,7 +5843,7 @@ __metadata:
     gray-matter: 4.0.3
     next: 13.1.2
     next-mdx-remote: 4.2.1
-    prettier: 2.8.2
+    prettier: 2.8.3
     react: 18.2.0
     react-dom: 18.2.0
     react-is: 18.2.0
@@ -6415,12 +6408,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.2":
-  version: 2.8.2
-  resolution: "prettier@npm:2.8.2"
+"prettier@npm:2.8.3":
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
   bin:
     prettier: bin-prettier.js
-  checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
