@@ -30,18 +30,18 @@ async function getFonts() {
   const data: string = response.data;
 
   const stylesheet: Stylesheet = css.parse(data);
-  const rules: Array<Rule | Comment | AtRule> = stylesheet.stylesheet.rules;
+  const rules: Array<Rule | Comment | AtRule> = stylesheet.stylesheet!.rules;
 
   const urls: Font[] = rules
     .filter(
       (rule: Rule | Comment | AtRule) =>
         isRule(rule) && rule.type == "font-face"
     )
-    .flatMap((rule: Rule) => {
+    .flatMap((rule: Rule | Comment | AtRule) => {
       const font: Font = Object.fromEntries(
-        rule.declarations.flatMap((declaration: Declaration) => {
+        (rule as Rule).declarations!.flatMap((declaration: Declaration) => {
           if (declaration.property === "src") {
-            const url = /url\(([^)]+)\)/.exec(declaration.value)[1];
+            const url = /url\(([^)]+)\)/.exec(declaration.value!)![1];
             const filename = url.substring(url.lastIndexOf("/") + 1);
             return [
               ["url", url],

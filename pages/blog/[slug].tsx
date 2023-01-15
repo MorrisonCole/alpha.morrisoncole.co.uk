@@ -7,12 +7,9 @@ import fs from "fs/promises";
 import path from "path";
 import { Button } from "../../components/button";
 import Image from "next/image";
-import {
-  ALL_POST_PATHS,
-  POSTS_PATH,
-} from "packages/nextjs-site/utils/mdx-utils";
+import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
 import { GetStaticPropsContext } from "next";
-import { Layout } from "packages/nextjs-site/components/layout";
+import { Layout } from "components/layout";
 
 const h1 = styled.h1`
   color: hsl(0, 0%, 50%);

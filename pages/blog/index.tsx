@@ -1,10 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
-import {
-  ALL_POST_PATHS,
-  POSTS_PATH,
-} from "packages/nextjs-site/utils/mdx-utils";
+import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
 import path from "path";
 import styled from "styled-components";
 
