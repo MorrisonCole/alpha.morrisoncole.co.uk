@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lhci/cli", "npm:0.10.0"],\
             ["@types/css", "npm:0.0.33"],\
             ["@types/eslint", "npm:8.4.10"],\
-            ["@types/mdx", "npm:2.0.1"],\
+            ["@types/mdx", "npm:2.0.3"],\
             ["@types/node", "npm:18.11.18"],\
             ["@types/prettier", "npm:2.7.2"],\
             ["@types/react", "npm:18.0.26"],\
@@ -901,13 +901,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/mdx", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/@types-mdx-npm-2.0.1-93f8844bdf-521ee9f976.zip/node_modules/@types/mdx/",\
-          "packageDependencies": [\
-            ["@types/mdx", "npm:2.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.0.3", {\
           "packageLocation": "./.yarn/cache/@types-mdx-npm-2.0.3-0b710c028d-41deb51c29.zip/node_modules/@types/mdx/",\
           "packageDependencies": [\
@@ -6892,7 +6885,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lhci/cli", "npm:0.10.0"],\
             ["@types/css", "npm:0.0.33"],\
             ["@types/eslint", "npm:8.4.10"],\
-            ["@types/mdx", "npm:2.0.1"],\
+            ["@types/mdx", "npm:2.0.3"],\
             ["@types/node", "npm:18.11.18"],\
             ["@types/prettier", "npm:2.7.2"],\
             ["@types/react", "npm:18.0.26"],\
