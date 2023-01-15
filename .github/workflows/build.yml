@@ -1,0 +1,28 @@
+name: Build & Deploy
+
+on:
+  push:
+  schedule:
+    - cron: "0 20 * * *"
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Wait for 2 minutes
+        run: sleep 120
+      - name: Wait for Vercel Preview URL
+        uses: zentered/vercel-preview-url@v1.1.9
+        id: vercel_preview_url
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          vercel_project_id: "QmXDbu5Q4G9fCayQvVk3XbCU4fWJarh2P79kGAxEsPAfzM"
+      - name: Run Lighthouse CI
+        run: |
+          yarn install --immutable
+          yarn test:next --collect.url=https://${{ steps.vercel_preview_url.outputs.preview_url }}/en-GB --collect.numberOfRuns=3
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

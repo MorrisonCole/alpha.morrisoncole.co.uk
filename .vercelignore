@@ -1,0 +1,7 @@
+# Avoid uploading big files
+.github
+.vscode
+.yarn/cache
+.yarn/unplugged
+.yarn/sdks
+README.md
