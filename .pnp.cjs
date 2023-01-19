@@ -55,7 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-components", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:5.3.6"],\
             ["ts-node", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"],\
-            ["vercel", "npm:28.12.7"]\
+            ["vercel", "npm:28.12.8"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1302,10 +1302,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@vercel/next", [\
-        ["npm:3.3.16", {\
-          "packageLocation": "./.yarn/cache/@vercel-next-npm-3.3.16-9b6cbe0151-8c12d7ea71.zip/node_modules/@vercel/next/",\
+        ["npm:3.3.17", {\
+          "packageLocation": "./.yarn/cache/@vercel-next-npm-3.3.17-1e032664a3-2ec0f158ed.zip/node_modules/@vercel/next/",\
           "packageDependencies": [\
-            ["@vercel/next", "npm:3.3.16"]\
+            ["@vercel/next", "npm:3.3.17"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1381,10 +1381,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@vercel/remix", [\
-        ["npm:1.2.6", {\
-          "packageLocation": "./.yarn/cache/@vercel-remix-npm-1.2.6-e687afb279-1e9dcd9382.zip/node_modules/@vercel/remix/",\
+        ["npm:1.2.7", {\
+          "packageLocation": "./.yarn/cache/@vercel-remix-npm-1.2.7-001cc52615-84425d7bf8.zip/node_modules/@vercel/remix/",\
           "packageDependencies": [\
-            ["@vercel/remix", "npm:1.2.6"],\
+            ["@vercel/remix", "npm:1.2.7"],\
             ["@vercel/nft", "npm:0.22.5"]\
           ],\
           "linkType": "HARD"\
@@ -6996,7 +6996,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-components", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:5.3.6"],\
             ["ts-node", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=ad5954"],\
-            ["vercel", "npm:28.12.7"]\
+            ["vercel", "npm:28.12.8"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -9581,18 +9581,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vercel", [\
-        ["npm:28.12.7", {\
-          "packageLocation": "./.yarn/unplugged/vercel-npm-28.12.7-ee78fa8d66/node_modules/vercel/",\
+        ["npm:28.12.8", {\
+          "packageLocation": "./.yarn/unplugged/vercel-npm-28.12.8-98a0759112/node_modules/vercel/",\
           "packageDependencies": [\
-            ["vercel", "npm:28.12.7"],\
+            ["vercel", "npm:28.12.8"],\
             ["@vercel/build-utils", "npm:5.9.0"],\
             ["@vercel/go", "npm:2.2.30"],\
             ["@vercel/hydrogen", "npm:0.0.44"],\
-            ["@vercel/next", "npm:3.3.16"],\
+            ["@vercel/next", "npm:3.3.17"],\
             ["@vercel/node", "npm:2.8.14"],\
             ["@vercel/python", "npm:3.1.40"],\
             ["@vercel/redwood", "npm:1.0.51"],\
-            ["@vercel/remix", "npm:1.2.6"],\
+            ["@vercel/remix", "npm:1.2.7"],\
             ["@vercel/ruby", "npm:1.3.56"],\
             ["@vercel/static-build", "npm:1.1.7"],\
             ["esprima", "npm:4.0.1"]\
