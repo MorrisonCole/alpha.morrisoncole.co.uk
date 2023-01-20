@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glyphhanger", "npm:5.0.0"],\
             ["gray-matter", "npm:4.0.3"],\
             ["next", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:13.1.2"],\
-            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.2.1"],\
+            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.3.0"],\
             ["prettier", "npm:2.8.3"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:18.2.0"],\
@@ -507,10 +507,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:ecafd68eb345d1b9316b54fd8b5ec14e6645403c23c2a8a3b51709cb3036a8be31064198273e263d83923a153c7176bdb242be8f99132de8fbc5284839c98bb3#npm:2.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-04e88e5288/0/cache/@mdx-js-react-npm-2.2.1-4655499d67-4462dad1d7.zip/node_modules/@mdx-js/react/",\
+        ["virtual:c3c0ef09acdf8a1d97f11fcee70da12eaebb4bba3fb9185eeac459ee0066f046e7f04848ace242a2ed1701456f2a6a48c81b2a7452e85ee22d11cdb02e06c644#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-6f609b21df/0/cache/@mdx-js-react-npm-2.2.1-4655499d67-4462dad1d7.zip/node_modules/@mdx-js/react/",\
           "packageDependencies": [\
-            ["@mdx-js/react", "virtual:ecafd68eb345d1b9316b54fd8b5ec14e6645403c23c2a8a3b51709cb3036a8be31064198273e263d83923a153c7176bdb242be8f99132de8fbc5284839c98bb3#npm:2.2.1"],\
+            ["@mdx-js/react", "virtual:c3c0ef09acdf8a1d97f11fcee70da12eaebb4bba3fb9185eeac459ee0066f046e7f04848ace242a2ed1701456f2a6a48c81b2a7452e85ee22d11cdb02e06c644#npm:2.2.1"],\
             ["@types/mdx", "npm:2.0.3"],\
             ["@types/react", "npm:18.0.27"],\
             ["react", "npm:18.2.0"]\
@@ -6963,19 +6963,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["next-mdx-remote", [\
-        ["npm:4.2.1", {\
-          "packageLocation": "./.yarn/cache/next-mdx-remote-npm-4.2.1-87d842b28f-bc9cff107a.zip/node_modules/next-mdx-remote/",\
+        ["npm:4.3.0", {\
+          "packageLocation": "./.yarn/cache/next-mdx-remote-npm-4.3.0-2cf10016ce-1de864a162.zip/node_modules/next-mdx-remote/",\
           "packageDependencies": [\
-            ["next-mdx-remote", "npm:4.2.1"]\
+            ["next-mdx-remote", "npm:4.3.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/next-mdx-remote-virtual-ecafd68eb3/0/cache/next-mdx-remote-npm-4.2.1-87d842b28f-bc9cff107a.zip/node_modules/next-mdx-remote/",\
+        ["virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.3.0", {\
+          "packageLocation": "./.yarn/__virtual__/next-mdx-remote-virtual-c3c0ef09ac/0/cache/next-mdx-remote-npm-4.3.0-2cf10016ce-1de864a162.zip/node_modules/next-mdx-remote/",\
           "packageDependencies": [\
-            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.2.1"],\
+            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.3.0"],\
             ["@mdx-js/mdx", "npm:2.2.1"],\
-            ["@mdx-js/react", "virtual:ecafd68eb345d1b9316b54fd8b5ec14e6645403c23c2a8a3b51709cb3036a8be31064198273e263d83923a153c7176bdb242be8f99132de8fbc5284839c98bb3#npm:2.2.1"],\
+            ["@mdx-js/react", "virtual:c3c0ef09acdf8a1d97f11fcee70da12eaebb4bba3fb9185eeac459ee0066f046e7f04848ace242a2ed1701456f2a6a48c81b2a7452e85ee22d11cdb02e06c644#npm:2.2.1"],\
             ["@types/react", "npm:18.0.27"],\
             ["@types/react-dom", null],\
             ["react", "npm:18.2.0"],\
@@ -7016,7 +7016,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glyphhanger", "npm:5.0.0"],\
             ["gray-matter", "npm:4.0.3"],\
             ["next", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:13.1.2"],\
-            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.2.1"],\
+            ["next-mdx-remote", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:4.3.0"],\
             ["prettier", "npm:2.8.3"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:18.2.0"],\

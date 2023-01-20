@@ -5823,9 +5823,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-mdx-remote@npm:4.2.1":
-  version: 4.2.1
-  resolution: "next-mdx-remote@npm:4.2.1"
+"next-mdx-remote@npm:4.3.0":
+  version: 4.3.0
+  resolution: "next-mdx-remote@npm:4.3.0"
   dependencies:
     "@mdx-js/mdx": ^2.2.1
     "@mdx-js/react": ^2.2.1
@@ -5834,7 +5834,7 @@ __metadata:
   peerDependencies:
     react: ">=16.x <=18.x"
     react-dom: ">=16.x <=18.x"
-  checksum: bc9cff107ae1d98f6a40073e937c2617ca0580881f8d705e9ce9eaa08a5b525213d5f2c85c0641f7deff9a513343970660dd1ad364258cc69c13e66816248ad4
+  checksum: 1de864a162948be28d5abcda39c5369f5b95200d95523ddb9993065527dc8da930e9347632fe3413e950d6d4ecac92922b19ba7e5ce6fbd61a66edcad56b754a
   languageName: node
   linkType: hard
 
@@ -5929,7 +5929,7 @@ __metadata:
     glyphhanger: 5.0.0
     gray-matter: 4.0.3
     next: 13.1.2
-    next-mdx-remote: 4.2.1
+    next-mdx-remote: 4.3.0
     prettier: 2.8.3
     react: 18.2.0
     react-dom: 18.2.0
