@@ -53,5 +53,5 @@
     "upgrade": "yarn set version latest",
     "prettier:fix": "yarn prettier \"**/*.{tsx,ts,js,md,mdx,json,yml,html,css}\" --write"
   },
-  "packageManager": "yarn@3.4.0"
+  "packageManager": "yarn@3.4.1"
 }
