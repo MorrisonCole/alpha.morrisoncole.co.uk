@@ -32,7 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/css", "npm:0.0.33"],\
             ["@types/eslint", "npm:8.21.1"],\
             ["@types/mdx", "npm:2.0.3"],\
-            ["@types/node", "npm:18.13.0"],\
+            ["@types/node", "npm:18.14.0"],\
             ["@types/prettier", "npm:2.7.2"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/styled-components", "npm:5.1.26"],\
@@ -3716,10 +3716,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.13.0", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.13.0-00f732af8e-4ea10f8802.zip/node_modules/@types/node/",\
+        ["npm:18.14.0", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.14.0-ddc1a221d2-d83fcf5e4e.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.13.0"]\
+            ["@types/node", "npm:18.14.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11539,7 +11539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/css", "npm:0.0.33"],\
             ["@types/eslint", "npm:8.21.1"],\
             ["@types/mdx", "npm:2.0.3"],\
-            ["@types/node", "npm:18.13.0"],\
+            ["@types/node", "npm:18.14.0"],\
             ["@types/prettier", "npm:2.7.2"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/styled-components", "npm:5.1.26"],\
@@ -14539,7 +14539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.13.0"],\
+            ["@types/node", "npm:18.14.0"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
