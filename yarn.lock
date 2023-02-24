@@ -2157,9 +2157,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/dev@npm:1.12.0":
-  version: 1.12.0
-  resolution: "@remix-run/dev@npm:1.12.0"
+"@remix-run/dev@npm:1.13.0":
+  version: 1.13.0
+  resolution: "@remix-run/dev@npm:1.13.0"
   dependencies:
     "@babel/core": ^7.18.6
     "@babel/generator": ^7.18.6
@@ -2172,7 +2172,7 @@ __metadata:
     "@babel/types": ^7.20.2
     "@esbuild-plugins/node-modules-polyfill": ^0.1.4
     "@npmcli/package-json": ^2.0.0
-    "@remix-run/server-runtime": 1.12.0
+    "@remix-run/server-runtime": 1.13.0
     "@vanilla-extract/integration": ^6.0.2
     arg: ^5.0.1
     cacache: ^15.0.5
@@ -2198,6 +2198,7 @@ __metadata:
     ora: ^5.4.1
     postcss: ^8.4.19
     postcss-discard-duplicates: ^5.1.0
+    postcss-load-config: ^4.0.1
     postcss-modules: ^6.0.0
     prettier: 2.7.1
     pretty-ms: ^7.0.1
@@ -2212,35 +2213,35 @@ __metadata:
     ws: ^7.4.5
     xdm: ^2.0.0
   peerDependencies:
-    "@remix-run/serve": ^1.12.0
+    "@remix-run/serve": ^1.13.0
   peerDependenciesMeta:
     "@remix-run/serve":
       optional: true
   bin:
     remix: dist/cli.js
-  checksum: 318a9aa0f6074500fd049133008da171e6b2dd7be0c38d4590dcedf6d58d3abc7d9eaf38d6acbc88d402d5d2a1fb3c396e3f0c36ebd1fe46652122e9cb81de2c
+  checksum: 37a0574605bcf2a8a0f683ba378368604b2deb4217d6f4e08ad113633d74aad41573dfb9b0f1f4bedf7435b83d43865d11a4cebf49fa9eabc7e2f39da67a2985
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@remix-run/router@npm:1.3.1"
-  checksum: c91cba100b13fbb83cdaf43ca66b0d9fc1ab9dfe0bc58ac80ff2a4889488bf518a111267c790350eac8c7f764cc7809402430de15bdf70282d0bd60acf06d9de
+"@remix-run/router@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@remix-run/router@npm:1.3.2"
+  checksum: ee2108b87d4a1241cdea137dd7e1741ee679228bd33fd81e22a6bb2940f81186cefe9a85e26d60cc49bbcc1bdbc57d1954b7d4d62f8a51ef69feddfc899f55fa
   languageName: node
   linkType: hard
 
-"@remix-run/server-runtime@npm:1.12.0":
-  version: 1.12.0
-  resolution: "@remix-run/server-runtime@npm:1.12.0"
+"@remix-run/server-runtime@npm:1.13.0":
+  version: 1.13.0
+  resolution: "@remix-run/server-runtime@npm:1.13.0"
   dependencies:
-    "@remix-run/router": 1.3.1
+    "@remix-run/router": 1.3.2
     "@types/cookie": ^0.4.0
     "@types/react": ^18.0.15
     "@web3-storage/multipart-parser": ^1.0.0
     cookie: ^0.4.1
     set-cookie-parser: ^2.4.8
     source-map: ^0.7.3
-  checksum: 67b4d433a9b9ef494b9e2c5691a08b627697f197f7973d9c0b36904becf402d8389b19cf4978ed69a2e918045206bb7382c1f5933b562c7b0358dfbc1eecda0b
+  checksum: 4e055d79ed6572da8ecda81b679a254d73e750fac0d0d08c86b7c2e987550d3b21c6569a4775c41bc3cf545223c0d52348510298876a40719c716f7cbd1ff621
   languageName: node
   linkType: hard
 
@@ -2940,18 +2941,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/gatsby-plugin-vercel-builder@npm:1.1.8":
-  version: 1.1.8
-  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:1.1.8"
+"@vercel/gatsby-plugin-vercel-builder@npm:1.1.9":
+  version: 1.1.9
+  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:1.1.9"
   dependencies:
     "@vercel/build-utils": 6.3.1
-    "@vercel/node": 2.9.7
+    "@vercel/node": 2.9.8
     "@vercel/routing-utils": 2.1.9
     ajv: 8.12.0
     esbuild: 0.14.47
     etag: 1.8.1
     fs-extra: 11.1.0
-  checksum: 544a957545297d750131d0dd8b2478f85359cf1b599dba1d470f408b718e57d5102a44e727aa8de4940b109cc1c8b22a826cc72feb703b960b02e44a78794a08
+  checksum: a4f7129c47f636e69fd9b8ab0c63caa2781658d2f35a87f4c07c5dfa5820716be3bddd0df0dd7b5f2409b4e64a7d3621564660090e054d2473e1b12a6d61c868
   languageName: node
   linkType: hard
 
@@ -2969,10 +2970,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:3.6.0":
-  version: 3.6.0
-  resolution: "@vercel/next@npm:3.6.0"
-  checksum: c0c81c8257b2fecaf0da82f3aca571ff9b141e6d2c660a4b9bdad4152406e0c854c3a579f076c5d016a494cf49c5f70c9101e76ed6d8dca11fd5f148395ff79e
+"@vercel/next@npm:3.6.1":
+  version: 3.6.1
+  resolution: "@vercel/next@npm:3.6.1"
+  checksum: 11ff6b58b51fe007aa34059eb1248515076be48d8ffb0d42a519ef4522e62795c08a66f83335e510978d7dab8b2af178f623f1c60d31ccc24e3680bf14d7315a
   languageName: node
   linkType: hard
 
@@ -2997,21 +2998,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node-bridge@npm:3.1.11":
-  version: 3.1.11
-  resolution: "@vercel/node-bridge@npm:3.1.11"
-  checksum: 57c3e52307dd92a2dcf3b8606023f6be68ecc8dd582af06a89c6673498f6dc28a77a9c170c86b12e2af263385909ac91b3d3d7c9042e83386c7cdd68e4c7b7a0
+"@vercel/node-bridge@npm:3.1.12":
+  version: 3.1.12
+  resolution: "@vercel/node-bridge@npm:3.1.12"
+  checksum: b47be4aafd332da1a3d4dc96798efbf8c9c9cd0c5f099b891e19c6241e79ff806abace9fabc6945d668eaf8800438b6a289fe5856f2a3a47d1f9552e178cc584
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@vercel/node@npm:2.9.7"
+"@vercel/node@npm:2.9.8":
+  version: 2.9.8
+  resolution: "@vercel/node@npm:2.9.8"
   dependencies:
     "@edge-runtime/vm": 2.0.0
     "@types/node": 14.18.33
     "@vercel/build-utils": 6.3.1
-    "@vercel/node-bridge": 3.1.11
+    "@vercel/node-bridge": 3.1.12
     "@vercel/static-config": 2.0.13
     edge-runtime: 2.0.0
     esbuild: 0.14.47
@@ -3019,7 +3020,7 @@ __metadata:
     node-fetch: 2.6.7
     ts-node: 10.9.1
     typescript: 4.3.4
-  checksum: 1a2ada84410dd674398ff4452d88e4631a6f986fa54052963e7dfd7857e5837a4010c3a618df10b2c99a0dfc207990da1869cd019abe813a11ab743e1e95b2c2
+  checksum: b66d29c036a82c02477fc52e3fa5987c3865faf9dde8f6b4c0318c4f9552241560fb446e7cf34a3244c12969d22414aacc0a754fa8bd84ee9ba0dd31427d7835
   languageName: node
   linkType: hard
 
@@ -3041,16 +3042,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/remix@npm:1.4.0":
-  version: 1.4.0
-  resolution: "@vercel/remix@npm:1.4.0"
+"@vercel/remix@npm:1.4.1":
+  version: 1.4.1
+  resolution: "@vercel/remix@npm:1.4.1"
   dependencies:
-    "@remix-run/dev": 1.12.0
+    "@remix-run/dev": 1.13.0
     "@vercel/nft": 0.22.5
     "@vercel/static-config": 2.0.13
     path-to-regexp: 6.2.1
     ts-morph: 12.0.0
-  checksum: e8943f8262f8288e909e9dc6a1d6ffeaa6d78ac2d608574d4586f449fae756df981a998ff470f56e0656f7d3b3e5a6be9e0a28b6b3a9fb9625a1ab3419146c1c
+  checksum: 03709945ebad7400540a640d840973b812920d2cc81d161c65abbae0b7276d4a828f4423c815c6f8f69a5069897d1dcd7c7452b8a00642a643bc7f06b072c838
   languageName: node
   linkType: hard
 
@@ -3074,13 +3075,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:1.3.11":
-  version: 1.3.11
-  resolution: "@vercel/static-build@npm:1.3.11"
+"@vercel/static-build@npm:1.3.12":
+  version: 1.3.12
+  resolution: "@vercel/static-build@npm:1.3.12"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": 1.0.7
-    "@vercel/gatsby-plugin-vercel-builder": 1.1.8
-  checksum: 5979ebb976315535d76d2748ceecacf18c4e4cbfa676b3839d0aea0b101099decdf61dbee178612591d7651aaacc50809d3cb2064b022ccc4154f335bdd7b334
+    "@vercel/gatsby-plugin-vercel-builder": 1.1.9
+  checksum: 15ebf94fc84b6f856cd8ace909ad251d688bd111724d6cae211ccdc60c33cec75c845e0795f0f7a4dc40c02d56f94f214e5ef97eb2c6967e8155f4e78887d760
   languageName: node
   linkType: hard
 
@@ -8170,6 +8171,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lilconfig@npm:^2.0.5":
+  version: 2.0.6
+  resolution: "lilconfig@npm:2.0.6"
+  checksum: 40a3cd72f103b1be5975f2ac1850810b61d4053e20ab09be8d3aeddfe042187e1ba70b4651a7e70f95efa1642e7dc8b2ae395b317b7d7753b241b43cef7c0f7d
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
@@ -9392,7 +9400,7 @@ __metadata:
     styled-components: 5.3.6
     ts-node: 10.9.1
     typescript: 4.9.5
-    vercel: 28.16.5
+    vercel: 28.16.7
   languageName: unknown
   linkType: soft
 
@@ -10126,6 +10134,24 @@ __metadata:
   peerDependencies:
     postcss: ^8.2.15
   checksum: 88d6964201b1f4ed6bf7a32cefe68e86258bb6e42316ca01d9b32bdb18e7887d02594f89f4a2711d01b51ea6e3fcca8c54be18a59770fe5f4521c61d3eb6ca35
+  languageName: node
+  linkType: hard
+
+"postcss-load-config@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "postcss-load-config@npm:4.0.1"
+  dependencies:
+    lilconfig: ^2.0.5
+    yaml: ^2.1.1
+  peerDependencies:
+    postcss: ">=8.0.9"
+    ts-node: ">=9.0.0"
+  peerDependenciesMeta:
+    postcss:
+      optional: true
+    ts-node:
+      optional: true
+  checksum: b61f890499ed7dcda1e36c20a9582b17d745bad5e2b2c7bc96942465e406bc43ae03f270c08e60d1e29dab1ee50cb26970b5eb20c9aae30e066e20bd607ae4e4
   languageName: node
   linkType: hard
 
@@ -12486,24 +12512,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:28.16.5":
-  version: 28.16.5
-  resolution: "vercel@npm:28.16.5"
+"vercel@npm:28.16.7":
+  version: 28.16.7
+  resolution: "vercel@npm:28.16.7"
   dependencies:
     "@vercel/build-utils": 6.3.1
     "@vercel/go": 2.3.8
     "@vercel/hydrogen": 0.0.54
-    "@vercel/next": 3.6.0
-    "@vercel/node": 2.9.7
+    "@vercel/next": 3.6.1
+    "@vercel/node": 2.9.8
     "@vercel/python": 3.1.50
     "@vercel/redwood": 1.1.6
-    "@vercel/remix": 1.4.0
+    "@vercel/remix": 1.4.1
     "@vercel/ruby": 1.3.67
-    "@vercel/static-build": 1.3.11
+    "@vercel/static-build": 1.3.12
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: f99b2065a23c9a30bd9efb96c1cda43a980dccad1d43e63a252e7159afa908dbbfc3caff0722162e024ec93976ef1955b3eb874f68a875d0eb46115caea277b0
+  checksum: 08d78e5c472f6e7d05f6cd489da6b69f99150c43e4d791b2f3791565662b801e735f361d68c69d28db28bd7841e40049da8c4e13562678a3e5096930b6e45252
   languageName: node
   linkType: hard
 
@@ -12934,6 +12960,13 @@ __metadata:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 343617202af32df2a15a3be36a5a8c0c8545208f3d3dfbc6bb7c3e3b7e8c6f8e7485432e4f3b88da3031a6e20afa7c711eded32ddfb122896ac5d914e75848d5
+  languageName: node
+  linkType: hard
+
+"yaml@npm:^2.1.1":
+  version: 2.2.1
+  resolution: "yaml@npm:2.2.1"
+  checksum: 84f68cbe462d5da4e7ded4a8bded949ffa912bc264472e5a684c3d45b22d8f73a3019963a32164023bdf3d83cfb6f5b58ff7b2b10ef5b717c630f40bd6369a23
   languageName: node
   linkType: hard
 
