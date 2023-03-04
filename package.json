@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/css": "0.0.33",
     "@types/eslint": "8.21.1",
-    "@types/node": "18.14.5",
+    "@types/node": "18.14.6",
     "@types/prettier": "2.7.2",
     "@typescript-eslint/eslint-plugin": "5.53.0",
     "@typescript-eslint/parser": "5.53.0",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@lhci/cli": "0.11.0",
     "@types/mdx": "2.0.3",
-    "@types/node": "18.14.5",
+    "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.53.0",
