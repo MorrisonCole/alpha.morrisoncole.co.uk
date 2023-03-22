@@ -24,7 +24,7 @@
     "styled-components": "5.3.9",
     "ts-node": "10.9.1",
     "typescript": "5.0.2",
-    "vercel": "28.17.0"
+    "vercel": "28.18.0"
   },
   "devDependencies": {
     "@lhci/cli": "0.11.0",
