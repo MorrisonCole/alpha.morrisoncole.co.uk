@@ -9,7 +9,7 @@ https://github.com/MorrisonCole/morrisoncole.co.uk.
 # Development
 
 1. Run `yarn install`
-2. Run `yarn start`
+2. Run `yarn dev`
 
 ## Yarn
 

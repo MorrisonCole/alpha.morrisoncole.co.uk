@@ -1,2 +1,4 @@
 .yarn
 .next
+.pnp.cjs
+.pnp.loader.mjs
