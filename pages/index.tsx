@@ -1,12 +1,12 @@
+import { Centered } from "../components/centered";
 import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
-import React from "react";
-import { useIntl } from "react-intl";
-import styled from "styled-components";
-import { Centered } from "../components/centered";
 import { Layout } from "../components/layout";
+import React from "react";
 import { SwitchLocaleButton } from "../components/switch-locale-button";
 import loadIntlMessages from "../helper/loadIntlMessages";
+import styled from "styled-components";
+import { useIntl } from "react-intl";
 
 const Title = styled.h1`
   font-size: 4rem;

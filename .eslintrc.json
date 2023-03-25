@@ -4,6 +4,7 @@
     "formatjs"
   ],
   "rules": {
+    "sort-imports": "error",
     "formatjs/enforce-default-message": [
       "error",
       "literal"
