@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
 import { createGlobalStyle } from "styled-components";
 import { ThemeProvider } from "../components/theme-provider";
+import type { MessageConfig } from "../helper/loadIntlMessages";
+import { IntlProvider } from "react-intl";
+import { useRouter } from "next/router";
 
 // From: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=optional
 const GlobalStyle = createGlobalStyle`
@@ -103,12 +106,23 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps,
+}: AppProps<{ intlMessages: MessageConfig }>) {
+  const { locale } = useRouter();
+
   return (
-    <ThemeProvider>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <IntlProvider
+      locale={locale as string}
+      defaultLocale={"en"}
+      messages={pageProps.intlMessages}
+    >
+      <ThemeProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </IntlProvider>
   );
 }
 

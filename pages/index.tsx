@@ -1,9 +1,12 @@
+import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import React from "react";
+import { useIntl } from "react-intl";
 import styled from "styled-components";
 import { Centered } from "../components/centered";
 import { Layout } from "../components/layout";
 import { SwitchLocaleButton } from "../components/switch-locale-button";
+import loadIntlMessages from "../helper/loadIntlMessages";
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -25,19 +28,50 @@ const BoldItalic = styled.span`
 const Japanese = styled.p`
   font-size: 1rem;
   font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; ;
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
+export async function getStaticProps({
+  defaultLocale,
+  locale,
+}: GetStaticPropsContext) {
+  return {
+    props: {
+      intlMessages: await loadIntlMessages(locale as string, defaultLocale),
+    },
+  };
+}
+
 export default function Home() {
+  const intl = useIntl();
+
+  const title = intl.formatMessage({
+    defaultMessage: "Morrison Cole - Alpha",
+    id: "92K9zb",
+    description: "Homepage title",
+  });
+
+  const description = intl.formatMessage({
+    defaultMessage: "Work in progress.",
+    id: "ymbshm",
+    description: "Homepage description",
+  });
+
+  const pageTitle = intl.formatMessage({
+    defaultMessage: "Hello, world.",
+    id: "QifQBf",
+    description: "Homepage header",
+  });
+
   return (
     <Layout>
       <Head>
-        <title>Morrison Cole - Alpha</title>
-        <meta name="description" content="Work in progress." />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Title>Hello, world.</Title>
+      <Title>{pageTitle}</Title>
       <p>
         I&apos;m <Bold>bold.</Bold>
       </p>

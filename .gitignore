@@ -42,3 +42,6 @@ yarn-error.log*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# i18n
+compiled-lang
