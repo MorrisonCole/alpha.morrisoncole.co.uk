@@ -41,6 +41,7 @@
     "eslint-config-next": "13.2.4",
     "eslint-plugin-formatjs": "4.9.0",
     "glyphhanger": "5.0.0",
+    "lint-staged": "13.2.0",
     "typescript": "5.0.2"
   },
   "resolutions": {
@@ -57,7 +58,11 @@
     "upgrade": "yarn set version latest",
     "prettier:fix": "yarn prettier \"**/*.{tsx,ts,js,md,mdx,json,yml,html,css}\" --write",
     "i18n:extract": "formatjs extract 'pages/**/*.ts*' 'components/**/*.ts*' --out-file lang/en.json",
-    "i18n:compile": "formatjs compile-folder lang compiled-lang"
+    "i18n:compile": "formatjs compile-folder lang compiled-lang",
+    "postinstall": "husky install"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.5.0",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
 }

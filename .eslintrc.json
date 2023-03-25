@@ -1,8 +1,13 @@
 {
   "extends": "next/core-web-vitals",
-  "plugins": ["formatjs"],
+  "plugins": [
+    "formatjs"
+  ],
   "rules": {
-    "formatjs/enforce-default-message": ["error", "literal"],
+    "formatjs/enforce-default-message": [
+      "error",
+      "literal"
+    ],
     "formatjs/enforce-id": [
       "error",
       {

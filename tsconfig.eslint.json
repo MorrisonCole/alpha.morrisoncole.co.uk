@@ -1,4 +1,11 @@
 {
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**.js"],
-  "exclude": [".next"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**.js"
+  ],
+  "exclude": [
+    ".next"
+  ]
 }
