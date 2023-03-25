@@ -18,9 +18,11 @@ const h1 = styled.h1`
 
 const p = styled.p``;
 
+const ResponsiveImage = (props) => <Image alt={props.alt} fill {...props} />;
+
 const mdxComponents = {
   Button: Button,
-  Image: Image,
+  img: ResponsiveImage,
   h1: h1,
   p: p,
 };

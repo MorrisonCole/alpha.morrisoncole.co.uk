@@ -1,4 +1,3 @@
-import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
@@ -23,7 +22,7 @@ export interface FrontMatter {
   draft: boolean;
 }
 
-const Button = styled.a`
+const PostButton = styled(Link)`
   display: inline-block;
   color: hsl(340, 59%, 64%);
   font-size: 1em;
@@ -37,14 +36,12 @@ export default function Index({ posts }: { posts: Post[] }) {
   return (
     <>
       {posts.map((post) => (
-        <Link
-          as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
-          href={`/blog/[slug]`}
-          passHref
+        <PostButton
+          href={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
           key={post.filePath}
         >
-          <Button>{post.frontMatter.title}</Button>
-        </Link>
+          {post.frontMatter.title}
+        </PostButton>
       ))}
     </>
   );
