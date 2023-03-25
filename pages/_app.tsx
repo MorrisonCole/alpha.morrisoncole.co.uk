@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
-import { createGlobalStyle } from "styled-components";
-import { ThemeProvider } from "../components/theme-provider";
-import type { MessageConfig } from "../helper/loadIntlMessages";
 import { IntlProvider } from "react-intl";
+import type { MessageConfig } from "../helper/loadIntlMessages";
+import { ThemeProvider } from "../components/theme-provider";
+import { createGlobalStyle } from "styled-components";
 import { useRouter } from "next/router";
 
 // From: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=optional

@@ -41,6 +41,7 @@
     "eslint-config-next": "13.2.4",
     "eslint-plugin-formatjs": "4.9.0",
     "glyphhanger": "5.0.0",
+    "husky": "8.0.3",
     "lint-staged": "13.2.0",
     "typescript": "5.0.2"
   },
