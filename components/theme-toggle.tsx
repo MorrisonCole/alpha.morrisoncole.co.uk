@@ -11,6 +11,15 @@ const ToggleButton = styled.button`
   margin-top: ${(props) => props.theme.spacing[4]};
   max-width: min-content;
   align-self: flex-end;
+  animation: fade-in 0.8s forwards;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   &:hover {
     filter: brightness(1.2);
