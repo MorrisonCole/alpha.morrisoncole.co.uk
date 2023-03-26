@@ -5,7 +5,11 @@ import {
   eachWeekOfInterval,
   isSameYear,
   isWithinInterval,
+  setDefaultOptions,
+  startOfWeek,
+  subDays,
 } from "date-fns";
+import { enGB } from "date-fns/locale";
 import { LifeCalendarWeek } from "./life-calendar-week";
 
 const YearsInLife = Math.ceil(76.3);
@@ -17,7 +21,7 @@ const Intervals = [
     title: "Kid",
     text: "👶",
     interval: {
-      start: BirthDate,
+      start: startOfWeek(BirthDate),
       end: new Date(1996, 8, 1),
     },
   },
@@ -73,6 +77,7 @@ const WeekGrid = styled.span`
     grid-template-columns: repeat(${Columns}, 1fr);
   }
   justify-content: center;
+
   *:first-child {
     grid-column-start: 12;
   }
@@ -87,6 +92,7 @@ interface LifeCalendarProps {
 }
 
 export function LifeCalendar({ className }: LifeCalendarProps) {
+  setDefaultOptions({ locale: enGB, weekStartsOn: 0 });
   const weeksInLife = eachWeekOfInterval({
     start: BirthDate,
     end: addYears(BirthDate, YearsInLife),
