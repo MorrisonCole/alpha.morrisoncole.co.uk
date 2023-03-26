@@ -5,6 +5,11 @@ const Entry = styled.p`
   text-align: center;
 `;
 
-export function LifeCalendarWeek({ children }: { children: string }) {
-  return <Entry>{children}</Entry>;
+interface LifeCalendarWeekProps {
+  children: string;
+  week: Date;
+}
+
+export function LifeCalendarWeek({ children, week }: LifeCalendarWeekProps) {
+  return <Entry title={week.toDateString()}>{children}</Entry>;
 }
