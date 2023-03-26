@@ -3,15 +3,13 @@ import styled from "styled-components";
 import {
   addYears,
   eachWeekOfInterval,
-  getWeek,
   isSameYear,
   isWithinInterval,
 } from "date-fns";
 import { LifeCalendarWeek } from "./life-calendar-week";
 
 const YearsInLife = Math.ceil(76.3);
-const WeeksInYear = 52;
-const TotalWeeks = YearsInLife * WeeksInYear;
+const Columns = 53;
 const BirthDate = new Date(1992, 2, 15);
 
 const Intervals = [
@@ -67,12 +65,12 @@ const Intervals = [
 
 const WeekGrid = styled.span`
   display: grid;
-  grid-template-columns: repeat(${WeeksInYear / 4}, 1fr);
+  grid-template-columns: repeat(${Math.ceil(Columns / 4)}, 1fr);
   @media (min-width: 600px) {
-    grid-template-columns: repeat(${WeeksInYear / 2}, 1fr);
+    grid-template-columns: repeat(${Math.ceil(Columns / 2)}, 1fr);
   }
   @media (min-width: 1200px) {
-    grid-template-columns: repeat(${WeeksInYear}, 1fr);
+    grid-template-columns: repeat(${Columns}, 1fr);
   }
   justify-content: center;
   *:first-child {
