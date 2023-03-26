@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
   addYears,
   eachWeekOfInterval,
+  getWeek,
   isSameYear,
   isWithinInterval,
 } from "date-fns";
@@ -75,7 +76,7 @@ const WeekGrid = styled.span`
   }
   justify-content: center;
   *:first-child {
-    grid-column-start: 11;
+    grid-column-start: 12;
   }
 `;
 
