@@ -10,7 +10,10 @@ const Button = styled.button`
   background: hsla(0, 0%, 25%, 0.6);
   color: hsl(0, 0%, 100%);
   border: 2px solid white;
-  margin-left: auto;
+  margin-left: ${(props) => props.theme.spacing[4]};
+  margin-top: ${(props) => props.theme.spacing[4]};
+  min-width: fit-content;
+  height: fit-content;
 
   &:hover {
     filter: brightness(1.2);
