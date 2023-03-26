@@ -2,6 +2,11 @@ import styled from "styled-components";
 import React from "react";
 import { SwitchLocaleButton } from "./switch-locale-button";
 import Logo from "./logo";
+import dynamic from "next/dynamic";
+
+const ThemeToggle = dynamic(() => import("../components/theme-toggle"), {
+  ssr: false,
+});
 
 const HeaderContainer = styled.header`
   grid-area: header;
@@ -10,11 +15,20 @@ const HeaderContainer = styled.header`
   flex-direction: row;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+`;
+
 export function Header() {
   return (
     <HeaderContainer>
       <Logo />
-      <SwitchLocaleButton />
+      <ButtonContainer>
+        <SwitchLocaleButton />
+        <ThemeToggle />
+      </ButtonContainer>
     </HeaderContainer>
   );
 }

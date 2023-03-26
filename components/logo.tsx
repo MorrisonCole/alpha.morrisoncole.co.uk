@@ -1,29 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Svg = styled.svg`
   width: 100%;
 `;
 const PathOne = styled.path`
-  fill: #242429;
+  fill: var(--color-logo-1);
 `;
 const PathTwo = styled.path`
-  fill: #6580a4;
-  filter: brightness(115%);
+  fill: var(--color-logo-2);
 `;
 const PathThree = styled.path`
-  fill: #a8a56b;
-  filter: brightness(115%);
+  fill: var(--color-logo-3);
 `;
 const PathFour = styled.path`
-  fill: #404049;
-  filter: brightness(115%);
+  fill: var(--color-logo-4);
 `;
 const PathFive = styled.path`
-  fill: #546273;
-  filter: brightness(115%);
+  fill: var(--color-logo-5);
 `;
-
 export default function Logo() {
   return (
     <Svg version="1.1" viewBox="0 0 687 185.9" fill="currentColor">

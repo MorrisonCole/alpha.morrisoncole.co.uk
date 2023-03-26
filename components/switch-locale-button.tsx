@@ -4,7 +4,6 @@ import React from "react";
 import { useIntl } from "react-intl";
 
 const Button = styled.button`
-  display: flex;
   border-radius: 3px;
   padding: 0.5rem;
   background: hsla(0, 0%, 25%, 0.6);
@@ -12,8 +11,7 @@ const Button = styled.button`
   border: 2px solid white;
   margin-left: ${(props) => props.theme.spacing[4]};
   margin-top: ${(props) => props.theme.spacing[4]};
-  min-width: fit-content;
-  height: fit-content;
+  min-width: max-content;
 
   &:hover {
     filter: brightness(1.2);
