@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/css": "0.0.33",
     "@types/eslint": "8.21.3",
-    "@types/node": "18.15.8",
+    "@types/node": "18.15.10",
     "@types/prettier": "2.7.2",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
@@ -33,7 +33,7 @@
     "@formatjs/swc-plugin": "1.4.20",
     "@lhci/cli": "0.11.0",
     "@types/mdx": "2.0.3",
-    "@types/node": "18.15.8",
+    "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.56.0",
