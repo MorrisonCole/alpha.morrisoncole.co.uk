@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 const Div = styled.div`
   max-width: ${(props) => props.theme.spacing[12]};

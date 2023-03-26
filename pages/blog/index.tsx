@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
 import path from "path";
 import styled from "styled-components";
+import React from "react";
 
 interface Post {
   content: string;

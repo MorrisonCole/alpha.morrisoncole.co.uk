@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:5.56.0"],\
             ["axios", "npm:1.3.4"],\
             ["css", "npm:3.0.0"],\
+            ["date-fns", "npm:2.29.3"],\
             ["eslint", "npm:8.36.0"],\
             ["eslint-config-next", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:13.2.4"],\
             ["eslint-config-prettier", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:8.8.0"],\
@@ -6688,6 +6689,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["date-fns", [\
+        ["npm:2.29.3", {\
+          "packageLocation": "./.yarn/cache/date-fns-npm-2.29.3-fef7e3c72c-e01cf5b62a.zip/node_modules/date-fns/",\
+          "packageDependencies": [\
+            ["date-fns", "npm:2.29.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["deasync", [\
         ["npm:0.1.28", {\
           "packageLocation": "./.yarn/unplugged/deasync-npm-0.1.28-378fa31cdc/node_modules/deasync/",\
@@ -12238,6 +12248,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:5.56.0"],\
             ["axios", "npm:1.3.4"],\
             ["css", "npm:3.0.0"],\
+            ["date-fns", "npm:2.29.3"],\
             ["eslint", "npm:8.36.0"],\
             ["eslint-config-next", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:13.2.4"],\
             ["eslint-config-prettier", "virtual:3c8385246cb9ead98ab74ad1605549808af0effcf476c79300e302ed6a395a526a1c31e420faba5548165ceae004b17f1e0b3b5d388f29a4ce9dec65855e6103#npm:8.8.0"],\

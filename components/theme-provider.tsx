@@ -1,4 +1,5 @@
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
+import React from "react";
 
 export const theme = {
   spacing: [

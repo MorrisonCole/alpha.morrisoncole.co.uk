@@ -7,6 +7,7 @@ import { SwitchLocaleButton } from "../components/switch-locale-button";
 import loadIntlMessages from "../helper/loadIntlMessages";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
+import { LifeCalendar } from "../components/life-calendar";
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -31,13 +32,15 @@ const Japanese = styled.p`
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
-export async function getStaticProps({
-  defaultLocale,
-  locale,
-}: GetStaticPropsContext) {
+const StyledLifeCalendar = styled(LifeCalendar)`
+  padding-top: 16px;
+  padding-bottom: 16px;
+`;
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      intlMessages: await loadIntlMessages(locale as string, defaultLocale),
+      intlMessages: await loadIntlMessages(locale as string),
     },
   };
 }
@@ -87,6 +90,8 @@ export default function Home() {
       <Centered>
         <SwitchLocaleButton />
       </Centered>
+
+      <StyledLifeCalendar />
     </Layout>
   );
 }

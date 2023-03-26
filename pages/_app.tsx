@@ -4,6 +4,7 @@ import type { MessageConfig } from "../helper/loadIntlMessages";
 import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
 import { useRouter } from "next/router";
+import React from "react";
 
 // From: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=optional
 const GlobalStyle = createGlobalStyle`
