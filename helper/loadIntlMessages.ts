@@ -4,7 +4,7 @@ export default async function loadI18nMessages(
   locale: string,
   defaultLocale = "en"
 ) {
-  if (locale === defaultLocale) {
+  if (locale === defaultLocale || locale === "default") {
     return {};
   }
 
