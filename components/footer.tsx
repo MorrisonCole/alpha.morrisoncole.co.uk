@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { getYear } from "date-fns";
 
 const FooterContainer = styled.footer`
   grid-area: footer;
@@ -8,7 +9,7 @@ const FooterContainer = styled.footer`
 `;
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = getYear(new Date());
 
   return (
     <FooterContainer>
