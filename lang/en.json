@@ -3,6 +3,10 @@
     "defaultMessage": "Morrison Cole - Alpha",
     "description": "Homepage title"
   },
+  "K8NcGB": {
+    "defaultMessage": "日本語",
+    "description": "Switch language"
+  },
   "QifQBf": {
     "defaultMessage": "Hello, world.",
     "description": "Homepage header"

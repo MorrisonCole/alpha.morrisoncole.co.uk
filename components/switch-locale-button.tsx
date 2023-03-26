@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import React from "react";
+import { useIntl } from "react-intl";
 
 const Button = styled.button`
   display: flex;
@@ -17,6 +18,13 @@ const Button = styled.button`
 `;
 
 export const SwitchLocaleButton = () => {
+  const intl = useIntl();
+  const text = intl.formatMessage({
+    defaultMessage: "日本語",
+    id: "K8NcGB",
+    description: "Switch language",
+  });
+
   const router = useRouter();
   const { pathname, asPath, query } = router;
 
@@ -26,5 +34,5 @@ export const SwitchLocaleButton = () => {
     router.push({ pathname, query }, asPath, { locale: targetLocale });
   };
 
-  return <Button onClick={handleClick}>{`Switch to ${targetLocale}`}</Button>;
+  return <Button onClick={handleClick}>{text}</Button>;
 };
