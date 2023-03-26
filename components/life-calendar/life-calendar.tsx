@@ -10,7 +10,7 @@ import {
   subDays,
 } from "date-fns";
 import { enGB } from "date-fns/locale";
-import { LifeCalendarWeek } from "./life-calendar-week";
+import { LifeCalendarEntry } from "./life-calendar-entry";
 
 const YearsInLife = Math.ceil(76.3);
 const Columns = 53;
@@ -108,9 +108,9 @@ export function LifeCalendar({ className }: LifeCalendarProps) {
     for (const entry of Intervals) {
       if (isWithinInterval(week, entry.interval)) {
         items.push(
-          <LifeCalendarWeek key={week.valueOf()} week={week}>
+          <LifeCalendarEntry key={week.valueOf()} week={week}>
             {entry.text}
-          </LifeCalendarWeek>
+          </LifeCalendarEntry>
         );
         break;
       }

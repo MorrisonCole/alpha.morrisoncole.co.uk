@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Footer } from "./footer";
+import { Header } from "./header";
 
 const Grid = styled.span`
   min-height: 100%;
@@ -11,10 +12,6 @@ const Grid = styled.span`
     ". header header header ."
     ". content content content ."
     "footer footer footer footer footer";
-`;
-
-const Header = styled.div`
-  grid-area: header;
 `;
 
 const Content = styled.div`

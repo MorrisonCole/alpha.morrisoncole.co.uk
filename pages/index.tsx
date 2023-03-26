@@ -3,11 +3,10 @@ import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { Layout } from "../components/layout";
 import React from "react";
-import { SwitchLocaleButton } from "../components/switch-locale-button";
 import loadIntlMessages from "../helper/loadIntlMessages";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { LifeCalendar } from "../components/life-calendar";
+import { LifeCalendar } from "../components/life-calendar/life-calendar";
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -86,10 +85,6 @@ export default function Home() {
       </p>
 
       <Japanese>日本語で書いてます。</Japanese>
-
-      <Centered>
-        <SwitchLocaleButton />
-      </Centered>
 
       <StyledLifeCalendar />
     </Layout>

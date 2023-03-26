@@ -3,12 +3,13 @@ import styled from "styled-components";
 import React from "react";
 
 const Button = styled.button`
+  display: flex;
   border-radius: 3px;
-  padding: 0.5rem 0;
-  width: 100%;
+  padding: 0.5rem;
   background: hsla(0, 0%, 25%, 0.6);
   color: hsl(0, 0%, 100%);
   border: 2px solid white;
+  margin-left: auto;
 
   &:hover {
     filter: brightness(1.2);
