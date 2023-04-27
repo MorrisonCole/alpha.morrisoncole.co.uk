@@ -2923,7 +2923,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx@npm:2.0.3, @types/mdx@npm:^2.0.0":
+"@types/mdx@npm:2.0.5":
+  version: 2.0.5
+  resolution: "@types/mdx@npm:2.0.5"
+  checksum: 1069baff0b2d0fb0bc724748e2386af626cc30f8ef99e680afb4dee566ed0aeabd31cea774212a7033f491e594a0acc234116078b252cba94ac413f91eb585a3
+  languageName: node
+  linkType: hard
+
+"@types/mdx@npm:^2.0.0":
   version: 2.0.3
   resolution: "@types/mdx@npm:2.0.3"
   checksum: 41deb51c29535913af01d25f0e1414cfb5a6948d0e60e77e4aca895694de48bf0ac69c5a81fe2d9617d726cb253001ef82a65b683d5ef51987d15aa1931d086b
@@ -10014,7 +10021,7 @@ __metadata:
     "@lhci/cli": 0.11.0
     "@types/css": 0.0.33
     "@types/eslint": 8.21.3
-    "@types/mdx": 2.0.3
+    "@types/mdx": 2.0.5
     "@types/node": 18.15.10
     "@types/prettier": 2.7.2
     "@types/react": 18.0.29
