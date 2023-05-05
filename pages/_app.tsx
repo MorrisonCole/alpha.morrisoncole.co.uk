@@ -154,9 +154,9 @@ const MyApp = ({
     >
       <ThemeProvider>
         <GlobalStyle />
-        <MDXProvider components={mdxComponents}>
-          <Component {...pageProps} />
-        </MDXProvider>
+        {/*<MDXProvider components={mdxComponents}>*/}
+        <Component {...pageProps} />
+        {/*</MDXProvider>*/}
       </ThemeProvider>
     </IntlProvider>
   );
