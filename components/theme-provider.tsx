@@ -22,10 +22,8 @@ const theme: DefaultTheme = {
   ],
 };
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  return (
-    <StyledComponentsThemeProvider theme={theme}>
-      {children}
-    </StyledComponentsThemeProvider>
-  );
-}
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => (
+  <StyledComponentsThemeProvider theme={theme}>
+    {children}
+  </StyledComponentsThemeProvider>
+);

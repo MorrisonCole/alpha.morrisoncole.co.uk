@@ -18,12 +18,10 @@ const Content = styled.div`
   grid-area: content;
 `;
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <Grid>
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
-    </Grid>
-  );
-}
+export const Layout = ({ children }: { children: React.ReactNode }) => (
+  <Grid>
+    <Header />
+    <Content>{children}</Content>
+    <Footer />
+  </Grid>
+);

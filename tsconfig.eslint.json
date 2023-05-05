@@ -3,6 +3,8 @@
   "include": [
     "scripts",
     "next-env.d.ts",
+    "*.js",
+    "*.ts",
     "**/*.js",
     "**/*.ts",
     "**/*.d.ts",

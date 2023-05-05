@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { IntlProvider } from "react-intl";
-import type { MessageConfig } from "../helper/loadIntlMessages";
+import type { MessageConfig } from "../utils/loadIntlMessages";
 import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
 import { useRouter } from "next/router";
@@ -138,10 +138,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-function MyApp({
+const MyApp = ({
   Component,
   pageProps,
-}: AppProps<{ intlMessages: MessageConfig }>) {
+}: AppProps<{ intlMessages: MessageConfig }>) => {
   const { locale = "en" } = useRouter();
 
   return (
@@ -156,6 +156,6 @@ function MyApp({
       </ThemeProvider>
     </IntlProvider>
   );
-}
+};
 
 export default MyApp;

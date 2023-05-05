@@ -21,14 +21,12 @@ const ButtonContainer = styled.div`
   width: min-content;
 `;
 
-export function Header() {
-  return (
-    <HeaderContainer>
-      <Logo />
-      <ButtonContainer>
-        <SwitchLocaleButton />
-        <ThemeToggle />
-      </ButtonContainer>
-    </HeaderContainer>
-  );
-}
+export const Header = () => (
+  <HeaderContainer>
+    <Logo />
+    <ButtonContainer>
+      <SwitchLocaleButton />
+      <ThemeToggle />
+    </ButtonContainer>
+  </HeaderContainer>
+);

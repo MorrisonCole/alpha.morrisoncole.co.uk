@@ -25,5 +25,6 @@ module.exports = {
         checksVoidReturn: false,
       },
     ],
+    "func-style": ["error", "expression"],
   },
 };

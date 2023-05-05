@@ -4,10 +4,10 @@ interface CompiledLangModule {
   default: MessageConfig;
 }
 
-export default async function loadI18nMessages(
+const loadI18nMessages = async (
   locale?: string,
   defaultLocale = "en"
-): Promise<MessageConfig> {
+): Promise<MessageConfig> => {
   if (
     locale === undefined ||
     locale === defaultLocale ||
@@ -26,4 +26,6 @@ export default async function loadI18nMessages(
       'Could not load compiled language files. Please run "yarn i18n:compile" first"'
     );
   }
-}
+};
+
+export default loadI18nMessages;

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-export function middleware(req: NextRequest) {
+export const middleware = (req: NextRequest) => {
   if (
     req.nextUrl.pathname.startsWith("/_next") ||
     req.nextUrl.pathname.includes("/api/") ||
@@ -18,4 +18,4 @@ export function middleware(req: NextRequest) {
       new URL(`/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url)
     );
   }
-}
+};

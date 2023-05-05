@@ -10,6 +10,9 @@ interface LifeCalendarEntryProps {
   week: Date;
 }
 
-export function LifeCalendarEntry({ children, week }: LifeCalendarEntryProps) {
-  return <Entry title={week.toDateString()}>{children}</Entry>;
-}
+export const LifeCalendarEntry = ({
+  children,
+  week,
+}: LifeCalendarEntryProps) => (
+  <Entry title={week.toDateString()}>{children}</Entry>
+);

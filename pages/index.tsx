@@ -2,7 +2,7 @@ import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { Layout } from "../components/layout";
 import React from "react";
-import loadIntlMessages from "../helper/loadIntlMessages";
+import loadIntlMessages from "../utils/loadIntlMessages";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 import { LifeCalendar } from "../components/life-calendar/life-calendar";
@@ -35,15 +35,13 @@ const StyledLifeCalendar = styled(LifeCalendar)`
   padding-bottom: 16px;
 `;
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      intlMessages: await loadIntlMessages(locale),
-    },
-  };
-}
+export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
+  props: {
+    intlMessages: await loadIntlMessages(locale),
+  },
+});
 
-export default function Home() {
+const Home = () => {
   const intl = useIntl();
 
   const title = intl.formatMessage({
@@ -88,4 +86,6 @@ export default function Home() {
       <StyledLifeCalendar />
     </Layout>
   );
-}
+};
+
+export default Home;

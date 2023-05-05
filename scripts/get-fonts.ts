@@ -30,7 +30,7 @@ async function getFonts() {
   const data: string = response.data;
 
   const stylesheet: Stylesheet = css.parse(data);
-  const rules: Array<Rule | Comment | AtRule> = stylesheet.stylesheet!.rules;
+  const rules: (Rule | Comment | AtRule)[] = stylesheet.stylesheet!.rules;
 
   const urls: Font[] = rules
     .filter(

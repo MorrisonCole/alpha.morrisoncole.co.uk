@@ -8,7 +8,7 @@ const FooterContainer = styled.footer`
   padding: ${(props) => props.theme.spacing[6]};
 `;
 
-export function Footer() {
+export const Footer = () => {
   const currentYear = getYear(new Date());
 
   return (
@@ -19,4 +19,4 @@ export function Footer() {
       </div>
     </FooterContainer>
   );
-}
+};

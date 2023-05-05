@@ -24,7 +24,6 @@ export interface FrontMatter {
 }
 
 const PostButton = styled(Link)`
-  display: inline-block;
   color: hsl(340, 59%, 64%);
   font-size: 1em;
   padding: 0.25em 1em;
@@ -48,13 +47,7 @@ export default function Index({ posts }: { posts: Post[] }) {
   );
 }
 
-export function getStaticProps() {
-  const posts: Post[] = ALL_POST_PATHS.map((filePath) => getPost(filePath));
-
-  return { props: { posts } };
-}
-
-function getPost(filePath: string) {
+const getPost = (filePath: string) => {
   const sourceFile = path.join(POSTS_PATH, filePath);
   const { content, data } = matter.read(sourceFile);
 
@@ -63,4 +56,10 @@ function getPost(filePath: string) {
     frontMatter: data as FrontMatter,
     filePath,
   };
-}
+};
+
+export const getStaticProps = () => {
+  const posts: Post[] = ALL_POST_PATHS.map((filePath) => getPost(filePath));
+
+  return { props: { posts } };
+};

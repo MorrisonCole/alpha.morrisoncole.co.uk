@@ -90,7 +90,7 @@ interface LifeCalendarProps {
   className?: string;
 }
 
-export function LifeCalendar({ className }: LifeCalendarProps) {
+export const LifeCalendar = ({ className }: LifeCalendarProps) => {
   setDefaultOptions({ locale: enGB, weekStartsOn: 0 });
   const weeksInLife = eachWeekOfInterval({
     start: BirthDate,
@@ -119,4 +119,4 @@ export function LifeCalendar({ className }: LifeCalendarProps) {
   }
 
   return <WeekGrid className={className}>{items}</WeekGrid>;
-}
+};

@@ -49,17 +49,12 @@ const mdxComponents: MDXComponents = {
   p: p,
 };
 
-export default function PostPage({
-  source,
-}: {
-  source: MDXRemoteSerializeResult;
-}) {
-  return (
-    <Layout>
-      <MDXRemote {...source} components={mdxComponents} />
-    </Layout>
-  );
-}
+const PostPage = ({ source }: { source: MDXRemoteSerializeResult }) => (
+  <Layout>
+    <MDXRemote {...source} components={mdxComponents} />
+  </Layout>
+);
+export default PostPage;
 
 export const getStaticProps = async ({
   params,
