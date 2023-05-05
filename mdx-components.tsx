@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import Image from "next/image";
 import { Button } from "./components/button";
-import { MDXComponents } from "mdx/types";
+import { Components } from "@mdx-js/react/lib";
 
 const h1 = styled.h1`
   color: hsl(0, 0%, 50%);
@@ -35,7 +35,7 @@ const ResponsiveImage = ({
   />
 );
 
-export const mdxComponents: MDXComponents = {
+export const mdxComponents: Components = {
   Button: Button,
   img: ResponsiveImage,
   h1: h1,
