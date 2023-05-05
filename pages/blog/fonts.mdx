@@ -1,6 +1,3 @@
-import { MDXProvider } from "@mdx-js/react";
-import { mdxComponents } from "../../mdx-components";
-
 export const meta = {
   title: "Fonts",
   date: "2021-08-07",
@@ -13,14 +10,6 @@ export const meta = {
   draft: false,
   slug: "fonts",
 };
-
-export default function Post(props) {
-  return (
-    <MDXProvider components={mdxComponents}>
-      <main {...props} />
-    </MDXProvider>
-  );
-}
 
 # Fonts
 

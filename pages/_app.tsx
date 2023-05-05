@@ -5,6 +5,8 @@ import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
 import { useRouter } from "next/router";
 import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import { mdxComponents } from "../mdx-components";
 
 // From: https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=optional
 const GlobalStyle = createGlobalStyle`
@@ -152,7 +154,9 @@ const MyApp = ({
     >
       <ThemeProvider>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <MDXProvider components={mdxComponents}>
+          <Component {...pageProps} />
+        </MDXProvider>
       </ThemeProvider>
     </IntlProvider>
   );
