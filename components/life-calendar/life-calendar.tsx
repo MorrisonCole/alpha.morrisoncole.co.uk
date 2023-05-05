@@ -7,7 +7,6 @@ import {
   isWithinInterval,
   setDefaultOptions,
   startOfWeek,
-  subDays,
 } from "date-fns";
 import { enGB } from "date-fns/locale";
 import { LifeCalendarEntry } from "./life-calendar-entry";
@@ -97,9 +96,6 @@ export function LifeCalendar({ className }: LifeCalendarProps) {
     start: BirthDate,
     end: addYears(BirthDate, YearsInLife),
   });
-
-  const weeksLivedInterval = { start: BirthDate, end: new Date() };
-  const weeksLived = eachWeekOfInterval(weeksLivedInterval);
 
   const items = [];
   for (let i = 0; i < weeksInLife.length; i++) {

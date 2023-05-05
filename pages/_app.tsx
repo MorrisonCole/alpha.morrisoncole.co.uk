@@ -142,11 +142,11 @@ function MyApp({
   Component,
   pageProps,
 }: AppProps<{ intlMessages: MessageConfig }>) {
-  const { locale } = useRouter();
+  const { locale = "en" } = useRouter();
 
   return (
     <IntlProvider
-      locale={locale as string}
+      locale={locale}
       defaultLocale={"en"}
       messages={pageProps.intlMessages}
     >

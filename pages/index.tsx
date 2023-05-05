@@ -1,4 +1,3 @@
-import { Centered } from "../components/centered";
 import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { Layout } from "../components/layout";
@@ -39,7 +38,7 @@ const StyledLifeCalendar = styled(LifeCalendar)`
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      intlMessages: await loadIntlMessages(locale as string),
+      intlMessages: await loadIntlMessages(locale),
     },
   };
 }

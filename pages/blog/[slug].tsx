@@ -1,6 +1,5 @@
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { MDXComponents } from "mdx/types";
 import React from "react";
 import styled from "styled-components";
 import fs from "fs/promises";
@@ -10,6 +9,7 @@ import Image from "next/image";
 import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
 import { GetStaticPropsContext } from "next";
 import { Layout } from "components/layout";
+import { MDXComponents } from "mdx/types";
 
 const h1 = styled.h1`
   color: hsl(0, 0%, 50%);
@@ -18,11 +18,31 @@ const h1 = styled.h1`
 
 const p = styled.p``;
 
-const ResponsiveImage = (props: any) => (
-  <Image alt={props.alt} fill {...props} />
+const ResponsiveImage = ({
+  alt,
+  src,
+  width,
+  height,
+  ...props
+}: Omit<
+  React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  >,
+  "placeholder" | "ref"
+>) => (
+  <Image
+    alt={alt ?? "Missing alt"}
+    src={src ?? "Missing"}
+    width={Number(width)}
+    height={Number(height)}
+    placeholder={"blur"}
+    fill
+    {...props}
+  />
 );
 
-const mdxComponents = {
+const mdxComponents: MDXComponents = {
   Button: Button,
   img: ResponsiveImage,
   h1: h1,
@@ -32,17 +52,23 @@ const mdxComponents = {
 export default function PostPage({
   source,
 }: {
-  source: MDXRemoteSerializeResult<Record<string, unknown>>;
+  source: MDXRemoteSerializeResult;
 }) {
   return (
     <Layout>
-      <MDXRemote {...source} components={mdxComponents as MDXComponents} />
+      <MDXRemote {...source} components={mdxComponents} />
     </Layout>
   );
 }
 
-export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
-  const sourceFile = path.join(POSTS_PATH, `${params!.slug}.mdx`);
+export const getStaticProps = async ({
+  params,
+}: GetStaticPropsContext<{ slug: string }>) => {
+  if (params === undefined) {
+    return;
+  }
+
+  const sourceFile = path.join(POSTS_PATH, `${params.slug}.mdx`);
   const source = (await fs.readFile(sourceFile)).toString();
 
   const mdxSerializeResult = await serialize(source, {
@@ -61,7 +87,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = () => {
   const paths = ALL_POST_PATHS.map((path) =>
     path.replace(/\.mdx?$/, "")
   ).flatMap((slug) => [

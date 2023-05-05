@@ -1,7 +1,10 @@
-import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
+import {
+  DefaultTheme,
+  ThemeProvider as StyledComponentsThemeProvider,
+} from "styled-components";
 import React from "react";
 
-const theme = {
+const theme: DefaultTheme = {
   spacing: [
     "0.25rem",
     "0.5rem",
