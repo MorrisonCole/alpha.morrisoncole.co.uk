@@ -1,8 +1,8 @@
-module.exports = {
+const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  pageExtensions: ["js", "jsx", "ts", "tsx"],
+  pageExtensions: ["tsx", "mdx"],
   reactStrictMode: true,
   poweredByHeader: false,
   i18n: {
@@ -32,3 +32,14 @@ module.exports = {
     return config;
   },
 };
+
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    providerImportSource: "@mdx-js/react",
+  },
+});
+
+module.exports = withMDX(nextConfig);

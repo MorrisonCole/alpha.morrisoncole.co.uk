@@ -1,27 +1,9 @@
-import matter from "gray-matter";
 import Link from "next/link";
-import { ALL_POST_PATHS, POSTS_PATH } from "utils/mdx-utils";
-import path from "path";
 import styled from "styled-components";
 import React from "react";
-
-interface Post {
-  content: string;
-  frontMatter: FrontMatter;
-  filePath: string;
-}
-
-export interface FrontMatter {
-  title: string;
-  date: Date;
-  updated?: Date;
-  description: string;
-  category: string;
-  image: string;
-  imageAlt: string;
-  linkText: string;
-  draft: boolean;
-}
+import { meta as fontsFrontMatter } from "./fonts.mdx";
+import { meta as lighthouseFrontMatter } from "./lighthouse.mdx";
+import { meta as oneYearInJapanFrontMatter } from "./one-year-in-japan.mdx";
 
 const PostButton = styled(Link)`
   color: hsl(340, 59%, 64%);
@@ -32,34 +14,20 @@ const PostButton = styled(Link)`
   display: block;
 `;
 
-export default function Index({ posts }: { posts: Post[] }) {
+export default function Index() {
+  const posts = [
+    fontsFrontMatter,
+    lighthouseFrontMatter,
+    oneYearInJapanFrontMatter,
+  ];
+
   return (
     <>
       {posts.map((post) => (
-        <PostButton
-          href={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
-          key={post.filePath}
-        >
-          {post.frontMatter.title}
+        <PostButton href={`/blog/${post.slug}`} key={post.slug}>
+          {post.title}
         </PostButton>
       ))}
     </>
   );
 }
-
-const getPost = (filePath: string) => {
-  const sourceFile = path.join(POSTS_PATH, filePath);
-  const { content, data } = matter.read(sourceFile);
-
-  return {
-    content,
-    frontMatter: data as FrontMatter,
-    filePath,
-  };
-};
-
-export const getStaticProps = () => {
-  const posts: Post[] = ALL_POST_PATHS.map((filePath) => getPost(filePath));
-
-  return { props: { posts } };
-};
