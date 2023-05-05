@@ -1,3 +1,6 @@
+import { MDXProvider } from "@mdx-js/react";
+import { mdxComponents } from "../../mdx-components";
+
 export const meta = {
   title: "One Year in Japan",
   date: "2020-04-29",
@@ -10,6 +13,14 @@ export const meta = {
   draft: false,
   slug: "one-year-in-japan",
 };
+
+export default function Post(props) {
+  return (
+    <MDXProvider components={mdxComponents}>
+      <main {...props} />
+    </MDXProvider>
+  );
+}
 
 As Instagram so helpfully reminded me this morning: today marks the 1st
 anniversary of my arrival in Japan. I arrived stereotypically — with a backpack
