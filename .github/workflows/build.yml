@@ -23,6 +23,7 @@ jobs:
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
+          yarn build
           yarn test:lighthouse --collect.url=https://${{ steps.vercel_preview_url.outputs.preview_url }}/en --collect.numberOfRuns=3
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
