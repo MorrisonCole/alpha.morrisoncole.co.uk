@@ -5,7 +5,6 @@ import React from "react";
 import loadIntlMessages from "../utils/loadIntlMessages";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
-import { LifeCalendar } from "../components/life-calendar/life-calendar";
 
 const Title = styled.h1`
   font-size: 4rem;
@@ -28,11 +27,6 @@ const Japanese = styled.p`
   font-size: 1rem;
   font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-`;
-
-const StyledLifeCalendar = styled(LifeCalendar)`
-  padding-top: 16px;
-  padding-bottom: 16px;
 `;
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({
@@ -82,8 +76,6 @@ const Home = () => {
       </p>
 
       <Japanese>日本語で書いてます。</Japanese>
-
-      <StyledLifeCalendar />
     </Layout>
   );
 };
