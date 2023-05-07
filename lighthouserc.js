@@ -12,6 +12,8 @@ module.exports = {
     assert: {
       preset: "lighthouse:no-pwa",
       assertions: {
+        "bf-cache": "warn",
+        "color-contrast": "warn",
         "csp-xss": "warn",
         "is-crawlable": "warn",
       },
