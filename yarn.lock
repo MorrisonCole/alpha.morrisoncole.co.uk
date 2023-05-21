@@ -3339,10 +3339,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.2.2":
-  version: 20.2.2
-  resolution: "@types/node@npm:20.2.2"
-  checksum: a39bef01b7592fd35c5704c74b9167c154a9a357017db8cd8644461c6e6ad87be19f82dfc65ecb2f35a8fb143fc8a0587f17507bc0b0c9bfee676b3fb4bc89ae
+"@types/node@npm:20.2.3":
+  version: 20.2.3
+  resolution: "@types/node@npm:20.2.3"
+  checksum: 576065e8fc1fa45798c8f59a6bf809169582d04abc2e25fab1a048ffc734975b9992ae31be0d960cf705a21fb37112f7fcde11aa322beddf7491e73d5a5a988c
   languageName: node
   linkType: hard
 
@@ -10717,7 +10717,7 @@ __metadata:
     "@types/css": 0.0.33
     "@types/eslint": 8.37.0
     "@types/mdx": 2.0.5
-    "@types/node": 20.2.2
+    "@types/node": 20.2.3
     "@types/prettier": 2.7.2
     "@types/react": 18.2.5
     "@types/react-dom": 18.2.3
