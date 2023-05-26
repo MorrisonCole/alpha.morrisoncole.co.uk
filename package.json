@@ -24,7 +24,7 @@
     "react-dom": "18.2.0",
     "react-intl": "6.4.2",
     "react-is": "18.2.0",
-    "styled-components": "5.3.10",
+    "styled-components": "5.3.11",
     "ts-node": "10.9.1",
     "typescript": "5.0.4",
     "vercel": "29.3.6"
