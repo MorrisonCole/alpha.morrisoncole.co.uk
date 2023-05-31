@@ -10744,7 +10744,7 @@ __metadata:
     styled-components: 5.3.11
     ts-node: 10.9.1
     typescript: 5.0.4
-    vercel: 29.3.6
+    vercel: 29.4.0
     webpack: 5.85.0
   languageName: unknown
   linkType: soft
@@ -14078,9 +14078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:29.3.6":
-  version: 29.3.6
-  resolution: "vercel@npm:29.3.6"
+"vercel@npm:29.4.0":
+  version: 29.4.0
+  resolution: "vercel@npm:29.4.0"
   dependencies:
     "@vercel/build-utils": 6.7.3
     "@vercel/go": 2.5.1
@@ -14095,7 +14095,7 @@ __metadata:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: b6731eb523a71fb20fecd80edd465ad9a6e7a23049f4c4f253c88c5467b7c97cc2dc22a344b6d5bb793913a2e87268cc07c2fae1bd23d89ded2c5670a2575804
+  checksum: ccff035b691208824a24e88991f2bbe7ccc3060ed8113586e0f1c23afc081b36f30b7c03858cfd6358a8c2477f1979b99111320d20f1e3a32e2ed75f7cb9c9b0
   languageName: node
   linkType: hard
 
