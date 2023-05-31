@@ -47,7 +47,7 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
     "typescript": "5.0.4",
-    "webpack": "5.84.1"
+    "webpack": "5.85.0"
   },
   "scripts": {
     "dev": "run i18n:compile && next dev",
