@@ -2230,16 +2230,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ecma402-abstract@npm:1.16.0":
-  version: 1.16.0
-  resolution: "@formatjs/ecma402-abstract@npm:1.16.0"
-  dependencies:
-    "@formatjs/intl-localematcher": 0.3.0
-    tslib: ^2.4.0
-  checksum: a3d6016d51b9f9a876e4ad66010ef80b07f54b9bb50f6135267d41203219d38e9b934fc575e65e3556eb89d92640452e03927f50f030906be8919a319d906bd2
-  languageName: node
-  linkType: hard
-
 "@formatjs/ecma402-abstract@npm:1.17.0":
   version: 1.17.0
   resolution: "@formatjs/ecma402-abstract@npm:1.17.0"
@@ -2259,17 +2249,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.5.0":
-  version: 2.5.0
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.5.0"
-  dependencies:
-    "@formatjs/ecma402-abstract": 1.16.0
-    "@formatjs/icu-skeleton-parser": 1.5.0
-    tslib: ^2.4.0
-  checksum: 11c524cc2c15c1f15b54e81fca506ccfc77f3b3adabdb457053aacfbd28789c88054e378439cf23accf69baeefbe8e35d9bb5a6253235a1bc4724dd4956bfba3
-  languageName: node
-  linkType: hard
-
 "@formatjs/icu-messageformat-parser@npm:2.6.0":
   version: 2.6.0
   resolution: "@formatjs/icu-messageformat-parser@npm:2.6.0"
@@ -2278,16 +2257,6 @@ __metadata:
     "@formatjs/icu-skeleton-parser": 1.6.0
     tslib: ^2.4.0
   checksum: 67e76416a381663f62cb7ceaa699b3dc4505b9bfd8dda31950b8fa159e9abc1aae85d2ffa08760448083f113bdabca1653796e988b7a12eef891260726e56ed7
-  languageName: node
-  linkType: hard
-
-"@formatjs/icu-skeleton-parser@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@formatjs/icu-skeleton-parser@npm:1.5.0"
-  dependencies:
-    "@formatjs/ecma402-abstract": 1.16.0
-    tslib: ^2.4.0
-  checksum: 0da173c1fb3d28c8eb4c3fd4eadec9d0b6476d639abb5c371b0a156aa79bbe6d1e0d6fc6fff09b254da7523049baa1032a61a0cad647a3e2e005f7e55317ef39
   languageName: node
   linkType: hard
 
@@ -2320,15 +2289,6 @@ __metadata:
     "@formatjs/intl-localematcher": 0.4.0
     tslib: ^2.4.0
   checksum: a2deed31cce57f249e470f54675286c36edc2f5ec1d63a2f36e6315a0154ca06404fa5c00aaefc2c52af57d3d471b17c217e885cc9565e5f54c36509af37fe12
-  languageName: node
-  linkType: hard
-
-"@formatjs/intl-localematcher@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@formatjs/intl-localematcher@npm:0.3.0"
-  dependencies:
-    tslib: ^2.4.0
-  checksum: 26fbe20a3187842ea9fd417429dd53af941ad896c783fcc15df25e92c3fe9b9895f9909de9f9731ef75b81e7fb396d3d10d35656e3f5ff3588488521d600ec3a
   languageName: node
   linkType: hard
 
@@ -2379,26 +2339,6 @@ __metadata:
     ts-jest:
       optional: true
   checksum: b5c2418b93fb85e758e7b07274e6cff4f79701016396885a537c5870eb44db6925bfd3cf7a9617c5a05794b0779af16e6169b26b3ba0d58045fc0cb2d103372f
-  languageName: node
-  linkType: hard
-
-"@formatjs/ts-transformer@npm:3.13.2":
-  version: 3.13.2
-  resolution: "@formatjs/ts-transformer@npm:3.13.2"
-  dependencies:
-    "@formatjs/icu-messageformat-parser": 2.5.0
-    "@types/json-stable-stringify": ^1.0.32
-    "@types/node": 14 || 16 || 17
-    chalk: ^4.0.0
-    json-stable-stringify: ^1.0.1
-    tslib: ^2.4.0
-    typescript: ^4.7 || 5
-  peerDependencies:
-    ts-jest: ">=27"
-  peerDependenciesMeta:
-    ts-jest:
-      optional: true
-  checksum: 55bfc9f2b2f5c68a1a444a88279c9a778856e3807e6184077d0cdb4103dc49aec5aa492ec4410fb6bfad737796971ed0a63713340ebeeda8cb35c58cbafe62d3
   languageName: node
   linkType: hard
 
@@ -6985,12 +6925,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:4.10.2":
-  version: 4.10.2
-  resolution: "eslint-plugin-formatjs@npm:4.10.2"
+"eslint-plugin-formatjs@npm:4.10.3":
+  version: 4.10.3
+  resolution: "eslint-plugin-formatjs@npm:4.10.3"
   dependencies:
-    "@formatjs/icu-messageformat-parser": 2.5.0
-    "@formatjs/ts-transformer": 3.13.2
+    "@formatjs/icu-messageformat-parser": 2.6.0
+    "@formatjs/ts-transformer": 3.13.3
     "@types/eslint": 7 || 8
     "@types/picomatch": ^2.3.0
     "@typescript-eslint/typescript-estree": 5.59.0
@@ -7002,7 +6942,7 @@ __metadata:
     unicode-emoji-utils: ^1.1.1
   peerDependencies:
     eslint: 7 || 8
-  checksum: ae5913359321c5a3622fe0167b432cc7250618421d6d256801a103073b0a99cec38019ed64c72aa2b45aa608f5ac161606d49eb5a49cc9b7895f42a726062037
+  checksum: 356d2ef2fbce88b97e4bda7e6226fde3359c1a7ce86e4be94c3781e9525804057adebe055d6c6063ec1ccd0cdb5832192370fc8c9eb81f0516304de38db1375b
   languageName: node
   linkType: hard
 
@@ -10920,7 +10860,7 @@ __metadata:
     eslint: 8.41.0
     eslint-config-next: 13.4.5
     eslint-config-prettier: 8.8.0
-    eslint-plugin-formatjs: 4.10.2
+    eslint-plugin-formatjs: 4.10.3
     eslint-plugin-react: 7.32.2
     glyphhanger: 5.0.0
     husky: 8.0.3
