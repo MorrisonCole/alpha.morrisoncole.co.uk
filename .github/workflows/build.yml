@@ -12,18 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Wait for Vercel Preview URL
-        uses: BetaHuhn/deploy-to-vercel-action@v1.9.12
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
         id: vercel_preview_url
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: "9Bvk0UQ1Iv0a6S5q1GRt7DVe"
-          VERCEL_PROJECT_ID: "QmXDbu5Q4G9fCayQvVk3XbCU4fWJarh2P79kGAxEsPAfzM"
-          PRODUCTION: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 600
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
           yarn build
-          yarn test:lighthouse --collect.url=${{ steps.vercel_preview_url.outputs.PREVIEW_URL }}/en --collect.numberOfRuns=3
+          yarn test:lighthouse --collect.url=https://${{ steps.vercel_preview_url.outputs.url }}/en --collect.numberOfRuns=3
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
