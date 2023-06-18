@@ -19,6 +19,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: "9Bvk0UQ1Iv0a6S5q1GRt7DVe"
           VERCEL_PROJECT_ID: "QmXDbu5Q4G9fCayQvVk3XbCU4fWJarh2P79kGAxEsPAfzM"
+          PRODUCTION: false
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
