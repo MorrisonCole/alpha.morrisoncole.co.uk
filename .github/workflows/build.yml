@@ -17,10 +17,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 600
+          check_interval: 6
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
           yarn build
-          yarn test:lighthouse --collect.url=https://${{ steps.vercel_preview_url.outputs.url }}/en --collect.numberOfRuns=3
+          yarn test:lighthouse --collect.url=${{ steps.vercel_preview_url.outputs.url }}/en --collect.numberOfRuns=3
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
