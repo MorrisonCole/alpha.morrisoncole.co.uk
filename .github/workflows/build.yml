@@ -16,8 +16,8 @@ jobs:
         id: vercel_preview_url
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 600
-          check_interval: 6
+          max_timeout: 900
+          check_interval: 20
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
