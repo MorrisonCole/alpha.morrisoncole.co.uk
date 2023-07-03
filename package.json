@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/parser": "5.60.1",
     "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
+    "eslint-config-next": "13.4.8",
     "eslint-plugin-formatjs": "4.10.3",
     "glyphhanger": "5.0.0",
     "husky": "8.0.3",
