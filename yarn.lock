@@ -4773,21 +4773,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/parser@npm:6.0.0"
+"@typescript-eslint/parser@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@typescript-eslint/parser@npm:6.1.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 6.0.0
-    "@typescript-eslint/types": 6.0.0
-    "@typescript-eslint/typescript-estree": 6.0.0
-    "@typescript-eslint/visitor-keys": 6.0.0
+    "@typescript-eslint/scope-manager": 6.1.0
+    "@typescript-eslint/types": 6.1.0
+    "@typescript-eslint/typescript-estree": 6.1.0
+    "@typescript-eslint/visitor-keys": 6.1.0
     debug: ^4.3.4
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a22f0c8f67eb244134f9d79d78faf1b6e2c0965495d78eef94a5680868f3d0fd9446a3ce5dc1e36dde02587da5d962944f3d83679c712d0b819ac99cdb9f7143
+  checksum: dc59cda4396ca09e3aa2bd5b99d8ef9526df56567d4a9b953668102116db975dfb2426c3369560a2b02e083d49e43b4cebb252144d175e900096eb0b17f7ae3c
   languageName: node
   linkType: hard
 
@@ -4815,16 +4815,6 @@ __metadata:
     "@typescript-eslint/types": 5.48.1
     "@typescript-eslint/visitor-keys": 5.48.1
   checksum: f60a7efe917798cccf8652925de6be58b023ded6c6ee44ce74d074f0c2a1927680398a6d73bab33d500c69474ad8c54d63b90fcc6e13256712707d12a60e0a64
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/scope-manager@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/scope-manager@npm:6.0.0"
-  dependencies:
-    "@typescript-eslint/types": 6.0.0
-    "@typescript-eslint/visitor-keys": 6.0.0
-  checksum: 450015be6454f953d0ea0da020ab47597e96a7a15c1002eed16c57430783bd7b045513d57a126606fb35e8971f1ce65fbefd845e3b5496bf75284cbe1681d0b9
   languageName: node
   linkType: hard
 
@@ -4869,13 +4859,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/types@npm:6.0.0"
-  checksum: a2e232b66b0b057152f4a94d7e0be75f32e389c9c1ec9ed9901ed5aab6e5df08c07bde9865710e315d835e4400ec2232f9c3c525b6edf8a85675ebfbfb69d3a5
-  languageName: node
-  linkType: hard
-
 "@typescript-eslint/types@npm:6.1.0":
   version: 6.1.0
   resolution: "@typescript-eslint/types@npm:6.1.0"
@@ -4916,24 +4899,6 @@ __metadata:
     typescript:
       optional: true
   checksum: d80f2766e2830dc830b9f4f1b9e744e1e7a285ebe72babdf0970f75bfe26cb832c6623bb836a53c48f1e707069d1e407ac1ea095bd583807007f713ba6e2e0e1
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/typescript-estree@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/typescript-estree@npm:6.0.0"
-  dependencies:
-    "@typescript-eslint/types": 6.0.0
-    "@typescript-eslint/visitor-keys": 6.0.0
-    debug: ^4.3.4
-    globby: ^11.1.0
-    is-glob: ^4.0.3
-    semver: ^7.5.0
-    ts-api-utils: ^1.0.1
-  peerDependenciesMeta:
-    typescript:
-      optional: true
-  checksum: 6214ff9cc3c4fd7fe03f846e96a498ecf85916083bb60d419bc5a12142cff912670032b1de5ea52ab353ca7eeb4e1cc8fa475a22958b010043c88e274df49859
   languageName: node
   linkType: hard
 
@@ -4989,16 +4954,6 @@ __metadata:
     "@typescript-eslint/types": 5.59.0
     eslint-visitor-keys: ^3.3.0
   checksum: e21656de02e221a27a5fe9f7fd34a1ca28530e47675134425f84fd0d1f276695fe39e35120837a491b02255d49aa2fd871e2c858ecccc66c687db972d057bd1c
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/visitor-keys@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@typescript-eslint/visitor-keys@npm:6.0.0"
-  dependencies:
-    "@typescript-eslint/types": 6.0.0
-    eslint-visitor-keys: ^3.4.1
-  checksum: b0d9848a4490174db1d25b5f336548bb11dde4e0ce664c3dc341bed89fb3a3ada091aeb7f5d2d371433815332d93339c6cb77f7a24469c329c3d055b15237bfa
   languageName: node
   linkType: hard
 
@@ -11854,7 +11809,7 @@ __metadata:
     "@types/react-dom": 18.2.7
     "@types/styled-components": 5.1.26
     "@typescript-eslint/eslint-plugin": 6.1.0
-    "@typescript-eslint/parser": 6.0.0
+    "@typescript-eslint/parser": 6.1.0
     axios: 1.4.0
     css: 3.0.0
     date-fns: 2.30.0
@@ -13779,7 +13734,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.0, semver@npm:^7.5.4":
+"semver@npm:^7.5.4":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
