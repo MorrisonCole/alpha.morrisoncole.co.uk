@@ -3768,9 +3768,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:13.4.10":
-  version: 13.4.10
-  resolution: "@next/mdx@npm:13.4.10"
+"@next/mdx@npm:13.4.11":
+  version: 13.4.11
+  resolution: "@next/mdx@npm:13.4.11"
   dependencies:
     source-map: ^0.7.0
   peerDependencies:
@@ -3781,7 +3781,7 @@ __metadata:
       optional: true
     "@mdx-js/react":
       optional: true
-  checksum: 5fdf5f8cab6d1a4cfac83bf57599e33535b23a57bf5c0470d5893c7ba2a4fba89f1c74e9300c3a4a03b0fa056aa5658c07ff560d484a433a91b1f603116e48d5
+  checksum: f0525974291138906e3db267848ca892a65143928c0cced5d62b96403b1ce9743e8a5b82408a711cd58326e2ec586255a04027f4d18999456a17c10c779fef9f
   languageName: node
   linkType: hard
 
@@ -11799,7 +11799,7 @@ __metadata:
     "@lhci/cli": 0.12.0
     "@mdx-js/loader": 2.3.0
     "@mdx-js/react": 2.3.0
-    "@next/mdx": 13.4.10
+    "@next/mdx": 13.4.11
     "@types/css": 0.0.33
     "@types/eslint": 8.44.0
     "@types/mdx": 2.0.5
