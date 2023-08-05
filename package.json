@@ -16,7 +16,7 @@
     "css": "3.0.0",
     "date-fns": "2.30.0",
     "eslint": "8.46.0",
-    "eslint-config-prettier": "8.10.0",
+    "eslint-config-prettier": "9.0.0",
     "eslint-plugin-react": "7.33.1",
     "next": "13.4.12",
     "prettier": "3.0.1",
