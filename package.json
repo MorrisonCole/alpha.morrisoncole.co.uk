@@ -45,7 +45,7 @@
     "eslint-plugin-formatjs": "4.10.3",
     "glyphhanger": "5.0.0",
     "husky": "8.0.3",
-    "lint-staged": "14.0.0",
+    "lint-staged": "14.0.1",
     "typescript": "5.1.6"
   },
   "resolutions": {
