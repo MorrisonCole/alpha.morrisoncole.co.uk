@@ -10,7 +10,7 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Wait for Vercel Preview URL
         uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
         id: vercel_preview_url
