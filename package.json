@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@formatjs/cli": "6.1.4",
-    "@formatjs/swc-plugin": "1.5.3",
+    "@formatjs/swc-plugin": "1.5.4",
     "@lhci/cli": "0.12.0",
     "@types/mdx": "2.0.7",
     "@types/node": "20.5.9",
