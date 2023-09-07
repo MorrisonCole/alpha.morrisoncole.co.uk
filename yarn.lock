@@ -1977,9 +1977,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/cli@npm:6.1.3":
-  version: 6.1.3
-  resolution: "@formatjs/cli@npm:6.1.3"
+"@formatjs/cli@npm:6.1.4":
+  version: 6.1.4
+  resolution: "@formatjs/cli@npm:6.1.4"
   peerDependencies:
     "@vue/compiler-sfc": ^3.2.34
   peerDependenciesMeta:
@@ -1987,7 +1987,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 118dbc4ad1e547298bef57763f51cb1ae9c3bddc734ebe7ebc5dfe5b8625dcb9a9d98873aff38ac9d27e4858a3bab19dc2a7088e195e3ec60c1b0a06840123ce
+  checksum: cb411b3e0ecd0572e2528655174b45de12fa582d77548a8dfc749a412d5f78f9e8a224ff9f5c27ea3d95c6b0a046d5f20758d25a4f02750c1b09bf5ac9bcaa9a
   languageName: node
   linkType: hard
 
@@ -9201,7 +9201,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-site@workspace:."
   dependencies:
-    "@formatjs/cli": 6.1.3
+    "@formatjs/cli": 6.1.4
     "@formatjs/swc-plugin": 1.5.3
     "@lhci/cli": 0.12.0
     "@mdx-js/loader": 2.3.0
