@@ -2143,26 +2143,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ts-transformer@npm:3.13.4":
-  version: 3.13.4
-  resolution: "@formatjs/ts-transformer@npm:3.13.4"
-  dependencies:
-    "@formatjs/icu-messageformat-parser": 2.6.1
-    "@types/json-stable-stringify": ^1.0.32
-    "@types/node": 14 || 16 || 17
-    chalk: ^4.0.0
-    json-stable-stringify: ^1.0.1
-    tslib: ^2.4.0
-    typescript: ^4.7 || 5
-  peerDependencies:
-    ts-jest: ">=27"
-  peerDependenciesMeta:
-    ts-jest:
-      optional: true
-  checksum: ea45cd80ebcc7a50a9566835bf1ea1d778aadf22418d0117733854c2dd1356755f9d9fddcb0bcda736fbd9490587b10f79a73288a95d3f199a2e6dff2edd5f7a
-  languageName: node
-  linkType: hard
-
 "@formatjs/ts-transformer@npm:3.13.5":
   version: 3.13.5
   resolution: "@formatjs/ts-transformer@npm:3.13.5"
@@ -5883,12 +5863,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:4.10.4":
-  version: 4.10.4
-  resolution: "eslint-plugin-formatjs@npm:4.10.4"
+"eslint-plugin-formatjs@npm:4.10.5":
+  version: 4.10.5
+  resolution: "eslint-plugin-formatjs@npm:4.10.5"
   dependencies:
-    "@formatjs/icu-messageformat-parser": 2.6.1
-    "@formatjs/ts-transformer": 3.13.4
+    "@formatjs/icu-messageformat-parser": 2.6.2
+    "@formatjs/ts-transformer": 3.13.5
     "@types/eslint": 7 || 8
     "@types/picomatch": ^2.3.0
     "@typescript-eslint/typescript-estree": 5.62.0
@@ -5900,7 +5880,7 @@ __metadata:
     unicode-emoji-utils: ^1.1.1
   peerDependencies:
     eslint: 7 || 8
-  checksum: 52f94f113f4edffb025256d152d108a1828b6c93110708555b5c142cf89e748fb70b9c41c06dab8ce0a0ef1dace0c4df33395b5dd8d8f6b586e60e7bbe9f0c20
+  checksum: ecba262dfb90a87dc0edf917f30b5c47cc3dbbc3780ba675ba1550e32133f03e56cf20709fbb4df82d4c1862075edbc67ef016de1e71234c8c0388b449e80807
   languageName: node
   linkType: hard
 
@@ -9283,7 +9263,7 @@ __metadata:
     eslint: 8.49.0
     eslint-config-next: 13.4.19
     eslint-config-prettier: 9.0.0
-    eslint-plugin-formatjs: 4.10.4
+    eslint-plugin-formatjs: 4.10.5
     eslint-plugin-react: 7.33.2
     glyphhanger: 5.0.0
     husky: 8.0.3
