@@ -30,7 +30,7 @@
     "vercel": "32.2.0"
   },
   "devDependencies": {
-    "@formatjs/cli": "6.1.4",
+    "@formatjs/cli": "6.1.5",
     "@formatjs/swc-plugin": "1.5.4",
     "@lhci/cli": "0.12.0",
     "@types/mdx": "2.0.7",
