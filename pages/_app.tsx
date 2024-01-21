@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { IntlProvider } from "react-intl";
+import { IntlProvider, ReactIntlErrorCode } from "react-intl";
 import type { MessageConfig } from "../utils/loadIntlMessages";
 import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
@@ -151,6 +151,13 @@ const MyApp = ({
       locale={locale}
       defaultLocale={"en"}
       messages={pageProps.intlMessages}
+      onError={(err) => {
+        if (locale === "default") {
+          // Ignore missing translation error for default locale
+        } else {
+          console.error(err);
+        }
+      }}
     >
       <ThemeProvider>
         <GlobalStyle />
