@@ -52,8 +52,8 @@
     "@types/react": "18.2.21"
   },
   "scripts": {
-    "dev": "run i18n:compile && next dev",
-    "build": "run i18n:compile && next build",
+    "dev": "yarn i18n:compile && next dev",
+    "build": "yarn i18n:compile && next build",
     "start": "next start",
     "lint": "next lint",
     "test:lighthouse": "lhci autorun",

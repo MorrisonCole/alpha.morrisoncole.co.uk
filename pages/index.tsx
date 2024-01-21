@@ -2,7 +2,7 @@ import type { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { Layout } from "../components/layout";
 import React from "react";
-import loadIntlMessages from "../utils/loadIntlMessages";
+import { loadIntlMessages } from "@/utils/load-intl-messages";
 import styled from "styled-components";
 import { useIntl } from "react-intl";
 
@@ -25,8 +25,17 @@ const BoldItalic = styled.span`
 
 const Japanese = styled.p`
   font-size: 1rem;
-  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    "Noto Sans JP",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 `;
 
 export const getStaticProps = async ({ locale }: GetStaticPropsContext) => ({

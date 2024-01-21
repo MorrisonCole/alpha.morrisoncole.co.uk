@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 import { IntlProvider } from "react-intl";
-import type { MessageConfig } from "../utils/loadIntlMessages";
 import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
 import { useRouter } from "next/router";
@@ -143,7 +142,7 @@ const GlobalStyle = createGlobalStyle`
 const MyApp = ({
   Component,
   pageProps,
-}: AppProps<{ intlMessages: MessageConfig }>) => {
+}: AppProps<{ intlMessages: Record<string, string> }>) => {
   const { locale = "en" } = useRouter();
 
   return (
