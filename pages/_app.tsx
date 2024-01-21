@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { IntlProvider, ReactIntlErrorCode } from "react-intl";
+import { IntlProvider } from "react-intl";
 import type { MessageConfig } from "../utils/loadIntlMessages";
 import { ThemeProvider } from "../components/theme-provider";
 import { createGlobalStyle } from "styled-components";
