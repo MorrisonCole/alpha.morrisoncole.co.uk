@@ -64,5 +64,5 @@
     "i18n:compile": "formatjs compile-folder lang compiled-lang",
     "postinstall": "husky install"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }
