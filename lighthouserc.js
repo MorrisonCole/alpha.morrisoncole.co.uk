@@ -16,6 +16,7 @@ module.exports = {
         "color-contrast": "warn",
         "csp-xss": "warn",
         "is-crawlable": "warn",
+        "total-byte-weight": "warn",
       },
     },
   },
