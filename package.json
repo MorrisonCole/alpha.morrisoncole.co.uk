@@ -47,9 +47,6 @@
     "lint-staged": "15.2.2",
     "typescript": "5.4.5"
   },
-  "resolutions": {
-    "@types/react": "18.2.21"
-  },
   "scripts": {
     "dev": "yarn i18n:compile && next dev",
     "build": "yarn i18n:compile && next build",
