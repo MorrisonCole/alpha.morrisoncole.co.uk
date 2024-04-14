@@ -1,6 +1,0 @@
-{
-  "enabled": true,
-  "labels": ["automerge"],
-  "dependencyDashboard": true,
-  "prConcurrentLimit": 1
-}
