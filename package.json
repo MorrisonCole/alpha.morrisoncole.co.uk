@@ -48,7 +48,7 @@
     "typescript": "5.4.5"
   },
   "resolutions": {
-    "@types/react": "18.2.21"
+    "@types/react": "18.2.78"
   },
   "scripts": {
     "dev": "yarn i18n:compile && next dev",
