@@ -22,7 +22,7 @@ const ButtonContainer = styled.div`
 `;
 
 export const Header = () => (
-  <HeaderContainer>
+  <HeaderContainer role="banner">
     <Logo />
     <ButtonContainer>
       <SwitchLocaleButton />

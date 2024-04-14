@@ -12,7 +12,7 @@ export const Footer = () => {
   const currentYear = getYear(new Date());
 
   return (
-    <FooterContainer>
+    <FooterContainer role="contentinfo">
       <div style={{ display: "flex", flexDirection: "column" }}>
         <p>{"Handcrafted with TypeScript, React, and Next.js"}</p>
         <p>{`\u{00A9} Morrison Cole ${currentYear}`}</p>

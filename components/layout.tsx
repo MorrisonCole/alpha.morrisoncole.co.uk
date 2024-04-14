@@ -14,14 +14,14 @@ const Grid = styled.span`
     "footer footer footer footer footer";
 `;
 
-const Content = styled.div`
+const Content = styled.main`
   grid-area: content;
 `;
 
 export const Layout = ({ children }: { children: React.ReactNode }) => (
   <Grid>
     <Header />
-    <Content>{children}</Content>
+    <Content role="main">{children}</Content>
     <Footer />
   </Grid>
 );
