@@ -10,18 +10,11 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Wait for Vercel Preview URL
-        uses: patrickedqvist/wait-for-vercel-preview@v1.3.1
-        id: vercel_preview_url
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 900
-          check_interval: 20
+      - uses: actions/checkout@v4.1.1
       - name: Run Lighthouse CI
         run: |
           yarn install --immutable
           yarn build
-          yarn test:lighthouse --collect.url=${{ steps.vercel_preview_url.outputs.url }}/en --collect.numberOfRuns=3
+          yarn test:lighthouse
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
