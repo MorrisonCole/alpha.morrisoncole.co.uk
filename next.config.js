@@ -1,3 +1,6 @@
+const withMDX = require("@next/mdx")();
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {
     styledComponents: true,
@@ -32,14 +35,5 @@ const nextConfig = {
     return config;
   },
 };
-
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    providerImportSource: "@mdx-js/react",
-  },
-});
 
 module.exports = withMDX(nextConfig);
