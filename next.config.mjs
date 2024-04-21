@@ -43,22 +43,6 @@ const nextConfig = {
 export default withNextIntl(
   withPigment(withMDX(nextConfig), {
     theme: extendTheme({
-      colorSchemes: {
-        light: {
-          colors: {
-            background: "#f9f9f9",
-            foreground: "#121212",
-          },
-        },
-        dark: {
-          colors: {
-            background: "#212121",
-            foreground: "#fff",
-          },
-        },
-      },
-      getSelector: (colorScheme) =>
-        colorScheme ? `.theme-${colorScheme}` : ":root",
       spacing: [
         "0.25rem",
         "0.5rem",
