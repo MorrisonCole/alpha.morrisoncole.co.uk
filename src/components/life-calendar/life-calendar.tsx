@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "@pigment-css/react";
 import {
   addYears,
   eachWeekOfInterval,
@@ -68,12 +68,12 @@ const Intervals = [
 
 const WeekGrid = styled.span`
   display: grid;
-  grid-template-columns: repeat(${Math.ceil(Columns / 4)}, 1fr);
+  grid-template-columns: repeat(${() => Math.ceil(Columns / 4)}, 1fr);
   @media (min-width: 600px) {
-    grid-template-columns: repeat(${Math.ceil(Columns / 2)}, 1fr);
+    grid-template-columns: repeat(${() => Math.ceil(Columns / 2)}, 1fr);
   }
   @media (min-width: 1200px) {
-    grid-template-columns: repeat(${Columns}, 1fr);
+    grid-template-columns: repeat(${() => Columns}, 1fr);
   }
   justify-content: center;
 
@@ -106,7 +106,7 @@ export const LifeCalendar = ({ className }: LifeCalendarProps) => {
         items.push(
           <LifeCalendarEntry key={week.valueOf()} week={week}>
             {entry.text}
-          </LifeCalendarEntry>
+          </LifeCalendarEntry>,
         );
         break;
       }

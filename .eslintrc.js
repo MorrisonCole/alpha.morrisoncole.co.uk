@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "formatjs"],
   rules: {
-    "react/react-in-jsx-scope": "error",
     "formatjs/enforce-default-message": ["error", "literal"],
     "formatjs/enforce-id": [
       "error",

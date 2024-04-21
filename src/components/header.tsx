@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import { styled } from "@pigment-css/react";
 import React from "react";
 import { SwitchLocaleButton } from "./switch-locale-button";
 import Logo from "./logo";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 
 const ThemeToggle = dynamic(() => import("../components/theme-toggle"), {
   ssr: false,
@@ -21,12 +22,16 @@ const ButtonContainer = styled.div`
   width: min-content;
 `;
 
-export const Header = () => (
-  <HeaderContainer role="banner">
-    <Logo />
-    <ButtonContainer>
-      <SwitchLocaleButton />
-      <ThemeToggle />
-    </ButtonContainer>
-  </HeaderContainer>
-);
+export const Header = () => {
+  const translations = useTranslations("misc");
+
+  return (
+    <HeaderContainer role="banner">
+      <Logo />
+      <ButtonContainer>
+        <SwitchLocaleButton label={translations("switchLanguage")} />
+        <ThemeToggle />
+      </ButtonContainer>
+    </HeaderContainer>
+  );
+};
