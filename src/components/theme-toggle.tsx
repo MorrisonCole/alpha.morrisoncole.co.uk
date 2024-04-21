@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import { styled } from "@pigment-css/react";
 
 const ToggleButton = styled.button`
   border-radius: 3px;
@@ -28,14 +30,15 @@ const ToggleButton = styled.button`
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(
-    document.documentElement.dataset.theme
+    window.localStorage.getItem("theme") ?? "light",
   );
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    document.documentElement.dataset.theme = activeTheme;
-    window.localStorage.setItem("theme", activeTheme ?? "light");
+    document.documentElement.classList.toggle(`theme-${activeTheme}`);
+    window.localStorage.setItem("theme", activeTheme);
   }, [activeTheme]);
+
   return (
     <ToggleButton
       aria-label={`Change to ${inactiveTheme} mode`}

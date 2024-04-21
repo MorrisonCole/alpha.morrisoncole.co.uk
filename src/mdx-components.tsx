@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "@pigment-css/react";
 import React from "react";
 import Image from "next/image";
 import { Button } from "./components/button";

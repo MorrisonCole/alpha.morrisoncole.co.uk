@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { Footer } from "./footer";
 import { Header } from "./header";
+import "@pigment-css/react/styles.css";
+import { styled } from "@pigment-css/react";
 
 const Grid = styled.span`
   min-height: 100%;

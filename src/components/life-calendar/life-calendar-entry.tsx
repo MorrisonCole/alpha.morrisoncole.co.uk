@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { styled } from "@pigment-css/react";
 import React from "react";
 
 const Entry = styled.p`
