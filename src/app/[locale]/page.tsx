@@ -57,7 +57,7 @@ const Home = ({ params: { locale } }: Props) => {
 
   return (
     <Layout>
-      <Title>{translations("title")}</Title>
+      <Title>{translations("header")}</Title>
       <p>
         I&apos;m <Bold>bold.</Bold>
       </p>

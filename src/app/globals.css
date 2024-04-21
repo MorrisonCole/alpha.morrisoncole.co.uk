@@ -59,8 +59,6 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  background-color: hsl(0, 0%, 6%);
-  color: hsl(0, 0%, 100%);
 }
 
 html[data-theme="light"] {
@@ -85,11 +83,14 @@ html[data-theme="dark"] {
   --color-text: hsl(0, 0%, 100%);
 }
 
-// Reset from https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles
-  /*
+/* Reset from https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles */
+
+/*
   1. Use a more-intuitive box-sizing model.
   */
-  *, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

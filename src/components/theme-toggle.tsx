@@ -30,13 +30,13 @@ const ToggleButton = styled.button`
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(
-    window.localStorage.getItem("theme") ?? "light",
+    document.documentElement.dataset.theme,
   );
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    document.documentElement.classList.toggle(`theme-${activeTheme}`);
-    window.localStorage.setItem("theme", activeTheme);
+    document.documentElement.dataset.theme = activeTheme;
+    window.localStorage.setItem("theme", activeTheme ?? "light");
   }, [activeTheme]);
 
   return (

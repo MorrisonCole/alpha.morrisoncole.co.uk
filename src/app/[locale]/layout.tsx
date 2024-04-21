@@ -13,7 +13,7 @@ export default function Layout({ children, params: { locale } }: LayoutProps) {
           ? "dark"
           : "light";
       }
-      document.documentElement.classList.toggle(\`theme-\${getUserPreference()}\`);
+      document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
     <html lang={locale}>
