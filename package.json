@@ -15,7 +15,7 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
-    "@formatjs/cli": "6.2.9",
+    "@formatjs/cli": "6.2.10",
     "@lhci/cli": "0.13.0",
     "@types/css": "0.0.37",
     "@types/mdx": "2.0.13",
