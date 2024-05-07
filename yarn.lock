@@ -3056,9 +3056,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-formatjs@npm:4.13.0":
-  version: 4.13.0
-  resolution: "eslint-plugin-formatjs@npm:4.13.0"
+"eslint-plugin-formatjs@npm:4.13.1":
+  version: 4.13.1
+  resolution: "eslint-plugin-formatjs@npm:4.13.1"
   dependencies:
     "@formatjs/icu-messageformat-parser": "npm:2.7.6"
     "@formatjs/ts-transformer": "npm:3.13.12"
@@ -3073,7 +3073,7 @@ __metadata:
     unicode-emoji-utils: "npm:^1.2.0"
   peerDependencies:
     eslint: 7 || 8
-  checksum: 10/10bf4787209e86a43d70a3c8edbd272db13761271356f4329792e9372de95b2de2540809e8670e3d984226bf305c8b8aec1d87a78668285be5d3ea8f97fe3480
+  checksum: 10/d9f15cc5f1c6a48a0127095a8f8b36d55bf28e858510962022fb5b29c345be4d3e737b25cae803175ffbf508aa40dc38404b2953cf6c5f7331ceb741ad5853ce
   languageName: node
   linkType: hard
 
@@ -6119,7 +6119,7 @@ __metadata:
     date-fns: "npm:3.6.0"
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.3"
-    eslint-plugin-formatjs: "npm:4.13.0"
+    eslint-plugin-formatjs: "npm:4.13.1"
     glyphhanger: "npm:5.0.0"
     husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
