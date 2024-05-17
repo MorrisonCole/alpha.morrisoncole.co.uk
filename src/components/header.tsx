@@ -2,12 +2,8 @@ import { styled } from "@pigment-css/react";
 import React from "react";
 import { SwitchLocaleButton } from "./locale/switch-locale-button";
 import Logo from "./logo";
-import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-
-const ThemeToggle = dynamic(() => import("../components/theme-toggle"), {
-  ssr: false,
-});
+import { ThemeToggle } from "./theme/theme-toggle";
 
 const HeaderContainer = styled.header`
   grid-area: header;

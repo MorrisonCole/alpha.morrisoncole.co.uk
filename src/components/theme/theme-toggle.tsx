@@ -29,10 +29,14 @@ const ToggleButton = styled.button(({ theme }) => ({
   },
 }));
 
-const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(
-    document.documentElement.dataset.theme,
-  );
+export const ThemeToggle = () => {
+  const [activeTheme, setActiveTheme] = useState(() => {
+    if (typeof document !== "undefined") {
+      return document.documentElement.dataset.theme || "light";
+    }
+    return "light";
+  });
+
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
@@ -51,5 +55,3 @@ const ThemeToggle = () => {
     </ToggleButton>
   );
 };
-
-export default ThemeToggle;
