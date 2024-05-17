@@ -4,6 +4,8 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, params: { locale } }: LayoutProps) {
+  const defaultTheme = "light";
+
   const setColorsByTheme = `
       function getUserPreference() {
         if (window.localStorage.getItem("theme")) {
@@ -16,7 +18,7 @@ export default function Layout({ children, params: { locale } }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={locale}>
+    <html lang={locale} data-theme={defaultTheme}>
       <head>
         <link
           rel="preload"
