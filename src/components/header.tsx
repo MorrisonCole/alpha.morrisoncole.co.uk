@@ -1,6 +1,6 @@
 import { styled } from "@pigment-css/react";
 import React from "react";
-import { SwitchLocaleButton } from "./switch-locale-button";
+import { SwitchLocaleButton } from "./locale/switch-locale-button";
 import Logo from "./logo";
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";

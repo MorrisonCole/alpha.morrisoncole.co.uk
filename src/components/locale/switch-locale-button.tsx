@@ -3,21 +3,7 @@
 import React, { useTransition } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
-
-// const Button = styled.button`
-//   border-radius: 3px;
-//   padding: 0.5rem;
-//   background: hsla(0, 0%, 25%, 0.6);
-//   color: hsl(0, 0%, 100%);
-//   border: 2px solid white;
-//   margin-left: 1.5rem;
-//   margin-top: 1.5rem;
-//   min-width: max-content;
-
-//   &:hover {
-//     filter: brightness(1.2);
-//   }
-// `;
+import { LocaleButton } from "./locale-button";
 
 interface SwitchLocaleButtonProps {
   label: string;
@@ -36,8 +22,8 @@ export const SwitchLocaleButton = ({ label }: SwitchLocaleButtonProps) => {
   };
 
   return (
-    <button disabled={isPending} onClick={handleClick}>
+    <LocaleButton disabled={isPending} onClick={handleClick}>
       {label}
-    </button>
+    </LocaleButton>
   );
 };
