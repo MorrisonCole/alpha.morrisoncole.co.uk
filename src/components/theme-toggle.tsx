@@ -1,32 +1,33 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { styled } from "@pigment-css/react";
+import { keyframes, styled } from "@pigment-css/react";
 
-const ToggleButton = styled.button`
-  border-radius: 3px;
-  padding: 0.5rem;
-  background: hsla(0, 0%, 25%, 0.6);
-  color: hsl(0, 0%, 100%);
-  border: 2px solid white;
-  margin-left: ${(props) => props.theme.spacing[4]};
-  margin-top: ${(props) => props.theme.spacing[4]};
-  max-width: min-content;
-  align-self: flex-end;
-  animation: fade-in 0.8s forwards;
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
   }
-
-  &:hover {
-    filter: brightness(1.2);
+  to {
+    opacity: 1;
   }
 `;
+
+const ToggleButton = styled.button(({ theme }) => ({
+  borderRadius: "3px",
+  padding: "0.5rem",
+  background: "hsla(0, 0%, 25%, 0.6)",
+  color: "hsl(0, 0%, 100%)",
+  border: "2px solid white",
+  marginLeft: theme.spacing[4],
+  marginTop: theme.spacing[4],
+  maxWidth: "min-content",
+  alignSelf: "flex-end",
+  animation: `${fadeIn} 0.8s forwards`,
+
+  "&:hover": {
+    filter: "brightness(1.2)",
+  },
+}));
 
 const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState(
