@@ -1,20 +1,12 @@
 import React from "react";
 import { styled } from "@pigment-css/react";
-import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { Layout } from "@/components/layout";
+import { Locale } from "../i18n-config";
+import { getDictionary } from "../get-dictionary";
+import { Dictionary } from "../../../types/intl";
 
 type Props = {
-  params: { locale: string };
-};
-
-export const generateMetadata = async ({ params: { locale } }: Props) => {
-  const translations = await getTranslations({ locale, namespace: "home" });
-
-  return {
-    title: translations("title"),
-    description: translations("description"),
-  };
+  params: { lang: Locale };
 };
 
 const Title = styled.h1`
@@ -49,15 +41,12 @@ const Japanese = styled.p`
     sans-serif;
 `;
 
-const Home = ({ params: { locale } }: Props) => {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
-
-  const translations = useTranslations("home");
+const Home = async ({ params: { lang } }: Props) => {
+  const dictionary: Dictionary = await getDictionary(lang);
 
   return (
-    <Layout>
-      <Title>{translations("header")}</Title>
+    <Layout lang={lang}>
+      <Title>{dictionary.home.header}</Title>
       <p>
         I&apos;m <Bold>bold.</Bold>
       </p>

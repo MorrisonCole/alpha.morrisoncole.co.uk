@@ -1,24 +1,31 @@
 "use client";
 
 import React, { useTransition } from "react";
-import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/navigation";
 import { LocaleButton } from "./locale-button";
+import { Locale } from "@/app/i18n-config";
+import { usePathname, useRouter } from "next/navigation";
 
 interface SwitchLocaleButtonProps {
   label: string;
+  locale: Locale;
 }
 
-export const SwitchLocaleButton = ({ label }: SwitchLocaleButtonProps) => {
+export const SwitchLocaleButton = ({
+  label,
+  locale,
+}: SwitchLocaleButtonProps) => {
   const [isPending, startTransition] = useTransition();
-  const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
+  const pathName = usePathname();
 
   const targetLocale = locale === "ja" ? "en" : "ja";
 
   const handleClick = () => {
-    startTransition(() => router.replace(pathname, { locale: targetLocale }));
+    const segments = pathName.split("/");
+    segments[1] = targetLocale;
+    const newPath = segments.join("/");
+
+    startTransition(() => router.replace(newPath));
   };
 
   return (

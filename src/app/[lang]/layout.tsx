@@ -1,9 +1,15 @@
+import { Locale, i18n } from "../i18n-config";
+
+export const generateStaticParams = () => {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+};
+
 interface LayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { lang: Locale };
 }
 
-export default function Layout({ children, params: { locale } }: LayoutProps) {
+export default function Layout({ children, params: { lang } }: LayoutProps) {
   const defaultTheme = "light";
 
   const setColorsByTheme = `
@@ -18,7 +24,7 @@ export default function Layout({ children, params: { locale } }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={locale} data-theme={defaultTheme}>
+    <html lang={lang} data-theme={defaultTheme}>
       <head>
         <link
           rel="preload"

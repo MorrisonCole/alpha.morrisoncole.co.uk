@@ -1,9 +1,11 @@
-import { styled } from "@pigment-css/react";
 import React from "react";
+import { styled } from "@pigment-css/react";
 import { SwitchLocaleButton } from "./locale/switch-locale-button";
 import Logo from "./logo";
-import { useTranslations } from "next-intl";
 import { ThemeToggle } from "./theme/theme-toggle";
+import { Locale } from "@/app/i18n-config";
+import { getDictionary } from "@/app/get-dictionary";
+import { Dictionary } from "../../types/intl";
 
 const HeaderContainer = styled.header`
   grid-area: header;
@@ -18,14 +20,17 @@ const ButtonContainer = styled.div`
   width: min-content;
 `;
 
-export const Header = () => {
-  const translations = useTranslations("misc");
+export const Header = async ({ lang }: { lang: Locale }) => {
+  const dictionary: Dictionary = await getDictionary(lang);
 
   return (
     <HeaderContainer role="banner">
       <Logo />
       <ButtonContainer>
-        <SwitchLocaleButton label={translations("switchLanguage")} />
+        <SwitchLocaleButton
+          label={dictionary.misc.switchLanguage}
+          locale={lang}
+        />
         <ThemeToggle />
       </ButtonContainer>
     </HeaderContainer>

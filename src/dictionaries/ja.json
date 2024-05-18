@@ -6,5 +6,9 @@
   },
   "misc": {
     "switchLanguage": "English"
+  },
+  "notFound": {
+    "title": "見つかりません",
+    "description": "おやおや、探検家さん！残念ながら、ここにはページがありません。"
   }
 }

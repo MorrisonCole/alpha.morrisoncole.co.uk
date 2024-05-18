@@ -1,8 +1,9 @@
+import "@pigment-css/react/styles.css";
 import React from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
-import "@pigment-css/react/styles.css";
 import { styled } from "@pigment-css/react";
+import { Locale } from "@/app/i18n-config";
 
 const Grid = styled.span`
   min-height: 100%;
@@ -19,9 +20,15 @@ const Content = styled.main`
   grid-area: content;
 `;
 
-export const Layout = ({ children }: { children: React.ReactNode }) => (
+export const Layout = ({
+  lang,
+  children,
+}: {
+  lang: Locale;
+  children: React.ReactNode;
+}) => (
   <Grid>
-    <Header />
+    <Header lang={lang} />
     <Content role="main">{children}</Content>
     <Footer />
   </Grid>

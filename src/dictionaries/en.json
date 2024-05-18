@@ -6,5 +6,9 @@
   },
   "misc": {
     "switchLanguage": "日本語"
+  },
+  "notFound": {
+    "title": "Not Found",
+    "description": "Oh you explorer you! Unfortunately, there's no page here."
   }
 }
