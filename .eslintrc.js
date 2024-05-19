@@ -4,15 +4,8 @@ module.exports = {
     project: "./tsconfig.eslint.json",
     tsconfigRootDir: __dirname,
   },
-  plugins: ["@typescript-eslint", "formatjs"],
+  plugins: ["@typescript-eslint"],
   rules: {
-    "formatjs/enforce-default-message": ["error", "literal"],
-    "formatjs/enforce-id": [
-      "error",
-      {
-        idInterpolationPattern: "[sha512:contenthash:base64:6]",
-      },
-    ],
     "func-style": ["error", "expression"],
   },
   overrides: [
