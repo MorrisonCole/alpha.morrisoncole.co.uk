@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "コール　モリソン ー アルファ",
+    "description": "作業中です。",
+    "header": "こんにちは、世界"
+  },
+  "misc": {
+    "switchLanguage": "English"
+  },
+  "notFound": {
+    "title": "見つかりません",
+    "description": "おやおや、探検家さん！残念ながら、ここにはページがありません。"
+  }
+}
