@@ -43,10 +43,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:lighthouse": "lhci autorun",
-    "fonts": "glyphhanger http://localhost:3000/ --spider --family='Noto Sans' --subset='*.ttf' --formats=woff2 --css",
-    "get-fonts": "ts-node -T scripts/get-fonts.ts",
     "upgrade": "yarn set version latest",
     "postinstall": "husky install"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.2.2"
 }

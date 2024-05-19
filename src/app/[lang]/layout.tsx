@@ -1,4 +1,8 @@
 import { Locale, i18n } from "../i18n-config";
+import { Noto_Sans, Noto_Sans_JP } from "next/font/google";
+
+const notoSans = Noto_Sans({ subsets: ["latin"] });
+const notoSansJp = Noto_Sans_JP({ preload: false });
 
 export const generateStaticParams = () => {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -25,37 +29,9 @@ export default function Layout({ children, params: { lang } }: LayoutProps) {
     `;
   return (
     <html lang={lang} data-theme={defaultTheme}>
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/NotoSans-Regular-subset.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NotoSans-Bold-subset.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NotoSans-Italic-subset.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NotoSans-BoldItalic-subset.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body>
+      <body
+        className={`${lang === "en" ? notoSans.className : notoSansJp.className}`}
+      >
         <script dangerouslySetInnerHTML={{ __html: setColorsByTheme }} />
         {children}
       </body>
