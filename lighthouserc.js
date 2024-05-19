@@ -17,6 +17,8 @@ module.exports = {
         "csp-xss": "warn",
         "is-crawlable": "warn",
         "total-byte-weight": "warn",
+        "unused-javascript": "warn",
+        "unused-css-rules": "warn",
       },
     },
   },
