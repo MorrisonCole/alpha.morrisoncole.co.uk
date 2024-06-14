@@ -859,9 +859,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:14.2.3":
-  version: 14.2.3
-  resolution: "@next/mdx@npm:14.2.3"
+"@next/mdx@npm:14.2.4":
+  version: 14.2.4
+  resolution: "@next/mdx@npm:14.2.4"
   dependencies:
     source-map: "npm:^0.7.0"
   peerDependencies:
@@ -872,7 +872,7 @@ __metadata:
       optional: true
     "@mdx-js/react":
       optional: true
-  checksum: 10/37e8b7a5189ce035cd5cacc153ad808ed99157aa5cc48bdaa2e566be671fd383ba486241240e84b02fe232749c0ab9747beba2b0708bafe2ca0c1957641b4b16
+  checksum: 10/398287f4b6fa1a372b9559801ca2700183175e2227ce774823de695f4cff2560ede7985ca3f9bc61312b5603fa24a37ffe975b681fb3a57bc45eaec3e3098c5b
   languageName: node
   linkType: hard
 
@@ -6256,7 +6256,7 @@ __metadata:
     "@lhci/cli": "npm:0.13.0"
     "@mdx-js/loader": "npm:3.0.1"
     "@mdx-js/react": "npm:3.0.1"
-    "@next/mdx": "npm:14.2.3"
+    "@next/mdx": "npm:14.2.4"
     "@pigment-css/nextjs-plugin": "npm:0.0.14"
     "@pigment-css/react": "npm:0.0.13"
     "@types/css": "npm:0.0.37"
