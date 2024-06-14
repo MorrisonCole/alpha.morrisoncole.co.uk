@@ -988,14 +988,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/nextjs-plugin@npm:0.0.13":
-  version: 0.0.13
-  resolution: "@pigment-css/nextjs-plugin@npm:0.0.13"
+"@pigment-css/nextjs-plugin@npm:0.0.14":
+  version: 0.0.14
+  resolution: "@pigment-css/nextjs-plugin@npm:0.0.14"
   dependencies:
-    "@pigment-css/unplugin": "npm:^0.0.13"
+    "@pigment-css/unplugin": "npm:^0.0.14"
   peerDependencies:
     next: ^12.0.0 || ^13.0.0 || ^14.0.0
-  checksum: 10/2c2798855acaa7b01efd251aac01aaf1053cb81de006a6ed1dafc07dc85de4c8e9cd568b071c698751da468153513969d2cbf6ec43a4b12f9dc9d1fe153ada81
+  checksum: 10/d80546765625774d2429b26fb8a75e93d89357552ab3bae0563e315e8bb3f6996661848d727b5e4eb53dc47df70905665f38a8c55e239db79aafbf0405804ebd
   languageName: node
   linkType: hard
 
@@ -1030,9 +1030,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/unplugin@npm:^0.0.13":
-  version: 0.0.13
-  resolution: "@pigment-css/unplugin@npm:0.0.13"
+"@pigment-css/unplugin@npm:^0.0.14":
+  version: 0.0.14
+  resolution: "@pigment-css/unplugin@npm:0.0.14"
   dependencies:
     "@babel/core": "npm:^7.24.4"
     "@pigment-css/react": "npm:^0.0.13"
@@ -1040,7 +1040,7 @@ __metadata:
     "@wyw-in-js/transform": "npm:^0.5.3"
     babel-plugin-define-var: "npm:^0.1.0"
     unplugin: "npm:^1.7.1"
-  checksum: 10/4da63a0b8b63d498e901c5d0c04251325456b1e1e9495293381aa26a7874b67854daedd2fe42bb2c8482c9cd8a56ccbb40b550e08c9e279841357eb0efae7b87
+  checksum: 10/f7e26502e9fd11d1e0ee337dbfcd2a6564bf8645bbbac47de139b4371745ccd6e60d1c385357927e27eebe0254c9cd9e3e76673e286505296ce97dd62f804d47
   languageName: node
   linkType: hard
 
@@ -6257,7 +6257,7 @@ __metadata:
     "@mdx-js/loader": "npm:3.0.1"
     "@mdx-js/react": "npm:3.0.1"
     "@next/mdx": "npm:14.2.3"
-    "@pigment-css/nextjs-plugin": "npm:0.0.13"
+    "@pigment-css/nextjs-plugin": "npm:0.0.14"
     "@pigment-css/react": "npm:0.0.13"
     "@types/css": "npm:0.0.37"
     "@types/mdx": "npm:2.0.13"
