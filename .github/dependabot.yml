@@ -10,9 +10,6 @@ updates:
     schedule:
       interval: "daily"
     versioning-strategy: "increase"
-    ignore:
-      - dependency-name: "eslint"
-        versions: ["^9.0.0"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
