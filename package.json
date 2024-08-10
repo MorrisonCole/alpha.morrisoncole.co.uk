@@ -15,7 +15,7 @@
     "typescript": "5.5.4"
   },
   "devDependencies": {
-    "@lhci/cli": "0.13.0",
+    "@lhci/cli": "0.14.0",
     "@pigment-css/nextjs-plugin": "0.0.14",
     "@types/css": "0.0.37",
     "@types/mdx": "2.0.13",
