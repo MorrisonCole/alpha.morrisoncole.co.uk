@@ -1,28 +1,30 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    // NextJS Defaults
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
-    "noEmit": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    },
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "resolveJsonModule": true,
-    "skipLibCheck": false,
-    "strict": true
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    // Customized
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -30,5 +32,6 @@
     ".next/types/**/*.ts",
     "scripts",
     "**/*.d.ts"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
