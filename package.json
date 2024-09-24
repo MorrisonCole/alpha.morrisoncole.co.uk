@@ -6,7 +6,7 @@
     "@mdx-js/loader": "3.0.1",
     "@mdx-js/react": "3.0.1",
     "@next/mdx": "14.2.12",
-    "@pigment-css/react": "0.0.22",
+    "@pigment-css/react": "0.0.23",
     "date-fns": "3.6.0",
     "negotiator": "0.6.3",
     "next": "14.2.13",
