@@ -1216,10 +1216,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/css@npm:0.0.37":
-  version: 0.0.37
-  resolution: "@types/css@npm:0.0.37"
-  checksum: 10/c17cf1a74f65d8d658d7691ab81e08de301860bce4ce27409b1925125e3e5a0e7f842adfdf816c23b8863b3815f47521d8a4588683c6920028f3408b596e3eeb
+"@types/css@npm:0.0.38":
+  version: 0.0.38
+  resolution: "@types/css@npm:0.0.38"
+  checksum: 10/1bfac6b89579d620990422ea4049f3e846577084e5db8563fe123a6a759cb2c7334f37794a16e3db1c7d8b4d91b7a1397b5ce01c9d149dd52089935e876ca5a3
   languageName: node
   linkType: hard
 
@@ -6319,7 +6319,7 @@ __metadata:
     "@next/mdx": "npm:14.2.13"
     "@pigment-css/nextjs-plugin": "npm:0.0.24"
     "@pigment-css/react": "npm:0.0.23"
-    "@types/css": "npm:0.0.37"
+    "@types/css": "npm:0.0.38"
     "@types/mdx": "npm:2.0.13"
     "@types/negotiator": "npm:0.6.3"
     "@types/node": "npm:22.7.4"
