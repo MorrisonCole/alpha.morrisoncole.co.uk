@@ -6216,6 +6216,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"negotiator@npm:1.0.0":
+  version: 1.0.0
+  resolution: "negotiator@npm:1.0.0"
+  checksum: 10/b5734e87295324fabf868e36fb97c84b7d7f3156ec5f4ee5bf6e488079c11054f818290fc33804cef7b1ee21f55eeb14caea83e7dafae6492a409b3e573153e5
+  languageName: node
+  linkType: hard
+
 "netmask@npm:^2.0.2":
   version: 2.0.2
   resolution: "netmask@npm:2.0.2"
@@ -6303,7 +6310,7 @@ __metadata:
     eslint-config-next: "npm:14.2.15"
     husky: "npm:9.1.6"
     lint-staged: "npm:15.2.10"
-    negotiator: "npm:0.6.3"
+    negotiator: "npm:1.0.0"
     next: "npm:14.2.15"
     prettier: "npm:3.3.3"
     react: "npm:18.3.1"
