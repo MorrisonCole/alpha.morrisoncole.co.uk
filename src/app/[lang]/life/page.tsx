@@ -4,7 +4,7 @@ import { LifeCalendar } from "@/components/life-calendar/life-calendar";
 // import { styled } from "@pigment-css/react";
 
 type Props = {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 };
 
 // const StyledLifeCalendar = styled(LifeCalendar)`
@@ -12,7 +12,11 @@ type Props = {
 //   padding-bottom: 16px;
 // `;
 
-const Home = ({ params: { lang } }: Props) => {
+const Home = async (props: Props) => {
+  const params = await props.params;
+
+  const { lang } = params;
+
   return (
     <Layout lang={lang}>
       <LifeCalendar />

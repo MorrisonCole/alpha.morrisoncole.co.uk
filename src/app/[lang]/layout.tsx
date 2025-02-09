@@ -10,10 +10,16 @@ export const generateStaticParams = () => {
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }
 
-export default function Layout({ children, params: { lang } }: LayoutProps) {
+export default async function Layout(props: LayoutProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
+  const { children } = props;
+
   const defaultTheme = "light";
 
   const setColorsByTheme = `
