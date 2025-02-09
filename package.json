@@ -11,8 +11,7 @@
     "negotiator": "0.6.3",
     "next": "15.1.6",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "typescript": "5.6.3"
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@lhci/cli": "0.14.0",
@@ -27,9 +26,9 @@
     "@typescript-eslint/parser": "7.18.0",
     "eslint": "8.57.1",
     "eslint-config-next": "15.1.6",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "lint-staged": "15.4.3",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
   },
