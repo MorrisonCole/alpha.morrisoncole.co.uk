@@ -13,12 +13,8 @@ interface LayoutProps {
   params: Promise<{ lang: Locale }>;
 }
 
-export default async function Layout(props: LayoutProps) {
-  const params = await props.params;
-
-  const { lang } = params;
-
-  const { children } = props;
+export default async function Layout({ params, children }: LayoutProps) {
+  const { lang } = await params;
 
   const defaultTheme = "light";
 
