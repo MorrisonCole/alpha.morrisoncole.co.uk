@@ -12,10 +12,8 @@ type Props = {
 //   padding-bottom: 16px;
 // `;
 
-const Home = async (props: Props) => {
-  const params = await props.params;
-
-  const { lang } = params;
+const Home = async ({ params }: Props) => {
+  const { lang } = await params;
 
   return (
     <Layout lang={lang}>

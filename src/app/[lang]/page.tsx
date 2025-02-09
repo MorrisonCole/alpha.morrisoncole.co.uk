@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout";
 import { Locale } from "../i18n-config";
 import { getDictionary } from "../get-dictionary";
 import { Dictionary } from "../../../types/intl";
+import type { Metadata } from "next/types";
 
 type Props = {
   params: Promise<{ lang: Locale }>;
@@ -40,6 +41,18 @@ const Japanese = styled.p`
     "Helvetica Neue",
     sans-serif;
 `;
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const { lang } = await params;
+  const dictionary: Dictionary = await getDictionary(lang);
+
+  return {
+    title: dictionary.home.title,
+    description: dictionary.home.description,
+  };
+};
 
 const Home = async ({ params }: Props) => {
   const { lang } = await params;
