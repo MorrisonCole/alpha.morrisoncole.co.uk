@@ -33,7 +33,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.23.5, @babel/core@npm:^7.24.4":
+"@babel/core@npm:^7.23.5, @babel/core@npm:^7.24.4, @babel/core@npm:^7.26.0":
   version: 7.26.9
   resolution: "@babel/core@npm:7.26.9"
   dependencies:
@@ -143,7 +143,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.24.4, @babel/parser@npm:^7.26.9":
+"@babel/parser@npm:^7.24.4, @babel/parser@npm:^7.26.2, @babel/parser@npm:^7.26.9":
   version: 7.26.9
   resolution: "@babel/parser@npm:7.26.9"
   dependencies:
@@ -201,7 +201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.23.5, @babel/types@npm:^7.24.0, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.9":
+"@babel/types@npm:^7.23.5, @babel/types@npm:^7.24.0, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.26.9":
   version: 7.26.9
   resolution: "@babel/types@npm:7.26.9"
   dependencies:
@@ -252,7 +252,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css@npm:^11.11.2":
+"@emotion/css@npm:^11.11.2, @emotion/css@npm:^11.13.4":
   version: 11.13.5
   resolution: "@emotion/css@npm:11.13.5"
   dependencies:
@@ -272,7 +272,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:^1.2.2, @emotion/is-prop-valid@npm:^1.3.0":
+"@emotion/is-prop-valid@npm:^1.2.2, @emotion/is-prop-valid@npm:^1.3.0, @emotion/is-prop-valid@npm:^1.3.1":
   version: 1.3.1
   resolution: "@emotion/is-prop-valid@npm:1.3.1"
   dependencies:
@@ -288,7 +288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.11.4":
+"@emotion/react@npm:^11.11.4, @emotion/react@npm:^11.13.3":
   version: 11.14.0
   resolution: "@emotion/react@npm:11.14.0"
   dependencies:
@@ -309,7 +309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/serialize@npm:^1.1.4, @emotion/serialize@npm:^1.3.3":
+"@emotion/serialize@npm:^1.1.4, @emotion/serialize@npm:^1.3.2, @emotion/serialize@npm:^1.3.3":
   version: 1.3.3
   resolution: "@emotion/serialize@npm:1.3.3"
   dependencies:
@@ -329,7 +329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.11.5":
+"@emotion/styled@npm:^11.11.5, @emotion/styled@npm:^11.13.0":
   version: 11.14.0
   resolution: "@emotion/styled@npm:11.14.0"
   dependencies:
@@ -910,7 +910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^6.0.0-alpha.6":
+"@mui/system@npm:^6.0.0-alpha.6, @mui/system@npm:^6.1.6":
   version: 6.4.3
   resolution: "@mui/system@npm:6.4.3"
   dependencies:
@@ -950,7 +950,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/utils@npm:^6.0.0-alpha.6, @mui/utils@npm:^6.4.3":
+"@mui/utils@npm:^6.0.0-alpha.6, @mui/utils@npm:^6.1.6, @mui/utils@npm:^6.4.3":
   version: 6.4.3
   resolution: "@mui/utils@npm:6.4.3"
   dependencies:
@@ -1100,18 +1100,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/nextjs-plugin@npm:0.0.24":
-  version: 0.0.24
-  resolution: "@pigment-css/nextjs-plugin@npm:0.0.24"
+"@pigment-css/nextjs-plugin@npm:0.0.30":
+  version: 0.0.30
+  resolution: "@pigment-css/nextjs-plugin@npm:0.0.30"
   dependencies:
-    "@pigment-css/unplugin": "npm:^0.0.24"
+    "@pigment-css/unplugin": "npm:^0.0.30"
   peerDependencies:
-    next: ^12.0.0 || ^13.0.0 || ^14.0.0
-  checksum: 10/2ade7a1be95de4b70da47ff69a70206cd62963f59b72212beca0c79758d7a13bbfa68b0a4d766182e6840f3b501fe22f6e4bd5a0b5565f4e4070fc23e07af8c4
+    next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
+  checksum: 10/251c92d1aaf2cb5ccb087f7374240496762398d178183b5b79cf616144edcecf67f7c61cb28dbaf963f51797e6771a3810b6b904e179e691c7a632f7f2677bdc
   languageName: node
   linkType: hard
 
-"@pigment-css/react@npm:0.0.24, @pigment-css/react@npm:^0.0.24":
+"@pigment-css/react@npm:0.0.24":
   version: 0.0.24
   resolution: "@pigment-css/react@npm:0.0.24"
   dependencies:
@@ -1142,17 +1142,49 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/unplugin@npm:^0.0.24":
-  version: 0.0.24
-  resolution: "@pigment-css/unplugin@npm:0.0.24"
+"@pigment-css/react@npm:^0.0.30":
+  version: 0.0.30
+  resolution: "@pigment-css/react@npm:0.0.30"
   dependencies:
-    "@babel/core": "npm:^7.24.4"
-    "@pigment-css/react": "npm:^0.0.24"
-    "@wyw-in-js/shared": "npm:^0.5.4"
-    "@wyw-in-js/transform": "npm:^0.5.4"
+    "@babel/core": "npm:^7.26.0"
+    "@babel/helper-module-imports": "npm:^7.25.9"
+    "@babel/helper-plugin-utils": "npm:^7.25.9"
+    "@babel/parser": "npm:^7.26.2"
+    "@babel/types": "npm:^7.26.0"
+    "@emotion/css": "npm:^11.13.4"
+    "@emotion/is-prop-valid": "npm:^1.3.1"
+    "@emotion/react": "npm:^11.13.3"
+    "@emotion/serialize": "npm:^1.3.2"
+    "@emotion/styled": "npm:^11.13.0"
+    "@mui/system": "npm:^6.1.6"
+    "@mui/utils": "npm:^6.1.6"
+    "@wyw-in-js/processor-utils": "npm:^0.5.5"
+    "@wyw-in-js/shared": "npm:^0.5.5"
+    "@wyw-in-js/transform": "npm:^0.5.5"
+    clsx: "npm:^2.1.1"
+    cssesc: "npm:^3.0.0"
+    csstype: "npm:^3.1.3"
+    lodash: "npm:^4.17.21"
+    prop-types: "npm:^15.8.1"
+    stylis: "npm:^4.3.4"
+    stylis-plugin-rtl: "npm:^2.1.1"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/c6a489405afe4eae13fd27fbb787ac5bedb7fb6a0ce580c198bee08588666c9b2fc23fa51ff315d179e6c6709421a703f2e6781383b62995e8337c88a3af2d41
+  languageName: node
+  linkType: hard
+
+"@pigment-css/unplugin@npm:^0.0.30":
+  version: 0.0.30
+  resolution: "@pigment-css/unplugin@npm:0.0.30"
+  dependencies:
+    "@babel/core": "npm:^7.26.0"
+    "@pigment-css/react": "npm:^0.0.30"
+    "@wyw-in-js/shared": "npm:^0.5.5"
+    "@wyw-in-js/transform": "npm:^0.5.5"
     babel-plugin-define-var: "npm:^0.1.0"
-    unplugin: "npm:^1.7.1"
-  checksum: 10/f7a3383ddaf0a4e3143bbad1636bd5d7c7c1ab133c94db4e0dff55b4413642bc37d598e0f7471f5bd32f2a98f8e4243c123ac4742cf6a6851ad3999bda0f7f5c
+    unplugin: "npm:^1.15.0"
+  checksum: 10/d866191b26157c93a777f937eb13df425776d4ff74f839a2f320a42cd9f994f7ce9a1faf106a093b2a91ffa0d9a52f0dc1c57eaacf450482e8c5ca13f0e2113f
   languageName: node
   linkType: hard
 
@@ -1565,7 +1597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/processor-utils@npm:0.5.5, @wyw-in-js/processor-utils@npm:^0.5.4":
+"@wyw-in-js/processor-utils@npm:0.5.5, @wyw-in-js/processor-utils@npm:^0.5.4, @wyw-in-js/processor-utils@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/processor-utils@npm:0.5.5"
   dependencies:
@@ -1575,7 +1607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/shared@npm:0.5.5, @wyw-in-js/shared@npm:^0.5.4":
+"@wyw-in-js/shared@npm:0.5.5, @wyw-in-js/shared@npm:^0.5.4, @wyw-in-js/shared@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/shared@npm:0.5.5"
   dependencies:
@@ -1586,7 +1618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/transform@npm:^0.5.4":
+"@wyw-in-js/transform@npm:^0.5.4, @wyw-in-js/transform@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/transform@npm:0.5.5"
   dependencies:
@@ -5957,7 +5989,7 @@ __metadata:
     "@mdx-js/loader": "npm:3.1.0"
     "@mdx-js/react": "npm:3.1.0"
     "@next/mdx": "npm:15.1.7"
-    "@pigment-css/nextjs-plugin": "npm:0.0.24"
+    "@pigment-css/nextjs-plugin": "npm:0.0.30"
     "@pigment-css/react": "npm:0.0.24"
     "@types/css": "npm:0.0.38"
     "@types/mdx": "npm:2.0.13"
@@ -7591,7 +7623,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis@npm:^4.3.0, stylis@npm:^4.3.1":
+"stylis@npm:^4.3.0, stylis@npm:^4.3.1, stylis@npm:^4.3.4":
   version: 4.3.6
   resolution: "stylis@npm:4.3.6"
   checksum: 10/6ebe8a37827124e0caf0704c13d39c121f6e6a8433eb8c67cfce508477b24a4434d1731198ba0b6e453655022bbf5beda93585f38ff420545e5356f925f83761
@@ -8040,7 +8072,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin@npm:^1.7.1":
+"unplugin@npm:^1.15.0":
   version: 1.16.1
   resolution: "unplugin@npm:1.16.1"
   dependencies:
