@@ -1461,6 +1461,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/negotiator@npm:0.6.3":
+  version: 0.6.3
+  resolution: "@types/negotiator@npm:0.6.3"
+  checksum: 10/3ad4d92a5644a1c2cca2dc609ab19408501cac7cff31b0eb0c8b56ea8a1574e0493cb50a0784901a6f89160a224cf7df01b5c9b6e64754fc95a5e2502c553006
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*, @types/node@npm:22.7.6":
   version: 22.7.6
   resolution: "@types/node@npm:22.7.6"
@@ -6311,6 +6318,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"negotiator@npm:1.0.0":
+  version: 1.0.0
+  resolution: "negotiator@npm:1.0.0"
+  checksum: 10/b5734e87295324fabf868e36fb97c84b7d7f3156ec5f4ee5bf6e488079c11054f818290fc33804cef7b1ee21f55eeb14caea83e7dafae6492a409b3e573153e5
+  languageName: node
+  linkType: hard
+
 "netmask@npm:^2.0.2":
   version: 2.0.2
   resolution: "netmask@npm:2.0.2"
@@ -6392,6 +6406,7 @@ __metadata:
     "@pigment-css/react": "npm:0.0.24"
     "@types/css": "npm:0.0.38"
     "@types/mdx": "npm:2.0.13"
+    "@types/negotiator": "npm:0.6.3"
     "@types/node": "npm:22.7.6"
     "@types/react": "npm:19.0.8"
     "@types/react-dom": "npm:19.0.3"
@@ -6400,6 +6415,7 @@ __metadata:
     eslint-config-next: "npm:15.1.7"
     husky: "npm:9.1.7"
     lint-staged: "npm:15.4.3"
+    negotiator: "npm:1.0.0"
     next: "npm:15.1.6"
     prettier: "npm:3.5.1"
     react: "npm:19.0.0"
