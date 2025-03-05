@@ -39,7 +39,7 @@
     "upgrade": "yarn set version latest",
     "postinstall": "husky install"
   },
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "yarn@4.7.0",
   "resolutions": {
     "@types/react-dom": "19.0.4"
   }
