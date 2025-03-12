@@ -30,7 +30,7 @@ export default async function Layout({ params, children }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={lang} data-theme={defaultTheme}>
+    <html lang={lang} data-theme={defaultTheme} suppressHydrationWarning>
       <body
         className={`${lang === "en" ? notoSans.className : notoSansJp.className}`}
       >

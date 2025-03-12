@@ -30,19 +30,27 @@ const ToggleButton = styled.button(({ theme }) => ({
 }));
 
 export const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(() => {
-    if (typeof document !== "undefined") {
-      return document.documentElement.dataset.theme || "light";
-    }
-    return "light";
-  });
+  const [activeTheme, setActiveTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    const savedTheme = document.documentElement.dataset.theme || "light";
+    setActiveTheme(savedTheme);
+  }, []);
 
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    document.documentElement.dataset.theme = activeTheme;
-    window.localStorage.setItem("theme", activeTheme ?? "light");
+    if (activeTheme) {
+      document.documentElement.dataset.theme = activeTheme;
+      window.localStorage.setItem("theme", activeTheme);
+    }
   }, [activeTheme]);
+
+  if (activeTheme === null) {
+    return null;
+  }
+
+  const themeIcon = activeTheme === "light" ? "🌙" : "🌞";
 
   return (
     <ToggleButton
@@ -51,7 +59,7 @@ export const ThemeToggle = () => {
       type="button"
       onClick={() => setActiveTheme(inactiveTheme)}
     >
-      <span>🌙</span>
+      <span>{themeIcon}</span>
     </ToggleButton>
   );
 };
