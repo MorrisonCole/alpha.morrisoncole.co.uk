@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { keyframes, styled } from "@pigment-css/react";
+import { DEFAULT_THEME, isValidTheme, type Theme } from "./theme";
 
 const fadeIn = keyframes`
   from {
@@ -30,19 +31,32 @@ const ToggleButton = styled.button(({ theme }) => ({
 }));
 
 export const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState(() => {
-    if (typeof document !== "undefined") {
-      return document.documentElement.dataset.theme || "light";
+  const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
+
+  useEffect(() => {
+    const savedTheme = document.documentElement.dataset.theme;
+    if (isValidTheme(savedTheme)) {
+      setActiveTheme(savedTheme);
+    } else {
+      setActiveTheme(DEFAULT_THEME);
     }
-    return "light";
-  });
+  }, []);
 
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    document.documentElement.dataset.theme = activeTheme;
-    window.localStorage.setItem("theme", activeTheme ?? "light");
+    // Only save the theme preference if it was explicity set.
+    if (activeTheme && document.documentElement.dataset.theme !== activeTheme) {
+      document.documentElement.dataset.theme = activeTheme;
+      window.localStorage.setItem("theme", activeTheme);
+    }
   }, [activeTheme]);
+
+  if (activeTheme === null) {
+    return null;
+  }
+
+  const themeIcon = activeTheme === "light" ? "🌙" : "🌞";
 
   return (
     <ToggleButton
@@ -51,7 +65,7 @@ export const ThemeToggle = () => {
       type="button"
       onClick={() => setActiveTheme(inactiveTheme)}
     >
-      <span>🌙</span>
+      <span>{themeIcon}</span>
     </ToggleButton>
   );
 };

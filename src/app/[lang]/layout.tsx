@@ -1,3 +1,4 @@
+import { DEFAULT_THEME } from "@/components/theme/theme";
 import { Locale, i18n } from "../i18n-config";
 import { Noto_Sans, Noto_Sans_JP } from "next/font/google";
 
@@ -16,8 +17,6 @@ interface LayoutProps {
 export default async function Layout({ params, children }: LayoutProps) {
   const { lang } = await params;
 
-  const defaultTheme = "light";
-
   const setColorsByTheme = `
       function getUserPreference() {
         if (window.localStorage.getItem("theme")) {
@@ -30,7 +29,7 @@ export default async function Layout({ params, children }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={lang} data-theme={defaultTheme}>
+    <html lang={lang} data-theme={DEFAULT_THEME} suppressHydrationWarning>
       <body
         className={`${lang === "en" ? notoSans.className : notoSansJp.className}`}
       >
