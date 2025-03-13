@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { keyframes, styled } from "@pigment-css/react";
+import { DEFAULT_THEME, isValidTheme, type Theme } from "./theme";
 
 const fadeIn = keyframes`
   from {
@@ -30,17 +31,22 @@ const ToggleButton = styled.button(({ theme }) => ({
 }));
 
 export const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState<string | null>(null);
+  const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const savedTheme = document.documentElement.dataset.theme || "light";
-    setActiveTheme(savedTheme);
+    const savedTheme = document.documentElement.dataset.theme;
+    if (isValidTheme(savedTheme)) {
+      setActiveTheme(savedTheme);
+    } else {
+      setActiveTheme(DEFAULT_THEME);
+    }
   }, []);
 
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    if (activeTheme) {
+    // Only save the theme preference if it was explicity set.
+    if (activeTheme && document.documentElement.dataset.theme !== activeTheme) {
       document.documentElement.dataset.theme = activeTheme;
       window.localStorage.setItem("theme", activeTheme);
     }
