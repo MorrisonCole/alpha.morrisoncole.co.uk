@@ -1,7 +1,7 @@
 import { styled } from "@pigment-css/react";
 import React from "react";
 import Image from "next/image";
-import { Button } from "./components/button";
+import { Button } from "./components/button/button";
 import { MDXComponents } from "mdx/types";
 
 export const useMDXComponents = (components: MDXComponents): MDXComponents => {
