@@ -5,7 +5,7 @@
       "type": "npm",
       "script": "storybook",
       "problemMatcher": [],
-      "label": "npm: storybook",
+      "label": "storybook",
       "detail": "storybook dev -p 6006"
     }
   ]
