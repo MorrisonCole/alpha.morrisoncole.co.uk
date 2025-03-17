@@ -8,8 +8,14 @@ https://github.com/MorrisonCole/morrisoncole.co.uk.
 
 # Development
 
-1. Run `yarn`
-2. Run `yarn dev`
+## Requirements
+
+You'll need Node. Using `nvm` is recommended.
+
+1. `nvm use`
+2. `corepack enable`
+3. `yarn`
+4. `yarn dev`, etc.
 
 ## Yarn
 
