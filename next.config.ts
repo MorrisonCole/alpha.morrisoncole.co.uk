@@ -1,8 +1,8 @@
-import withMDX from "@next/mdx";
+import createMDX from "@next/mdx";
 import { withPigment } from "@pigment-css/nextjs-plugin";
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "mdx"],
   experimental: {
     mdxRs: true,
@@ -13,5 +13,7 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
 };
+
+const withMDX = createMDX();
 
 export default withPigment(withMDX(nextConfig));
