@@ -47,4 +47,5 @@ compiled-lang
 # JetBrains
 .idea/
 
+# Storybook
 *storybook.log
