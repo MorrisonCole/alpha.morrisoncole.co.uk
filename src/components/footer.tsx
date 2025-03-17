@@ -5,7 +5,7 @@ import { getYear } from "date-fns";
 const FooterContainer = styled.footer`
   grid-area: footer;
   background-color: hsl(0, 0%, 26%);
-  padding: ${(props) => props.theme.spacing[6]};
+  padding: var(--spacing-6);
 `;
 
 export const Footer = () => {

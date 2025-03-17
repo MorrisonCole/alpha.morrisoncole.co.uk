@@ -9,7 +9,7 @@ import { Dictionary } from "../../types/intl";
 
 const HeaderContainer = styled.header`
   grid-area: header;
-  padding: ${(props) => props.theme.spacing[4]};
+  padding: var(--spacing-4);
   display: flex;
   flex-direction: row;
 `;
