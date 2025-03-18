@@ -1,6 +1,6 @@
 export type Theme = "light" | "dark";
 
-export const isValidTheme = (theme?: string): theme is Theme => {
+export const isValidTheme = (theme?: string | null): theme is Theme => {
   switch (theme) {
     case "light":
     case "dark":

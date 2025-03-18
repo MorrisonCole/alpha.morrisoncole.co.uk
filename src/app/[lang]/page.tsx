@@ -5,6 +5,7 @@ import { Locale } from "../i18n-config";
 import { getDictionary } from "../get-dictionary";
 import { Dictionary } from "../../../types/intl";
 import type { Metadata } from "next/types";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ lang: Locale }>;
@@ -72,6 +73,10 @@ const Home = async ({ params }: Props) => {
       </p>
 
       <Japanese>日本語で書いてます。</Japanese>
+
+      <Link href="/blog">Blog</Link>
+
+      <Link href="/life">Life</Link>
     </Layout>
   );
 };

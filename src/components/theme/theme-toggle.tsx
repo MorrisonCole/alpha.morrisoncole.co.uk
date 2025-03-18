@@ -34,7 +34,7 @@ export const ThemeToggle = () => {
   const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const savedTheme = document.documentElement.dataset.theme;
+    const savedTheme = window.localStorage.getItem("theme");
     if (isValidTheme(savedTheme)) {
       setActiveTheme(savedTheme);
     } else {

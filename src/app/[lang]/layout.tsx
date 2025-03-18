@@ -1,4 +1,3 @@
-import { DEFAULT_THEME } from "@/components/theme/theme";
 import { Locale, i18n } from "../i18n-config";
 import { Noto_Sans, Noto_Sans_JP } from "next/font/google";
 
@@ -29,7 +28,7 @@ export default async function Layout({ params, children }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={lang} data-theme={DEFAULT_THEME} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${lang === "en" ? notoSans.className : notoSansJp.className}`}
       >

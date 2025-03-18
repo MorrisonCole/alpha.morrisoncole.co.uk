@@ -3,7 +3,7 @@
 import React, { useTransition } from "react";
 import { LocaleButton } from "./locale-button";
 import { Locale } from "@/app/i18n-config";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface SwitchLocaleButtonProps {
   label: string;
@@ -15,7 +15,6 @@ export const SwitchLocaleButton = ({
   locale,
 }: SwitchLocaleButtonProps) => {
   const [isPending, startTransition] = useTransition();
-  const router = useRouter();
   const pathName = usePathname();
 
   const targetLocale = locale === "ja" ? "en" : "ja";
@@ -25,7 +24,10 @@ export const SwitchLocaleButton = ({
     segments[1] = targetLocale;
     const newPath = segments.join("/");
 
-    startTransition(() => router.replace(newPath));
+    startTransition(() => {
+      // Force a full page reload so that we don't get a flash of unthemed content.
+      window.location.href = newPath;
+    });
   };
 
   return (
