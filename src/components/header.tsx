@@ -12,10 +12,16 @@ const HeaderContainer = styled.header`
   padding: var(--spacing-4);
   display: flex;
   flex-direction: row;
+  max-height: 300px;
+`;
+
+const StyledLogo = styled(Logo)`
+  flex: 6;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   width: min-content;
 `;
@@ -25,7 +31,7 @@ export const Header = async ({ lang }: { lang: Locale }) => {
 
   return (
     <HeaderContainer role="banner">
-      <Logo />
+      <StyledLogo />
       <ButtonContainer>
         <SwitchLocaleButton
           label={dictionary.misc.switchLanguage}

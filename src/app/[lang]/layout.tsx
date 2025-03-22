@@ -2,7 +2,7 @@ import { Locale, i18n } from "../i18n-config";
 import { Noto_Sans, Noto_Sans_JP } from "next/font/google";
 
 const notoSans = Noto_Sans({ subsets: ["latin"] });
-const notoSansJp = Noto_Sans_JP({ preload: false });
+const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const generateStaticParams = () => {
   return i18n.locales.map((locale) => ({ lang: locale }));

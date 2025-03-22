@@ -1,35 +1,33 @@
 import { styled } from "@pigment-css/react";
 import React from "react";
-import Image from "next/image";
+import NextImage from "next/image";
 import { Button } from "./components/button/button";
 import { MDXComponents } from "mdx/types";
+
+type ImageProps = Omit<
+  React.DetailedHTMLProps<
+    React.ImgHTMLAttributes<HTMLImageElement>,
+    HTMLImageElement
+  >,
+  "placeholder" | "ref"
+>;
+
+const Image = ({ alt, src, width, height, ...props }: ImageProps) => (
+  <NextImage
+    alt={alt ?? "Missing alt"}
+    src={src ?? "Missing"}
+    width={Number(width)}
+    height={Number(height)}
+    placeholder={"blur"}
+    fill
+    {...props}
+  />
+);
 
 export const useMDXComponents = (components: MDXComponents): MDXComponents => {
   return {
     Button: Button,
-    img: ({
-      alt,
-      src,
-      width,
-      height,
-      ...props
-    }: Omit<
-      React.DetailedHTMLProps<
-        React.ImgHTMLAttributes<HTMLImageElement>,
-        HTMLImageElement
-      >,
-      "placeholder" | "ref"
-    >) => (
-      <Image
-        alt={alt ?? "Missing alt"}
-        src={src ?? "Missing"}
-        width={Number(width)}
-        height={Number(height)}
-        placeholder={"blur"}
-        fill
-        {...props}
-      />
-    ),
+    img: Image,
     h1: styled.h1`
       color: hsl(0, 0%, 50%);
       font-size: 3em;
