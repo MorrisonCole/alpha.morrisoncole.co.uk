@@ -7,10 +7,6 @@ import { Dictionary } from "../../../types/intl";
 import type { Metadata } from "next/types";
 import Link from "next/link";
 
-type Props = {
-  params: Promise<{ lang: Locale }>;
-};
-
 const Title = styled.h1`
   font-size: 4rem;
 `;
@@ -43,9 +39,13 @@ const Japanese = styled.p`
     sans-serif;
 `;
 
+type HomeProps = {
+  params: Promise<{ lang: Locale }>;
+};
+
 export const generateMetadata = async ({
   params,
-}: Props): Promise<Metadata> => {
+}: HomeProps): Promise<Metadata> => {
   const { lang } = await params;
   const dictionary: Dictionary = await getDictionary(lang);
 
@@ -55,7 +55,7 @@ export const generateMetadata = async ({
   };
 };
 
-const Home = async ({ params }: Props) => {
+const Home = async ({ params }: HomeProps) => {
   const { lang } = await params;
   const dictionary: Dictionary = await getDictionary(lang);
 
