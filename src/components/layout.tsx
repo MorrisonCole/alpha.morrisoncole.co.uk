@@ -8,7 +8,7 @@ import { Locale } from "@/app/i18n-config";
 const Grid = styled.span`
   min-height: 100%;
   display: grid;
-  grid-template-columns: 3fr minmax(auto, 60rem) 3fr;
+  grid-template-columns: minmax(1rem, 3fr) minmax(auto, 60rem) minmax(1rem, 3fr);
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     ". header ."
