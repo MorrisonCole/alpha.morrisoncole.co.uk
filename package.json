@@ -57,7 +57,7 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.8.0",
   "resolutions": {
     "@types/react-dom": "19.0.4"
   }
