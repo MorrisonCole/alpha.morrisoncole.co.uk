@@ -2710,12 +2710,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.15.9":
-  version: 22.15.9
-  resolution: "@types/node@npm:22.15.9"
+"@types/node@npm:22.15.10":
+  version: 22.15.10
+  resolution: "@types/node@npm:22.15.10"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/99d7a2164bd6d484ce9f0e176ccf6dd0b7d4542a11130c87c94677428f5636d48c896099c9c9a072ac26f0d929d4f0cf92cbce1f0d84ae712ef623130329465c
+  checksum: 10/9b451ea4f9e2a568eb9fa354ff64f6235087f807611968e75c9405c40d453699ebc604838b1442dbd4e90ce78a2195c514b50692dfa4221cbfb42b05529596ec
   languageName: node
   linkType: hard
 
@@ -8567,7 +8567,7 @@ __metadata:
     "@types/css": "npm:0.0.38"
     "@types/mdx": "npm:2.0.13"
     "@types/negotiator": "npm:0.6.3"
-    "@types/node": "npm:22.15.9"
+    "@types/node": "npm:22.15.10"
     "@types/react": "npm:19.1.1"
     "@types/react-dom": "npm:19.1.2"
     "@vitest/browser": "npm:3.1.3"
