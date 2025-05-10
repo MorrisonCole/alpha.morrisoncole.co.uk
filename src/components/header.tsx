@@ -6,6 +6,8 @@ import { ThemeToggle } from "./theme/theme-toggle";
 import { Locale } from "@/app/i18n-config";
 import { getDictionary } from "@/app/get-dictionary";
 import { Dictionary } from "../../types/intl";
+import Image from "next/image";
+import profilePicture from "../../public/static/images/morrison-cole.jpg";
 
 const HeaderContainer = styled.header`
   grid-area: header;
@@ -16,14 +18,22 @@ const HeaderContainer = styled.header`
 `;
 
 const StyledLogo = styled(Logo)`
-  flex: 6;
+  flex: 7;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  flex: 1;
+const RightContainer = styled.div`
+  display: inline-flex;
+  flex: 2;
   flex-direction: column;
-  width: min-content;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ButtonsContainer = styled.div`
+  padding-top: var(--spacing-2);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-1);
 `;
 
 export const Header = async ({ lang }: { lang: Locale }) => {
@@ -32,13 +42,25 @@ export const Header = async ({ lang }: { lang: Locale }) => {
   return (
     <HeaderContainer role="banner">
       <StyledLogo />
-      <ButtonContainer>
-        <SwitchLocaleButton
-          label={dictionary.misc.switchLanguage}
-          locale={lang}
+      <RightContainer>
+        <Image
+          src={profilePicture}
+          alt="Morrison Cole's Profile Picture"
+          style={{
+            flex: 1,
+            maxWidth: "100%",
+            height: "auto",
+            borderRadius: "50%",
+          }}
         />
-        <ThemeToggle />
-      </ButtonContainer>
+        <ButtonsContainer>
+          <ThemeToggle />
+          <SwitchLocaleButton
+            label={dictionary.misc.switchLanguage}
+            locale={lang}
+          />
+        </ButtonsContainer>
+      </RightContainer>
     </HeaderContainer>
   );
 };
