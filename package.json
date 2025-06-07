@@ -29,7 +29,7 @@
     "@storybook/test": "8.6.14",
     "@types/css": "0.0.38",
     "@types/mdx": "2.0.13",
-    "@types/negotiator": "0.6.3",
+    "@types/negotiator": "0.6.4",
     "@types/node": "22.15.30",
     "@types/react": "19.1.1",
     "@types/react-dom": "19.1.2",
