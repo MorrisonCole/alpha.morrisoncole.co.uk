@@ -2772,21 +2772,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:19.1.2":
-  version: 19.1.2
-  resolution: "@types/react-dom@npm:19.1.2"
+"@types/react-dom@npm:19.1.6":
+  version: 19.1.6
+  resolution: "@types/react-dom@npm:19.1.6"
   peerDependencies:
     "@types/react": ^19.0.0
-  checksum: 10/bcadf2a1f4d23db8c1aaa0d13e30866d7bcda076801bbc66df14512932e0802ddac526bf15f4cce9777cd6e0bd3803aba47a1d726977f5193b4bc173348508d0
+  checksum: 10/b5b20b7f0797f34c5a11915b74dcf8b3b7a9da9fea90279975ce6f150ca5d31bb069dbb0838638a5e9e168098aa4bb4a6f61d078efa1bbb55d7f0bdfe47bb142
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.1.1":
-  version: 19.1.1
-  resolution: "@types/react@npm:19.1.1"
+"@types/react@npm:19.1.8":
+  version: 19.1.8
+  resolution: "@types/react@npm:19.1.8"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/f267c2a7afddd1f463bd4cf18553ddea132c609a6dc29938c5e83ae392c75e0acdbace2d03ad26178183b10da733e476324e2f25f48bd7fa6c232de708c35563
+  checksum: 10/a3e6fe0f60f22828ef887f30993aa147b71532d7b1219dd00d246277eb7a9ca01ec533096237fa21ca1bccb3653373b4e8e59e5ae59f9c793058384bbc1f4d5c
   languageName: node
   linkType: hard
 
@@ -8477,8 +8477,8 @@ __metadata:
     "@types/mdx": "npm:2.0.13"
     "@types/negotiator": "npm:0.6.4"
     "@types/node": "npm:22.15.31"
-    "@types/react": "npm:19.1.1"
-    "@types/react-dom": "npm:19.1.2"
+    "@types/react": "npm:19.1.8"
+    "@types/react-dom": "npm:19.1.6"
     "@vitest/browser": "npm:3.2.3"
     "@vitest/coverage-v8": "npm:3.2.3"
     date-fns: "npm:4.1.0"
