@@ -19,6 +19,7 @@ module.exports = {
         "total-byte-weight": "warn",
         "unused-javascript": "warn",
         "unused-css-rules": "warn",
+        "network-dependency-tree-insight": "warn",
       },
     },
   },
