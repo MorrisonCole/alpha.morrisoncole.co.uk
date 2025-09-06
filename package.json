@@ -41,7 +41,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.1.6",
     "playwright": "1.55.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "storybook": "9.0.6",
     "typescript": "5.9.2",
     "vitest": "3.2.4"
