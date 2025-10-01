@@ -7363,9 +7363,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:16.2.1":
-  version: 16.2.1
-  resolution: "lint-staged@npm:16.2.1"
+"lint-staged@npm:16.2.3":
+  version: 16.2.3
+  resolution: "lint-staged@npm:16.2.3"
   dependencies:
     commander: "npm:^14.0.1"
     listr2: "npm:^9.0.4"
@@ -7376,7 +7376,7 @@ __metadata:
     yaml: "npm:^2.8.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/b604de3ca27a067e45c5f0e0780ca46f5617e9f6ac3895297dee087d62742bbcd9f9e910300c15c599e1f06900666469b73e036e3fe3153ccedef314ce791dd5
+  checksum: 10/7c83cb478aa8004eecc8c91d633abe2865ffc037957ae9ee2669e49b76b76fe3512ba431277efc29cec7a38641e7d8a62f3378a41b624c88bde6fbef5524e2cb
   languageName: node
   linkType: hard
 
@@ -8513,7 +8513,7 @@ __metadata:
     eslint-config-next: "npm:15.5.2"
     eslint-plugin-storybook: "npm:9.0.7"
     husky: "npm:9.1.7"
-    lint-staged: "npm:16.2.1"
+    lint-staged: "npm:16.2.3"
     negotiator: "npm:1.0.0"
     next: "npm:15.4.7"
     playwright: "npm:1.55.1"
