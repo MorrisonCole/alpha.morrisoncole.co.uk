@@ -7392,20 +7392,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:16.2.3":
-  version: 16.2.3
-  resolution: "lint-staged@npm:16.2.3"
+"lint-staged@npm:16.2.5":
+  version: 16.2.5
+  resolution: "lint-staged@npm:16.2.5"
   dependencies:
     commander: "npm:^14.0.1"
     listr2: "npm:^9.0.4"
     micromatch: "npm:^4.0.8"
-    nano-spawn: "npm:^1.0.3"
+    nano-spawn: "npm:^2.0.0"
     pidtree: "npm:^0.6.0"
     string-argv: "npm:^0.3.2"
     yaml: "npm:^2.8.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/7c83cb478aa8004eecc8c91d633abe2865ffc037957ae9ee2669e49b76b76fe3512ba431277efc29cec7a38641e7d8a62f3378a41b624c88bde6fbef5524e2cb
+  checksum: 10/9a1019d2d95646bb7acb0a43ec1f89427f2066defa7fc89f82c71b25fdc55d1c16e1ac44afbed1440c37615c4bbaeafd687bfb0adf1a08ae5bc9d1015325ca88
   languageName: node
   linkType: hard
 
@@ -8381,10 +8381,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-spawn@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "nano-spawn@npm:1.0.3"
-  checksum: 10/72c56e68ae733c81c459a338fd51e2aa3be06b1cca746c2abe83df7acfac7eee008b01833f5a8781f4ac9fc1eafd23036a44755257a669dfcc2ff2453850822a
+"nano-spawn@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "nano-spawn@npm:2.0.0"
+  checksum: 10/117d35d7bd85b146908de5d3d1177d2b2ee3174e5d884d6bc9555583bf6e50a265f4038b5c134b7cdd768a10d53598ccde5c00d6f55e25e7eed31b86b8d29646
   languageName: node
   linkType: hard
 
@@ -8533,7 +8533,7 @@ __metadata:
     eslint-config-next: "npm:15.5.2"
     eslint-plugin-storybook: "npm:9.0.7"
     husky: "npm:9.1.7"
-    lint-staged: "npm:16.2.3"
+    lint-staged: "npm:16.2.5"
     negotiator: "npm:1.0.0"
     next: "npm:15.4.7"
     playwright: "npm:1.56.0"
