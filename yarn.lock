@@ -1608,18 +1608,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.5.2":
-  version: 15.5.2
-  resolution: "@next/eslint-plugin-next@npm:15.5.2"
+"@next/eslint-plugin-next@npm:15.5.12":
+  version: 15.5.12
+  resolution: "@next/eslint-plugin-next@npm:15.5.12"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/2c87039e3a70d96e7c3585d66610517ad424f3548e5f227085c49e55e0a21093642e43b15a765aec9b20a617aa21fc078ccf7fa6c32880d8182b2f64e27ee713
+  checksum: 10/bae967dbceb4ef567929ec9a2b0cd6f310024a80e6b5e0e86575e0ac88ab848360f31476b32c2a7f05eb22aeae9548dc44f0baf6c9a8c41fd435827f336d95c3
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:15.5.2":
-  version: 15.5.2
-  resolution: "@next/mdx@npm:15.5.2"
+"@next/mdx@npm:15.5.12":
+  version: 15.5.12
+  resolution: "@next/mdx@npm:15.5.12"
   dependencies:
     source-map: "npm:^0.7.0"
   peerDependencies:
@@ -1630,7 +1630,7 @@ __metadata:
       optional: true
     "@mdx-js/react":
       optional: true
-  checksum: 10/fb7ec21460edb82a2c626e6c08f16d71414bedb7c007523d9eb2cb9324dcc8cef53c210da9542404f7639709d2901c20d2499943e11367498407b3d1f49dd749
+  checksum: 10/0afb9bfb8b307644cd9971f4c402fb9aec0fa51d77d124c76b755078edf7d252bd3c0acaaf854e9c9f9b8cfcf1cf3aa2101355879cae4826070580eafeff3f17
   languageName: node
   linkType: hard
 
@@ -5323,11 +5323,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.5.2":
-  version: 15.5.2
-  resolution: "eslint-config-next@npm:15.5.2"
+"eslint-config-next@npm:15.5.12":
+  version: 15.5.12
+  resolution: "eslint-config-next@npm:15.5.12"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.5.2"
+    "@next/eslint-plugin-next": "npm:15.5.12"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -5343,7 +5343,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/136fe6767f256063a93912e240c7e7f1fddad2c7eb66e7e40d1745d0c452277b20f15c135a4b582be1fa2d099c1125d365a07a734347c272c933eabc2de273b7
+  checksum: 10/4f939f1d6f16efb9fd0655ad1d57fe4d93de9e9b461d47c8f0b1e4212e0e260abcbbeaa4c182d35b1da169af9f5428dfa0c63ae588f51e60338d614b76ee5845
   languageName: node
   linkType: hard
 
@@ -8514,7 +8514,7 @@ __metadata:
     "@lhci/cli": "npm:0.15.1"
     "@mdx-js/loader": "npm:3.1.1"
     "@mdx-js/react": "npm:3.1.1"
-    "@next/mdx": "npm:15.5.2"
+    "@next/mdx": "npm:15.5.12"
     "@pigment-css/nextjs-plugin": "npm:0.0.30"
     "@pigment-css/react": "npm:0.0.30"
     "@pigment-css/vite-plugin": "npm:0.0.30"
@@ -8535,7 +8535,7 @@ __metadata:
     "@vitest/coverage-v8": "npm:3.2.4"
     date-fns: "npm:4.1.0"
     eslint: "npm:9.38.0"
-    eslint-config-next: "npm:15.5.2"
+    eslint-config-next: "npm:15.5.12"
     eslint-plugin-storybook: "npm:9.0.7"
     husky: "npm:9.1.7"
     lint-staged: "npm:16.2.6"
