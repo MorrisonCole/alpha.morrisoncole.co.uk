@@ -1,9 +1,9 @@
 module.exports = {
   ci: {
     collect: {
-      url: ["http://localhost:3000/en"],
-      startServerCommand: "npm start",
-      startServerReadyPattern: "ready - started server",
+      url: ["http://localhost:4173/en"],
+      startServerCommand: "npm run preview",
+      startServerReadyPattern: "ready in",
       numberOfRuns: 1,
     },
     upload: {

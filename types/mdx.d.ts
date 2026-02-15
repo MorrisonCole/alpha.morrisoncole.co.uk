@@ -1,8 +1,10 @@
 declare module "*.mdx" {
+  import type { ComponentType } from "react";
+
   interface FrontMatter {
     title: string;
-    date: Date;
-    updated?: Date;
+    date: string;
+    updated?: string | null;
     description: string;
     category: string;
     image: string;
@@ -12,5 +14,7 @@ declare module "*.mdx" {
     slug: string;
   }
 
-  export const meta: FrontMatter;
+  export const frontmatter: FrontMatter;
+  const MDXComponent: ComponentType;
+  export default MDXComponent;
 }
