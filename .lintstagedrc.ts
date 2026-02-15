@@ -2,9 +2,7 @@ import { relative } from "path";
 import { type Configuration } from "lint-staged";
 
 const buildEslintCommand = (filenames: string[]) =>
-  `next lint --fix --file ${filenames
-    .map((f: string) => relative(process.cwd(), f))
-    .join(" --file ")}`;
+  `eslint --fix ${filenames.map((f: string) => relative(process.cwd(), f)).join(" ")}`;
 
 const prettierCommand = "prettier --ignore-unknown --write";
 

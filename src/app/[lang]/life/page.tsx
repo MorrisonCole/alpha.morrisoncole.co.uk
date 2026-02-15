@@ -3,20 +3,17 @@ import { Layout } from "@/components/layout";
 import { LifeCalendar } from "@/components/life-calendar/life-calendar";
 // import { styled } from "@pigment-css/react";
 
-type Props = {
-  params: Promise<{ lang: Locale }>;
-};
-
 // const StyledLifeCalendar = styled(LifeCalendar)`
 //   padding-top: 16px;
 //   padding-bottom: 16px;
 // `;
 
-const Home = async ({ params }: Props) => {
+const Home = async ({ params }: PageProps<"/[lang]/life">) => {
   const { lang } = await params;
+  const locale = lang as Locale;
 
   return (
-    <Layout lang={lang}>
+    <Layout lang={locale}>
       <LifeCalendar />
     </Layout>
   );

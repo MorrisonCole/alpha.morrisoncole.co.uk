@@ -15,7 +15,7 @@ type ImageProps = Omit<
 const Image = ({ alt, src, width, height, ...props }: ImageProps) => (
   <NextImage
     alt={alt ?? "Missing alt"}
-    src={src ?? "Missing"}
+    src={typeof src === "string" ? src : "Missing"}
     width={Number(width)}
     height={Number(height)}
     placeholder={"blur"}
