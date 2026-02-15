@@ -1,19 +1,34 @@
-output "amplify_app_id" {
-  description = "The ID of the Amplify app"
-  value       = aws_amplify_app.main.id
+output "site_bucket" {
+  description = "The name of the S3 bucket for the main site"
+  value       = aws_s3_bucket.site.bucket
 }
 
-output "amplify_default_domain" {
-  description = "The default domain for the Amplify app"
-  value       = aws_amplify_app.main.default_domain
+output "previews_bucket" {
+  description = "The name of the S3 bucket for PR previews"
+  value       = aws_s3_bucket.previews.bucket
 }
 
-output "amplify_branch_url" {
-  description = "The URL for the main branch"
-  value       = "https://${aws_amplify_branch.main.branch_name}.${aws_amplify_app.main.default_domain}"
+output "cloudfront_distribution_id" {
+  description = "The ID of the main CloudFront distribution"
+  value       = aws_cloudfront_distribution.site.id
 }
 
-output "custom_domain_url" {
-  description = "The custom domain URL"
+output "previews_cloudfront_distribution_id" {
+  description = "The ID of the previews CloudFront distribution"
+  value       = aws_cloudfront_distribution.previews.id
+}
+
+output "github_actions_role_arn" {
+  description = "The ARN of the IAM role for GitHub Actions"
+  value       = aws_iam_role.github_actions.arn
+}
+
+output "site_url" {
+  description = "The URL of the site"
   value       = "https://${var.domain_name}"
+}
+
+output "preview_url_pattern" {
+  description = "The URL pattern for PR previews"
+  value       = "https://pr-{number}.previews.${var.domain_name}"
 }

@@ -10,8 +10,14 @@ variable "domain_name" {
   default     = "alpha.morrisoncole.co.uk"
 }
 
-variable "github_token" {
-  description = "GitHub personal access token for Amplify to access the repository"
+variable "root_domain_name" {
+  description = "Root domain name (for Route53 hosted zone lookup)"
   type        = string
-  sensitive   = true
+  default     = "morrisoncole.co.uk"
+}
+
+variable "github_repo" {
+  description = "GitHub repository in format owner/repo"
+  type        = string
+  default     = "MorrisonCole/alpha.morrisoncole.co.uk"
 }

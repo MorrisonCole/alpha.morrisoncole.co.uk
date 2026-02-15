@@ -2,6 +2,10 @@
 *.tfstate
 *.tfstate.*
 
+# Terraform plan files
+tfplan
+*.tfplan
+
 # Terraform lock file (can be committed)
 # .terraform.lock.hcl
 
