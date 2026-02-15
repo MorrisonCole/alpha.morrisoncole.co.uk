@@ -29,8 +29,9 @@ provider "aws" {
 
 # Amplify App
 resource "aws_amplify_app" "main" {
-  name       = "alpha-morrisoncole-co-uk"
-  repository = "https://github.com/MorrisonCole/alpha.morrisoncole.co.uk"
+  name         = "alpha-morrisoncole-co-uk"
+  repository   = "https://github.com/MorrisonCole/alpha.morrisoncole.co.uk"
+  access_token = var.github_token
 
   # Build settings
   build_spec = <<-EOT

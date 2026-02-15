@@ -9,3 +9,9 @@ variable "domain_name" {
   type        = string
   default     = "alpha.morrisoncole.co.uk"
 }
+
+variable "github_token" {
+  description = "GitHub personal access token for Amplify to access the repository"
+  type        = string
+  sensitive   = true
+}
