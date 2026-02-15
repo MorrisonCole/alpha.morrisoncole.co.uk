@@ -47,7 +47,7 @@
     "storybook": "10.2.8",
     "typescript": "5.9.3",
     "typescript-eslint": "8.19.1",
-    "vite": "6.0.7",
+    "vite": "6.4.1",
     "vitest": "3.2.4"
   },
   "scripts": {
