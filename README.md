@@ -13,26 +13,15 @@ https://github.com/MorrisonCole/morrisoncole.co.uk.
 You'll need Node. Using `nvm` is recommended.
 
 1. `nvm use`
-2. `corepack enable`
-3. `yarn`
-4. `yarn dev`, etc.
-
-## Yarn
-
-### Upgrade Yarn
-
-`yarn upgrade`
-
-### Upgrade Dependencies
-
-`yarn upgrade-interactive`
+2. `npm install`
+3. `npm run dev`, etc.
 
 ## Deploy on Vercel
 
 Deploy from local with:
 
 ```
-yarn vercel
+npx vercel
 ```
 
 # CI/CD
@@ -47,7 +36,7 @@ performance regression testing.
 ### Local Build
 
 ```
-yarn build && yarn test:lighthouse
+npm run build && npm run test:lighthouse
 ```
 
 _Note:_ running locally appears to be
@@ -56,5 +45,5 @@ _Note:_ running locally appears to be
 ### Remote Build
 
 ```
-yarn vercel | xargs -I{} yarn test:lighthouse --collect.url={}
+npx vercel | xargs -I{} npm run test:lighthouse --collect.url={}
 ```

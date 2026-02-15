@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       url: ["http://localhost:3000/en"],
-      startServerCommand: "yarn start",
+      startServerCommand: "npm start",
       startServerReadyPattern: "ready - started server",
       numberOfRuns: 1,
     },
