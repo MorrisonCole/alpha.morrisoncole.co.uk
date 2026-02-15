@@ -39,15 +39,12 @@ const Japanese = styled.p`
     sans-serif;
 `;
 
-type HomeProps = {
-  params: Promise<{ lang: Locale }>;
-};
-
 export const generateMetadata = async ({
   params,
-}: HomeProps): Promise<Metadata> => {
+}: PageProps<"/[lang]">): Promise<Metadata> => {
   const { lang } = await params;
-  const dictionary: Dictionary = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dictionary: Dictionary = await getDictionary(locale);
 
   return {
     title: dictionary.home.title,
@@ -55,12 +52,13 @@ export const generateMetadata = async ({
   };
 };
 
-const Home = async ({ params }: HomeProps) => {
+const Home = async ({ params }: PageProps<"/[lang]">) => {
   const { lang } = await params;
-  const dictionary: Dictionary = await getDictionary(lang);
+  const locale = lang as Locale;
+  const dictionary: Dictionary = await getDictionary(locale);
 
   return (
-    <Layout lang={lang}>
+    <Layout lang={locale}>
       <Title>{dictionary.home.header}</Title>
       <p>
         I&apos;m <Bold>bold.</Bold>

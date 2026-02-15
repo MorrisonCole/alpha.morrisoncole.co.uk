@@ -8,13 +8,12 @@ export const generateStaticParams = () => {
   return i18n.locales.map((locale) => ({ lang: locale }));
 };
 
-interface LayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
-}
-
-export default async function Layout({ params, children }: LayoutProps) {
+export default async function Layout({
+  params,
+  children,
+}: LayoutProps<"/[lang]">) {
   const { lang } = await params;
+  const locale = lang as Locale;
 
   const setColorsByTheme = `
       function getUserPreference() {
@@ -28,9 +27,9 @@ export default async function Layout({ params, children }: LayoutProps) {
       document.documentElement.dataset.theme = getUserPreference();
     `;
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${lang === "en" ? notoSans.className : notoSansJp.className}`}
+        className={`${locale === "en" ? notoSans.className : notoSansJp.className}`}
       >
         <script dangerouslySetInnerHTML={{ __html: setColorsByTheme }} />
         {children}
