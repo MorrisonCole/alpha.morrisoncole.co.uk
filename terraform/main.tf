@@ -58,8 +58,19 @@ resource "aws_amplify_app" "main" {
     NODE_ENV = "production"
   }
 
-  # Enable auto branch creation for feature branches
-  enable_auto_branch_creation = false
+  # Enable PR previews
+  enable_branch_auto_build           = true
+  enable_branch_auto_deletion        = true
+  enable_auto_branch_creation        = true
+  auto_branch_creation_patterns      = ["feat/*", "fix/*", "chore/*"]
+  
+  auto_branch_creation_config {
+    enable_auto_build             = true
+    enable_pull_request_preview   = true
+    pull_request_environment_name = "pr"
+    framework                     = "React"
+    stage                         = "DEVELOPMENT"
+  }
 
   # Custom rules for SPA routing
   custom_rule {
