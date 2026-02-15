@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
   grid-template-columns: inherit;
 `;
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   const currentYear = getYear(new Date());
 
   return (
@@ -19,7 +19,7 @@ export const Footer = () => {
       <div
         style={{ display: "flex", flexDirection: "column", gridColumn: "2" }}
       >
-        <p>{"Handcrafted with TypeScript, React, and Next.js"}</p>
+        <p>{"Handcrafted with TypeScript, React, and Vite"}</p>
         <p>{`\u{00A9} Morrison Cole ${currentYear}`}</p>
       </div>
     </FooterContainer>

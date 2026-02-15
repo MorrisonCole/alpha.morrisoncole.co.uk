@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { keyframes, styled } from "@pigment-css/react";
 import { DEFAULT_THEME, isValidTheme, type Theme } from "./theme";

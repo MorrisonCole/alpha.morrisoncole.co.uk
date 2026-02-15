@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/experimental-nextjs-vite";
+import type { StorybookConfig } from "@storybook/react-vite";
 import { mergeConfig } from "vite";
 import { pigment } from "@pigment-css/vite-plugin";
 
@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     "@storybook/experimental-addon-test",
   ],
   framework: {
-    name: "@storybook/experimental-nextjs-vite",
+    name: "@storybook/react-vite",
     options: {},
   },
   staticDirs: ["../public"],
