@@ -23,7 +23,7 @@
     "@storybook/blocks": "8.6.14",
     "@storybook/experimental-addon-test": "8.6.14",
     "@storybook/react": "10.2.8",
-    "@storybook/react-vite": "8.6.14",
+    "@storybook/react-vite": "8.6.15",
     "@storybook/test": "8.6.15",
     "@types/css": "0.0.38",
     "@types/mdx": "2.0.13",
