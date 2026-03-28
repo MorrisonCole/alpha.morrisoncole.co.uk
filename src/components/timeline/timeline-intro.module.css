@@ -25,7 +25,7 @@
 .cvButton {
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-4);
-  background: hsl(206, 89%, 54%);
+  background: hsl(206, 89%, 38%);
   color: white;
   border-radius: 0.25rem;
   text-decoration: none;
@@ -37,7 +37,7 @@
 }
 
 .cvButton:hover {
-  background: hsl(206, 89%, 44%);
+  background: hsl(206, 89%, 32%);
 }
 
 .cvButton:active {
