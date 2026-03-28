@@ -48,6 +48,15 @@ jobs:
             --delete \
             --cache-control "public, max-age=60"
 
+      - name: Invalidate CloudFront cache
+        run: |
+          DISTRIBUTION_ID=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[?Aliases.Items[?contains(@, '${{ env.PREVIEW_DOMAIN }}')]].Id | [0]" \
+            --output text)
+          aws cloudfront create-invalidation \
+            --distribution-id "$DISTRIBUTION_ID" \
+            --paths "/pr-${{ github.event.pull_request.number }}/*"
+
       - name: Comment PR with preview URL
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         with:
