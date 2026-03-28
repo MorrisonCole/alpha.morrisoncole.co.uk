@@ -1,9 +1,5 @@
-import { styled } from "@pigment-css/react";
 import React from "react";
-
-const Entry = styled.p`
-  text-align: center;
-`;
+import styles from "./life-calendar-entry.module.css";
 
 interface LifeCalendarEntryProps {
   children: string;
@@ -14,5 +10,7 @@ export const LifeCalendarEntry = ({
   children,
   week,
 }: LifeCalendarEntryProps) => (
-  <Entry title={week.toDateString()}>{children}</Entry>
+  <p className={styles.entry} title={week.toDateString()}>
+    {children}
+  </p>
 );

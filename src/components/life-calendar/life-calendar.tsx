@@ -1,5 +1,4 @@
 import React from "react";
-import { styled } from "@pigment-css/react";
 import {
   addYears,
   eachWeekOfInterval,
@@ -10,9 +9,9 @@ import {
 } from "date-fns";
 import { enGB } from "date-fns/locale";
 import { LifeCalendarEntry } from "./life-calendar-entry";
+import styles from "./life-calendar.module.css";
 
 const YearsInLife = Math.ceil(76.3);
-const Columns = 53;
 const BirthDate = new Date(1992, 2, 15);
 
 const Intervals = [
@@ -66,26 +65,6 @@ const Intervals = [
   },
 ];
 
-const WeekGrid = styled.span`
-  display: grid;
-  grid-template-columns: repeat(${() => Math.ceil(Columns / 4)}, 1fr);
-  @media (min-width: 600px) {
-    grid-template-columns: repeat(${() => Math.ceil(Columns / 2)}, 1fr);
-  }
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(${() => Columns}, 1fr);
-  }
-  justify-content: center;
-
-  *:first-child {
-    grid-column-start: 12;
-  }
-`;
-
-const YearDivider = styled.hr`
-  grid-column: 1/-1;
-`;
-
 interface LifeCalendarProps {
   className?: string;
 }
@@ -114,9 +93,17 @@ export const LifeCalendar = ({ className }: LifeCalendarProps) => {
 
     const nextWeek = weeksInLife[i + 1];
     if (!isSameYear(week, nextWeek)) {
-      items.push(<YearDivider key={i} />);
+      items.push(<hr className={styles.yearDivider} key={i} />);
     }
   }
 
-  return <WeekGrid className={className}>{items}</WeekGrid>;
+  return (
+    <span
+      className={
+        className ? `${styles.weekGrid} ${className}` : styles.weekGrid
+      }
+    >
+      {items}
+    </span>
+  );
 };

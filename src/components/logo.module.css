@@ -1,0 +1,23 @@
+.svg {
+  width: 100%;
+}
+
+.pathOne {
+  fill: var(--color-logo-1);
+}
+
+.pathTwo {
+  fill: var(--color-logo-2);
+}
+
+.pathThree {
+  fill: var(--color-logo-3);
+}
+
+.pathFour {
+  fill: var(--color-logo-4);
+}
+
+.pathFive {
+  fill: var(--color-logo-5);
+}

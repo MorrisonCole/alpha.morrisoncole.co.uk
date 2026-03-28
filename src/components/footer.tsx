@@ -1,27 +1,18 @@
-import { styled } from "@pigment-css/react";
 import React from "react";
 import { getYear } from "date-fns";
-
-const FooterContainer = styled.footer`
-  grid-area: footer;
-  background-color: hsl(0, 0%, 26%);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  display: grid;
-  grid-template-columns: inherit;
-`;
+import styles from "./footer.module.css";
 
 export const Footer: React.FC = () => {
   const currentYear = getYear(new Date());
 
   return (
-    <FooterContainer role="contentinfo">
+    <footer className={styles.footer} role="contentinfo">
       <div
         style={{ display: "flex", flexDirection: "column", gridColumn: "2" }}
       >
         <p>{"Handcrafted with TypeScript, React, and Vite"}</p>
         <p>{`\u{00A9} Morrison Cole ${currentYear}`}</p>
       </div>
-    </FooterContainer>
+    </footer>
   );
 };

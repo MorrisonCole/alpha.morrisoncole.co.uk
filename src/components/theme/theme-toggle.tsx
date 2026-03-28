@@ -1,69 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { keyframes, styled } from "@pigment-css/react";
+import { useEffect, useState } from "react";
 import { DEFAULT_THEME, isValidTheme, type Theme } from "./theme";
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-const ToggleButton = styled.button`
-  border-radius: 3px;
-  padding: 0.5rem;
-  background: hsla(0, 0%, 25%, 0.6);
-  color: hsl(0, 0%, 100%);
-  border: 2px solid white;
-  margin-left: var(--spacing-4);
-  margin-top: var(--spacing-4);
-  max-width: min-content;
-  align-self: flex-end;
-  animation: ${fadeIn} 0.8s forwards;
-
-  &:hover {
-    filter: brightness(1.2);
-  }
-`;
+import styles from "./theme-toggle.module.css";
 
 export const ThemeToggle = () => {
-  const [activeTheme, setActiveTheme] = useState<Theme | null>(null);
-
-  useEffect(() => {
+  const [activeTheme, setActiveTheme] = useState<Theme>(() => {
     const savedTheme = window.localStorage.getItem("theme");
-    if (isValidTheme(savedTheme)) {
-      setActiveTheme(savedTheme);
-    } else {
-      setActiveTheme(DEFAULT_THEME);
-    }
-  }, []);
+    return isValidTheme(savedTheme) ? savedTheme : DEFAULT_THEME;
+  });
 
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
-    // Only save the theme preference if it was explicity set.
-    if (activeTheme && document.documentElement.dataset.theme !== activeTheme) {
-      document.documentElement.dataset.theme = activeTheme;
+    if (document.documentElement.dataset["theme"] !== activeTheme) {
+      document.documentElement.dataset["theme"] = activeTheme;
       window.localStorage.setItem("theme", activeTheme);
     }
   }, [activeTheme]);
 
-  if (activeTheme === null) {
-    return null;
-  }
-
   const themeIcon = activeTheme === "light" ? "🌙" : "🌞";
 
   return (
-    <ToggleButton
+    <button
+      className={styles.toggleButton}
       aria-label={`Change to ${inactiveTheme} mode`}
       title={`Change to ${inactiveTheme} mode`}
       type="button"
       onClick={() => setActiveTheme(inactiveTheme)}
     >
       <span>{themeIcon}</span>
-    </ToggleButton>
+    </button>
   );
 };
