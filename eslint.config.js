@@ -5,7 +5,7 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 
 export default defineConfig(
-  [globalIgnores(["dist", ".github/scripts"])],
+  [globalIgnores(["dist"])],
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   reactHooks.configs.flat.recommended,
