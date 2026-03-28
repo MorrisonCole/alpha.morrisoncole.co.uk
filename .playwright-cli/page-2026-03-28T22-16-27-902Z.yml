@@ -1,0 +1,20 @@
+- generic [ref=e3]:
+    - banner [ref=e4]:
+        - img [ref=e5]
+        - generic [ref=e370]:
+            - button "English" [ref=e371]
+            - button "Change to dark mode" [ref=e372]: 🌙
+    - main [ref=e373]:
+        - heading "こんにちは、世界" [level=1] [ref=e374]
+        - paragraph [ref=e375]: I'm bold.
+        - paragraph [ref=e376]: I'm italic.
+        - paragraph [ref=e377]: I'm both!
+        - paragraph [ref=e378]: 日本語で書いてます。
+        - link "Blog" [ref=e379] [cursor=pointer]:
+            - /url: /ja/blog
+        - link "Life" [ref=e380] [cursor=pointer]:
+            - /url: /ja/life
+    - contentinfo [ref=e381]:
+        - generic [ref=e382]:
+            - paragraph [ref=e383]: Handcrafted with TypeScript, React, and Vite
+            - paragraph [ref=e384]: © Morrison Cole 2026
