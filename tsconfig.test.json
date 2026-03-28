@@ -1,4 +1,14 @@
 {
   "extends": "./tsconfig.base.json",
-  "include": ["vitest.config.ts", "vitest.shims.d.ts", ".storybook/**/*.ts"]
+  "compilerOptions": {
+    "jsx": "preserve",
+    "types": ["node"]
+  },
+  "include": [
+    "vitest.config.ts",
+    "vitest.shims.d.ts",
+    ".storybook/**/*.ts",
+    "types/**/*.d.ts"
+  ],
+  "references": [{ "path": "./tsconfig.src.json" }]
 }

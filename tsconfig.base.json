@@ -16,7 +16,8 @@
     "types": ["node"],
 
     // Emit
-    "noEmit": true,
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true,
     "skipLibCheck": true,
 
     // Interop Constraints
