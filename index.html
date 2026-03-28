@@ -11,6 +11,17 @@
       rel="stylesheet"
     />
     <title>Morrison Cole</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark =
+          stored === "dark" ||
+          (!stored &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+        if (stored) document.documentElement.classList.toggle("light", !dark);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
