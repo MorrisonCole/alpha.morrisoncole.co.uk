@@ -9,6 +9,9 @@ node_modules
 # vite
 /dist
 
+# storybook
+/storybook-static
+
 # production
 /build
 
