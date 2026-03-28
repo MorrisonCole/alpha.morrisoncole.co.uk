@@ -1,25 +1,24 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "../components/layout";
 import { useLocale } from "../LocaleContext";
 
-// Lazy load MDX components
-const blogPosts: Record<
-  string,
-  React.LazyExoticComponent<React.ComponentType>
-> = {
-  fonts: lazy(() => import("../content/blog/fonts.mdx")),
-  lighthouse: lazy(() => import("../content/blog/lighthouse.mdx")),
-  "one-year-in-japan": lazy(
-    () => import("../content/blog/one-year-in-japan.mdx"),
-  ),
-};
+import Fonts, {
+  frontmatter as fontsFrontmatter,
+} from "../content/blog/fonts.mdx";
+import Lighthouse, {
+  frontmatter as lighthouseFrontmatter,
+} from "../content/blog/lighthouse.mdx";
+import OneYearInJapan, {
+  frontmatter as oneYearInJapanFrontmatter,
+} from "../content/blog/one-year-in-japan.mdx";
 
-// Import frontmatter for metadata
-import { frontmatter as fontsFrontmatter } from "../content/blog/fonts.mdx";
-import { frontmatter as lighthouseFrontmatter } from "../content/blog/lighthouse.mdx";
-import { frontmatter as oneYearInJapanFrontmatter } from "../content/blog/one-year-in-japan.mdx";
+const blogPosts: Record<string, React.ComponentType> = {
+  fonts: Fonts,
+  lighthouse: Lighthouse,
+  "one-year-in-japan": OneYearInJapan,
+};
 
 const frontmatters: Record<string, typeof fontsFrontmatter> = {
   fonts: fontsFrontmatter,
@@ -44,9 +43,7 @@ export const BlogPostPage: React.FC = () => {
         <title>{meta?.title ?? "Blog"} | Morrison Cole</title>
         <meta name="description" content={meta?.description ?? ""} />
       </Helmet>
-      <Suspense fallback={<div>Loading...</div>}>
-        <PostContent />
-      </Suspense>
+      <PostContent />
     </Layout>
   );
 };

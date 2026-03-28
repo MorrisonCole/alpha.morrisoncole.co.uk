@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "checkJs": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts",
+    "types/**/*.d.ts",
+    "vite.config.ts",
+    ".lintstagedrc.ts",
+    "eslint.config.js",
+    "lighthouserc.cjs"
+  ]
+}

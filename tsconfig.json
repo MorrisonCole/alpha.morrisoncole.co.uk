@@ -1,42 +1,7 @@
 {
-  "compilerOptions": {
-    // Type Checking
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noPropertyAccessFromIndexSignature": true,
-
-    // Modules
-    "noUncheckedSideEffectImports": true,
-    "allowImportingTsExtensions": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "types": ["node"],
-
-    // Emit
-    "noEmit": true,
-
-    // JavaScript support
-    "checkJs": true,
-
-    // Interop Constraints
-    "erasableSyntaxOnly": true,
-    "verbatimModuleSyntax": true,
-
-    // Language and Environment
-    "jsx": "preserve"
-  },
-  "include": [
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts",
-    ".storybook/**/*.ts",
-    ".lintstagedrc.ts"
-  ],
-  "exclude": ["node_modules", "dist", ".github/scripts"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.src.json" },
+    { "path": "./tsconfig.test.json" }
+  ]
 }

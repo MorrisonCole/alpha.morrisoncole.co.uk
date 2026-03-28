@@ -10,7 +10,7 @@ Personal website for Morrison Cole — a React 19 SPA built with **Vite**, **Typ
 
 - **Runtime:** Node.js 25.8.2 (pinned in `.nvmrc`)
 - **Framework:** React 19, React Router DOM 7, react-helmet-async
-- **Build:** Vite 8 with `@vitejs/plugin-react-swc` and `@mdx-js/rollup`
+- **Build:** Vite 8 (Rolldown) with `@vitejs/plugin-react` (Oxc) and `@mdx-js/rollup`
 - **Language:** TypeScript 6 (strict mode, `noEmit`, `noUnusedLocals`, `noUnusedParameters`)
 - **Styling:** CSS Modules (`*.module.css`) + CSS custom properties in `src/index.css`
 - **Content:** MDX files with YAML frontmatter in `src/content/blog/`
@@ -27,6 +27,7 @@ Always run `npm ci` before any other command. All commands run from the repo roo
 | Step | Command | Notes |
 |------|---------|-------|
 | Install | `npm ci` | ~15s. Always use `npm ci`, not `npm install`. |
+| Typecheck | `npm run typecheck` | Runs `tsc --build`. Must pass with zero errors. |
 | Lint | `npm run lint` | Runs `eslint .`. Must pass with zero errors. |
 | Build | `npm run build` | Runs `vite build`. Output in `dist/`. ~300ms. |
 | Dev server | `npm run dev` | Vite dev server with HMR. |
@@ -38,7 +39,6 @@ Always run `npm ci` before any other command. All commands run from the repo roo
 ### Known Issues
 
 - **Vitest is broken:** `npx vitest run` fails with `The 'test.workspace' option was removed in Vitest 4. Please, migrate to 'test.projects' instead.` in `vitest.config.ts`. Do not attempt to run Vitest tests. Do not modify the vitest config unless specifically asked.
-- **Build warnings (safe to ignore):** Vite emits a deprecation warning about `esbuild` from `vite:react-swc` and `INEFFECTIVE_DYNAMIC_IMPORT` warnings for MDX files in `BlogPostPage.tsx`. These do not fail the build.
 
 ### Validation Sequence for PRs
 
@@ -46,6 +46,7 @@ Always validate changes with this exact sequence:
 
 ```sh
 npm ci
+npm run typecheck
 npm run lint
 npm run build
 ```
@@ -99,10 +100,13 @@ CI uses Node.js 25.8.2, `npm ci`, and runs on `ubuntu-latest`.
 ├── .storybook/                   # Storybook config (main.ts, preview.ts)
 ├── .husky/pre-commit             # Runs `npx lint-staged`
 ├── index.html                    # Vite HTML entry point
-├── vite.config.ts                # Vite config (React SWC + MDX plugins)
+├── vite.config.ts                # Vite config (React Oxc + MDX plugins)
 ├── vitest.config.ts              # Vitest config (currently broken, see Known Issues)
 ├── eslint.config.js              # ESLint flat config (recommended + type-checked + react-hooks)
-├── tsconfig.json                 # TypeScript config (strict, bundler resolution, noEmit)
+├── tsconfig.json                 # Root coordinator — references tsconfig.src.json + tsconfig.test.json
+├── tsconfig.base.json            # Shared compiler options (strict, composite, bundler resolution)
+├── tsconfig.src.json             # TypeScript config for app source (src/, types/, config files)
+├── tsconfig.test.json            # TypeScript config for tests (vitest, .storybook/)
 ├── .prettierrc                   # Prettier config (proseWrap: "always")
 ├── .lintstagedrc.ts              # lint-staged config (ESLint --fix + Prettier)
 ├── .nvmrc                        # Node version: 25.8.2
@@ -116,8 +120,8 @@ CI uses Node.js 25.8.2, `npm ci`, and runs on `ubuntu-latest`.
 - **Routing:** All routes are locale-prefixed (`/:lang/...`). The root `/` redirects to `/en`.
 - **Blog posts:** MDX files in `src/content/blog/`. Each requires YAML frontmatter with: `title`, `date`, `description`, `category`, `image`, `imageAlt`, `linkText`, `draft`, `slug`. New posts must also be registered in `src/pages/BlogPostPage.tsx` (lazy import + frontmatter import + both maps).
 - **Storybook stories:** Co-located with components (e.g., `button.stories.tsx` next to `button.tsx`).
-- **TypeScript:** Strict mode with `noUnusedLocals` and `noUnusedParameters` — unused variables/imports cause build errors.
-- **`.github/scripts/`** has its own `package.json` and `tsconfig.json` — separate from the main project. CI runs `npm ci --prefix .github/scripts` for it.
+- **TypeScript:** Uses composite projects (`tsc --build`). `tsconfig.json` is the root coordinator referencing `tsconfig.src.json` (app source) and `tsconfig.test.json` (vitest/storybook). Strict mode with `noUnusedLocals` and `noUnusedParameters` — unused variables/imports cause build errors.
+- **`.github/scripts/`** has its own `package.json` and composite tsconfig (`tsconfig.json` → `tsconfig.src.json`) — separate from the main project. CI runs `npm ci --prefix .github/scripts` for it.
 - **Terraform** files are in `terraform/` and have their own CI workflows.
 
 ### UI Components
