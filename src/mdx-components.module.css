@@ -1,9 +1,67 @@
 .image {
   max-width: 100%;
   height: auto;
+  border-radius: 0.5rem;
+  margin: var(--spacing-3) 0;
 }
 
 .h1 {
-  color: hsl(0, 0%, 50%);
-  font-size: 3em;
+  font-size: 2rem;
+  margin: var(--spacing-5) 0 var(--spacing-3);
+}
+
+.h2 {
+  font-size: 1.5rem;
+  margin: var(--spacing-5) 0 var(--spacing-2);
+}
+
+.h3 {
+  font-size: 1.25rem;
+  margin: var(--spacing-4) 0 var(--spacing-2);
+}
+
+.h4 {
+  font-size: 1.125rem;
+  margin: var(--spacing-3) 0 var(--spacing-1);
+}
+
+.blockquote {
+  border-left: 3px solid color-mix(in srgb, var(--color-text) 30%, transparent);
+  padding-left: var(--spacing-3);
+  margin: var(--spacing-3) 0;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.link {
+  color: hsl(206, 89%, 54%);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.pre {
+  background: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 90%);
+  padding: var(--spacing-3);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: var(--spacing-3) 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.code {
+  font-family: "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
+  font-size: 0.9em;
+}
+
+/* Inline code (not inside pre) */
+:not(.pre) > .code {
+  background: color-mix(in srgb, var(--color-text) 10%, transparent);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
 }

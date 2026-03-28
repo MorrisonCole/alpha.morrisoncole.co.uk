@@ -10,7 +10,11 @@ export const Footer: React.FC = () => {
       <div
         style={{ display: "flex", flexDirection: "column", gridColumn: "2" }}
       >
-        <p>{"Handcrafted with TypeScript, React, and Vite"}</p>
+        <p>
+          {
+            "Crafted with Vite, React, TypeScript (and a little help from my 🤖 friends)"
+          }
+        </p>
         <p>{`\u{00A9} Morrison Cole ${currentYear}`}</p>
       </div>
     </footer>

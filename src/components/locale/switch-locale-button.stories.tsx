@@ -8,10 +8,6 @@ const meta: Meta<typeof SwitchLocaleButton> = {
 
 type Story = StoryObj<typeof SwitchLocaleButton>;
 
-export const Default: Story = {
-  args: {
-    label: "日本語に切り替え",
-  },
-};
+export const Default: Story = {};
 
 export default meta;

@@ -48,6 +48,8 @@ body.font-jp {
 :root {
   color-scheme: light;
   --color-background: hsl(0, 0%, 100%);
+  --color-primary: hsl(206, 89%, 54%);
+  --color-secondary: hsl(14, 100%, 63%);
   --color-logo-1: hsl(240, 6%, 15%);
   --color-logo-2: hsl(214, 26%, 52%);
   --color-logo-3: hsl(57, 26%, 54%);
@@ -59,6 +61,8 @@ body.font-jp {
 html.dark {
   color-scheme: dark;
   --color-background: hsl(0, 0%, 6%);
+  --color-primary: hsl(14, 100%, 63%);
+  --color-secondary: hsl(206, 89%, 54%);
   --color-logo-1: hsl(240, 6%, 15%);
   --color-logo-2: hsl(214, 26%, 52%);
   --color-logo-3: hsl(57, 26%, 54%);
@@ -71,6 +75,8 @@ html.dark {
   :root:not(.light) {
     color-scheme: dark;
     --color-background: hsl(0, 0%, 6%);
+    --color-primary: hsl(14, 100%, 63%);
+    --color-secondary: hsl(206, 89%, 54%);
     --color-logo-1: hsl(240, 6%, 15%);
     --color-logo-2: hsl(214, 26%, 52%);
     --color-logo-3: hsl(57, 26%, 54%);

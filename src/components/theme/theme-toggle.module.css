@@ -1,15 +1,42 @@
-.toggleButton {
-  border-radius: 3px;
-  padding: 0.5rem;
-  background: hsla(0, 0%, 25%, 0.6);
-  color: hsl(0, 0%, 100%);
-  border: 2px solid white;
-  margin-left: var(--spacing-4);
-  margin-top: var(--spacing-4);
-  max-width: min-content;
-  align-self: flex-end;
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
 }
 
-.toggleButton:hover {
-  filter: brightness(1.2);
+.button:hover {
+  opacity: 0.7;
+}
+
+.button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.iconHidden {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+  pointer-events: none;
 }

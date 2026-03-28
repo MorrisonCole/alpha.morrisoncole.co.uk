@@ -1,8 +1,28 @@
 {
   "home": {
-    "title": "コール　モリソン ー アルファ",
-    "description": "作業中です。",
+    "title": "コール　モリソン",
+    "description": "東京在住のソフトウェアエンジニア、元プロダクトマネージャー、ミュージシャン。",
     "header": "こんにちは、世界"
+  },
+  "nav": {
+    "timeline": "タイムライン",
+    "blog": "ブログ"
+  },
+  "timeline": {
+    "greeting": "こんにちは！👋",
+    "bio": "東京在住のソフトウェアエンジニア、元プロダクトマネージャー、（たまに）ミュージシャンです。",
+    "cvDownload": "履歴書 (.PDF)",
+    "filterEverything": "すべて",
+    "filterLife": "ライフ",
+    "filterMusic": "音楽",
+    "filterSoftware": "ソフトウェア"
+  },
+  "blog": {
+    "title": "ブログ",
+    "breadcrumbBack": "ブログ"
+  },
+  "footer": {
+    "builtWith": "TypeScript、React、Viteで手作り"
   },
   "misc": {
     "switchLanguage": "English"

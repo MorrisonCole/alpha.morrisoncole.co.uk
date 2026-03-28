@@ -1,0 +1,123 @@
+.timeline {
+  position: relative;
+  padding: var(--spacing-4) 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.item:nth-child(odd) .date {
+  text-align: right;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item:nth-child(odd) .separator {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item:nth-child(odd) .cardWrapper {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item:nth-child(even) .date {
+  text-align: left;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item:nth-child(even) .separator {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item:nth-child(even) .cardWrapper {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.date {
+  font-size: 1.125rem;
+  font-weight: 500;
+  opacity: 0.6;
+  white-space: nowrap;
+  align-self: start;
+  padding-top: var(--spacing-3);
+}
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: hsl(206, 89%, 54%);
+  flex-shrink: 0;
+  z-index: 1;
+  margin-top: var(--spacing-3);
+}
+
+.connector {
+  width: 2px;
+  flex: 1;
+  background: color-mix(in srgb, var(--color-text) 20%, transparent);
+  min-height: 2rem;
+}
+
+.cardWrapper {
+  max-width: 100%;
+}
+
+.endItem {
+  display: flex;
+  justify-content: center;
+}
+
+.endDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: hsl(14, 100%, 63%);
+  color: white;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+/* Mobile: single column */
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-2);
+  }
+
+  .item:nth-child(odd) .date,
+  .item:nth-child(even) .date {
+    display: none;
+  }
+
+  .item:nth-child(odd) .separator,
+  .item:nth-child(even) .separator {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .item:nth-child(odd) .cardWrapper,
+  .item:nth-child(even) .cardWrapper {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
