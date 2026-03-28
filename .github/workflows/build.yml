@@ -21,6 +21,7 @@ jobs:
       - name: Run Lighthouse CI
         run: |
           npm ci
+          npm install --prefix .github/scripts
           npm run typecheck
           npm run build
           npm run test:lighthouse
