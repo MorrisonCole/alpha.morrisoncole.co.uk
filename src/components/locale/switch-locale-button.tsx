@@ -1,7 +1,7 @@
 import React, { useTransition } from "react";
 import { useLocation } from "react-router-dom";
 import { LocaleButton } from "./locale-button";
-import { useLocale } from "@/LocaleContext";
+import { useLocale } from "../../LocaleContext";
 
 interface SwitchLocaleButtonProps {
   label: string;

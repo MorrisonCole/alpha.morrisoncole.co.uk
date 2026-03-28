@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet, useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { LocaleProvider } from "../LocaleContext";
-import { isValidLocale, i18n, type Locale } from "../i18n-config";
+import { isValidLocale, i18n } from "../i18n-config";
 
 const setColorsByTheme = `
   (function() {
@@ -20,9 +20,7 @@ const setColorsByTheme = `
 
 export const LocaleLayout: React.FC = () => {
   const { lang } = useParams<{ lang: string }>();
-  const locale = (
-    lang && isValidLocale(lang) ? lang : i18n.defaultLocale
-  ) as Locale;
+  const locale = lang && isValidLocale(lang) ? lang : i18n.defaultLocale;
   const shouldRedirect = !lang || !isValidLocale(lang);
 
   // Set font class based on locale

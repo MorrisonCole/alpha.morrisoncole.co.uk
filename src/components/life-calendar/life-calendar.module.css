@@ -1,0 +1,25 @@
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .weekGrid {
+    grid-template-columns: repeat(27, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .weekGrid {
+    grid-template-columns: repeat(53, 1fr);
+  }
+}
+
+.weekGrid > *:first-child {
+  grid-column-start: 12;
+}
+
+.yearDivider {
+  grid-column: 1/-1;
+}

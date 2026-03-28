@@ -1,7 +1,6 @@
 .github
 .husky
 .yarn
-.next
 .pnp.cjs
 .pnp.loader.mjs
 .idea

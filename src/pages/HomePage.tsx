@@ -1,41 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { styled } from "@pigment-css/react";
 import { Layout } from "../components/layout";
 import { useLocale } from "../LocaleContext";
-
-const Title = styled.h1`
-  font-size: 4rem;
-`;
-
-const Bold = styled.span`
-  font-weight: bold;
-`;
-
-const Italic = styled.span`
-  font-style: italic;
-`;
-
-const BoldItalic = styled.span`
-  font-weight: bold;
-  font-style: italic;
-`;
-
-const Japanese = styled.p`
-  font-size: 1rem;
-  font-family:
-    "Noto Sans JP",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
-`;
+import styles from "./HomePage.module.css";
 
 export const HomePage: React.FC = () => {
   const { locale, dictionary } = useLocale();
@@ -46,18 +14,18 @@ export const HomePage: React.FC = () => {
         <title>{dictionary.home.title}</title>
         <meta name="description" content={dictionary.home.description} />
       </Helmet>
-      <Title>{dictionary.home.header}</Title>
+      <h1 className={styles.title}>{dictionary.home.header}</h1>
       <p>
-        I&apos;m <Bold>bold.</Bold>
+        I&apos;m <span className={styles.bold}>bold.</span>
       </p>
       <p>
-        I&apos;m <Italic>italic.</Italic>
+        I&apos;m <span className={styles.italic}>italic.</span>
       </p>
       <p>
-        I&apos;m <BoldItalic>both!</BoldItalic>
+        I&apos;m <span className={styles.boldItalic}>both!</span>
       </p>
 
-      <Japanese>日本語で書いてます。</Japanese>
+      <p className={styles.japanese}>日本語で書いてます。</p>
 
       <Link
         to={`/${locale}/blog`}
