@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 
 import { defineConfig } from "vitest/config";
 import { playwright } from "@vitest/browser-playwright";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 

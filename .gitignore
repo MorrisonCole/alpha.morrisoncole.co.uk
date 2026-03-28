@@ -9,6 +9,9 @@ node_modules
 # vite
 /dist
 
+# typescript
+*.tsbuildinfo
+
 # storybook
 /storybook-static
 

@@ -1,13 +1,4 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "noEmit": true,
-    "types": ["node"],
-    "verbatimModuleSyntax": true,
-    "erasableSyntaxOnly": true,
-    "noPropertyAccessFromIndexSignature": true
-  },
-  "include": ["**/*.ts"]
+  "files": [],
+  "references": [{ "path": "./tsconfig.src.json" }]
 }

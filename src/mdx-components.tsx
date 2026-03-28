@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./components/button/button";
-import { MDXComponents } from "mdx/types";
+import type { MDXComponents } from "mdx/types";
 import styles from "./mdx-components.module.css";
 
 type ImageProps = React.DetailedHTMLProps<
