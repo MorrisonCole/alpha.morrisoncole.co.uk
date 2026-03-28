@@ -536,6 +536,157 @@ resource "aws_iam_role_policy" "github_actions" {
           aws_cloudfront_distribution.site.arn,
           aws_cloudfront_distribution.previews.arn
         ]
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "cloudfront:ListDistributions"
+        ]
+        Resource = "*"
+      }
+    ]
+  })
+}
+
+# Policy for GitHub Actions to run Terraform plan/apply
+resource "aws_iam_role_policy" "github_actions_terraform" {
+  name = "terraform-policy"
+  role = aws_iam_role.github_actions.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid    = "TerraformState"
+        Effect = "Allow"
+        Action = [
+          "s3:GetObject",
+          "s3:PutObject",
+          "s3:DeleteObject",
+          "s3:ListBucket"
+        ]
+        Resource = [
+          "arn:aws:s3:::alpha-morrisoncole-terraform-state",
+          "arn:aws:s3:::alpha-morrisoncole-terraform-state/*"
+        ]
+      },
+      {
+        Sid    = "S3Management"
+        Effect = "Allow"
+        Action = [
+          "s3:CreateBucket",
+          "s3:DeleteBucket",
+          "s3:GetBucketPolicy",
+          "s3:PutBucketPolicy",
+          "s3:DeleteBucketPolicy",
+          "s3:GetBucketAcl",
+          "s3:GetBucketCORS",
+          "s3:GetBucketLogging",
+          "s3:GetBucketObjectLockConfiguration",
+          "s3:GetBucketPublicAccessBlock",
+          "s3:PutBucketPublicAccessBlock",
+          "s3:GetBucketRequestPayment",
+          "s3:GetBucketTagging",
+          "s3:PutBucketTagging",
+          "s3:GetBucketVersioning",
+          "s3:GetBucketWebsite",
+          "s3:GetEncryptionConfiguration",
+          "s3:GetLifecycleConfiguration",
+          "s3:PutLifecycleConfiguration",
+          "s3:GetReplicationConfiguration",
+          "s3:GetAccelerateConfiguration",
+          "s3:GetAnalyticsConfiguration",
+          "s3:GetBucketLocation",
+          "s3:GetIntelligentTieringConfiguration",
+          "s3:GetInventoryConfiguration",
+          "s3:GetMetricsConfiguration",
+          "s3:GetObject",
+          "s3:ListBucket"
+        ]
+        Resource = [
+          aws_s3_bucket.site.arn,
+          "${aws_s3_bucket.site.arn}/*",
+          aws_s3_bucket.previews.arn,
+          "${aws_s3_bucket.previews.arn}/*"
+        ]
+      },
+      {
+        Sid    = "CloudFrontManagement"
+        Effect = "Allow"
+        Action = [
+          "cloudfront:GetDistribution",
+          "cloudfront:UpdateDistribution",
+          "cloudfront:CreateDistribution",
+          "cloudfront:DeleteDistribution",
+          "cloudfront:TagResource",
+          "cloudfront:UntagResource",
+          "cloudfront:ListTagsForResource",
+          "cloudfront:GetOriginAccessControl",
+          "cloudfront:CreateOriginAccessControl",
+          "cloudfront:UpdateOriginAccessControl",
+          "cloudfront:DeleteOriginAccessControl",
+          "cloudfront:GetFunction",
+          "cloudfront:CreateFunction",
+          "cloudfront:UpdateFunction",
+          "cloudfront:DeleteFunction",
+          "cloudfront:DescribeFunction",
+          "cloudfront:PublishFunction",
+          "cloudfront:ListDistributions"
+        ]
+        Resource = "*"
+      },
+      {
+        Sid    = "ACMManagement"
+        Effect = "Allow"
+        Action = [
+          "acm:RequestCertificate",
+          "acm:DescribeCertificate",
+          "acm:DeleteCertificate",
+          "acm:ListTagsForCertificate",
+          "acm:AddTagsToCertificate",
+          "acm:RemoveTagsFromCertificate"
+        ]
+        Resource = "*"
+      },
+      {
+        Sid    = "Route53Management"
+        Effect = "Allow"
+        Action = [
+          "route53:GetHostedZone",
+          "route53:ListHostedZones",
+          "route53:ListResourceRecordSets",
+          "route53:ChangeResourceRecordSets",
+          "route53:GetChange",
+          "route53:ListTagsForResource"
+        ]
+        Resource = "*"
+      },
+      {
+        Sid    = "IAMManagement"
+        Effect = "Allow"
+        Action = [
+          "iam:GetRole",
+          "iam:GetRolePolicy",
+          "iam:ListRolePolicies",
+          "iam:ListAttachedRolePolicies",
+          "iam:CreateRole",
+          "iam:DeleteRole",
+          "iam:PutRolePolicy",
+          "iam:DeleteRolePolicy",
+          "iam:TagRole",
+          "iam:UntagRole",
+          "iam:GetOpenIDConnectProvider",
+          "iam:CreateOpenIDConnectProvider",
+          "iam:DeleteOpenIDConnectProvider",
+          "iam:TagOpenIDConnectProvider",
+          "iam:UpdateOpenIDConnectProviderThumbprint",
+          "iam:AddClientIDToOpenIDConnectProvider"
+        ]
+        Resource = [
+          aws_iam_role.github_actions.arn,
+          "${aws_iam_role.github_actions.arn}/*",
+          aws_iam_openid_connect_provider.github.arn
+        ]
       }
     ]
   })
