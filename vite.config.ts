@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import path from "node:path";
 
 export default defineConfig({
   plugins: [
@@ -12,9 +11,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
 });
