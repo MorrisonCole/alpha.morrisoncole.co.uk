@@ -19,12 +19,6 @@ for (const deployment of deployments) {
   });
 }
 
-await octokit.rest.repos.deleteAnEnvironment({
-  owner,
-  repo,
-  environment_name: environment,
-});
-
 console.log(
-  `Deactivated ${deployments.length} deployment(s) and deleted environment "${environment}"`,
+  `Deactivated ${deployments.length} deployment(s) for environment "${environment}"`,
 );
