@@ -356,7 +356,7 @@ resource "aws_cloudfront_distribution" "previews" {
 
     forwarded_values {
       query_string = false
-      headers      = ["Host"]
+      headers      = []
       cookies {
         forward = "none"
       }
