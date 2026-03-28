@@ -6,44 +6,76 @@ Alpha [alpha.morrisoncole.co.uk](https://alpha.morrisoncole.co.uk). Production
 [morrisoncole.co.uk](https://morrisoncole.co.uk) is from
 https://github.com/MorrisonCole/morrisoncole.co.uk.
 
-# Development
+## Overview
 
-## Requirements
+A React 19 single-page application built with Vite and TypeScript.
 
-You'll need Node. Using `nvm` is recommended.
+## Development
 
-1. `nvm use`
-2. `npm install`
-3. `npm run dev`, etc.
+### Requirements
 
-## Deploy on Vercel
+Node (version specified in `.nvmrc`). Using [nvm](https://github.com/nvm-sh/nvm)
+is recommended.
 
-Deploy from local with:
-
-```
-npx vercel
+```sh
+nvm install
+npm install
 ```
 
-# CI/CD
+### Scripts
 
-## Performance Regression Testing
+| Command                   | Description                       |
+| ------------------------- | --------------------------------- |
+| `npm run dev`             | Start Vite dev server             |
+| `npm run build`           | Production build                  |
+| `npm run preview`         | Preview production build locally  |
+| `npm run lint`            | ESLint                            |
+| `npm run storybook`       | Storybook dev server on port 6006 |
+| `npm run storybook:build` | Build static Storybook            |
 
-(CI Only) - make sure `LHCI_GITHUB_APP_TOKEN` is present.
+[Husky](https://typicode.github.io/husky/) runs ESLint and
+[Prettier](https://prettier.io/) on staged files via
+[lint-staged](https://github.com/lint-staged/lint-staged) before each commit.
 
-Using [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) for
-performance regression testing.
+## Testing
 
-### Local Build
+### Storybook + Vitest
 
-```
+Component tests use [Vitest](https://vitest.dev/) in browser mode (Playwright /
+Chromium) via
+[@storybook/addon-vitest](https://storybook.js.org/addons/@storybook/addon-vitest).
+Stories live alongside components (e.g. `button.stories.tsx`).
+
+### Lighthouse CI
+
+[lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) runs on every
+push and on a daily schedule. CI requires the `LHCI_GITHUB_APP_TOKEN` secret.
+
+To run locally:
+
+```sh
 npm run build && npm run test:lighthouse
 ```
 
-_Note:_ running locally appears to be
-[broken on WSL2 at the moment](https://github.com/GoogleChrome/chrome-launcher/issues/195).
+## CI/CD
 
-### Remote Build
+GitHub Actions workflows in `.github/workflows/`:
 
-```
-npx vercel | xargs -I{} npm run test:lighthouse --collect.url={}
-```
+| Workflow              | Trigger                     | Description                                                          |
+| --------------------- | --------------------------- | -------------------------------------------------------------------- |
+| `build.yml`           | Every push + daily schedule | Lighthouse CI performance regression testing                         |
+| `deploy.yml`          | Push to `main`              | Lint, build, deploy to S3, invalidate CloudFront                     |
+| `preview.yml`         | PR opened / updated         | Deploy PR preview to `pr-<number>.previews.alpha.morrisoncole.co.uk` |
+| `preview-cleanup.yml` | PR closed                   | Delete PR preview from S3 and deactivate deployment                  |
+
+[Renovate](https://docs.renovatebot.com/) is configured for automated dependency
+updates.
+
+## Infrastructure
+
+AWS infrastructure is managed with [Terraform](https://www.terraform.io/) in
+`terraform/`.
+
+Terraform state is stored in S3 (`alpha-morrisoncole-terraform-state`). The
+`terraform/bootstrap/` directory contains the config that creates the state
+bucket itself.
