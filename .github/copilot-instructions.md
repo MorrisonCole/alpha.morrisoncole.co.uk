@@ -121,7 +121,7 @@ CI uses Node.js 25.8.2, `npm ci`, and runs on `ubuntu-latest`.
 - **Blog posts:** MDX files in `src/content/blog/`. Each requires YAML frontmatter with: `title`, `date`, `description`, `category`, `image`, `imageAlt`, `linkText`, `draft`, `slug`. New posts must also be registered in `src/pages/BlogPostPage.tsx` (lazy import + frontmatter import + both maps).
 - **Storybook stories:** Co-located with components (e.g., `button.stories.tsx` next to `button.tsx`).
 - **TypeScript:** Uses composite projects (`tsc --build`). `tsconfig.json` is the root coordinator referencing `tsconfig.src.json` (app source) and `tsconfig.test.json` (vitest/storybook). Strict mode with `noUnusedLocals` and `noUnusedParameters` — unused variables/imports cause build errors.
-- **`.github/scripts/`** has its own `package.json` and composite tsconfig (`tsconfig.json` → `tsconfig.src.json`) — separate from the main project. CI runs `npm ci --prefix .github/scripts` for it.
+- **`.github/scripts/`** has its own `package.json` and composite tsconfig (`tsconfig.src.json`) — separate from the main project. CI runs `npm ci --prefix .github/scripts` for it.
 - **Terraform** files are in `terraform/` and have their own CI workflows.
 
 ### UI Components
