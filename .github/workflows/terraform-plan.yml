@@ -1,0 +1,109 @@
+name: Terraform Plan
+
+on:
+  pull_request:
+    paths:
+      - 'terraform/**'
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+env:
+  AWS_REGION: ap-northeast-1
+  TF_DIR: terraform
+
+jobs:
+  terraform-plan:
+    name: Terraform Plan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
+        with:
+          role-to-assume: arn:aws:iam::427319529420:role/alpha-morrisoncole-github-actions
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Terraform Format Check
+        id: fmt
+        run: terraform fmt -check -diff
+        working-directory: ${{ env.TF_DIR }}
+        continue-on-error: true
+
+      - name: Terraform Init
+        id: init
+        run: terraform init -input=false
+        working-directory: ${{ env.TF_DIR }}
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+        working-directory: ${{ env.TF_DIR }}
+
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color -input=false -lock=false
+        working-directory: ${{ env.TF_DIR }}
+        continue-on-error: true
+
+      - name: Comment PR with plan
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const fmtOutcome = '${{ steps.fmt.outcome }}';
+            const initOutcome = '${{ steps.init.outcome }}';
+            const validateOutcome = '${{ steps.validate.outcome }}';
+            const planOutcome = '${{ steps.plan.outcome }}';
+            const plan = `${{ steps.plan.outputs.stdout }}`;
+            const planError = `${{ steps.plan.outputs.stderr }}`;
+
+            const body = `#### Terraform Format 🖌 \`${fmtOutcome}\`
+            #### Terraform Init ⚙️ \`${initOutcome}\`
+            #### Terraform Validate 🤖 \`${validateOutcome}\`
+            #### Terraform Plan 📖 \`${planOutcome}\`
+
+            <details><summary>Show Plan</summary>
+
+            \`\`\`terraform
+            ${plan || planError}
+            \`\`\`
+
+            </details>
+
+            *Pushed by: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment =>
+              comment.user.type === 'Bot' &&
+              comment.body.includes('Terraform Plan 📖')
+            );
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }
+
+      - name: Fail on plan error
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
