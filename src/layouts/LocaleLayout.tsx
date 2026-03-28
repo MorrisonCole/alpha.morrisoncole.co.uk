@@ -4,20 +4,6 @@ import { Helmet } from "react-helmet-async";
 import { LocaleProvider } from "../LocaleContext";
 import { isValidLocale, i18n } from "../i18n-config";
 
-const setColorsByTheme = `
-  (function() {
-    function getUserPreference() {
-      if (window.localStorage.getItem("theme")) {
-        return window.localStorage.getItem("theme");
-      }
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
-    document.documentElement.dataset.theme = getUserPreference();
-  })();
-`;
-
 export const LocaleLayout: React.FC = () => {
   const { lang } = useParams<{ lang: string }>();
   const locale = lang && isValidLocale(lang) ? lang : i18n.defaultLocale;
@@ -38,7 +24,6 @@ export const LocaleLayout: React.FC = () => {
     <LocaleProvider locale={locale}>
       <Helmet>
         <html lang={locale} />
-        <script>{setColorsByTheme}</script>
       </Helmet>
       <Outlet />
     </LocaleProvider>
