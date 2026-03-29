@@ -13,12 +13,29 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({ entry }) => (
     target="_blank"
     rel="noopener noreferrer"
   >
-    <img
-      className={styles.image}
-      src={entry.image}
-      alt={entry.imageAlt}
-      loading="lazy"
-    />
+    {entry.imageDark ? (
+      <>
+        <img
+          className={`${styles.image} ${styles.lightOnly}`}
+          src={entry.image}
+          alt={entry.imageAlt}
+          loading="lazy"
+        />
+        <img
+          className={`${styles.image} ${styles.darkOnly}`}
+          src={entry.imageDark}
+          alt={entry.imageAlt}
+          loading="lazy"
+        />
+      </>
+    ) : (
+      <img
+        className={styles.image}
+        src={entry.image}
+        alt={entry.imageAlt}
+        loading="lazy"
+      />
+    )}
     <div className={styles.content}>
       <h4 className={styles.title}>{entry.title}</h4>
       <p className={styles.subtitle}>

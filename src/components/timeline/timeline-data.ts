@@ -9,6 +9,7 @@ export type Category = (typeof Category)[keyof typeof Category];
 export interface TimelineEntry {
   date: string;
   image: string;
+  imageDark?: string;
   imageAlt: string;
   mainLink: string;
   subtitle1: string;
@@ -22,6 +23,7 @@ export const timelineEntries: TimelineEntry[] = [
   {
     date: "2020 - Now",
     image: "/static/images/timeline/unity-black.png",
+    imageDark: "/static/images/timeline/unity-white.png",
     imageAlt: "Unity Logo",
     mainLink: "https://unity.com/",
     subtitle1: "Senior Software Engineer",

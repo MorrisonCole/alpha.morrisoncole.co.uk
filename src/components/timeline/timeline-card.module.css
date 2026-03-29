@@ -46,3 +46,25 @@
   font-size: 0.875rem;
   line-height: 1.6;
 }
+
+.darkOnly {
+  display: none;
+}
+
+:global(html.dark) .lightOnly {
+  display: none;
+}
+
+:global(html.dark) .darkOnly {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not(.light)) .lightOnly {
+    display: none;
+  }
+
+  :global(:root:not(.light)) .darkOnly {
+    display: block;
+  }
+}
