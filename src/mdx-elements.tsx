@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./mdx-components.module.css";
+import { useImageLoaded } from "./components/use-image-loaded";
 
 type ImageProps = React.DetailedHTMLProps<
   React.ImgHTMLAttributes<HTMLImageElement>,
@@ -7,15 +8,41 @@ type ImageProps = React.DetailedHTMLProps<
 >;
 
 export const MdxImage: React.FC<ImageProps> = ({ alt, src, ...props }) => (
-  <img
-    className={styles.image}
-    alt={alt ?? "Missing alt"}
-    src={src}
-    loading="lazy"
-    decoding="async"
-    {...props}
-  />
+  <MdxImageInner alt={alt} src={src} {...props} />
 );
+
+const MdxImageInner: React.FC<ImageProps> = ({
+  alt,
+  className,
+  onError,
+  onLoad,
+  src,
+  ...props
+}) => {
+  const { imageRef, isLoaded, handleLoad, handleError } = useImageLoaded(src);
+
+  return (
+    <img
+      ref={imageRef}
+      className={[styles.image, isLoaded && styles.loaded, className]
+        .filter(Boolean)
+        .join(" ")}
+      alt={alt ?? "Missing alt"}
+      src={src}
+      loading="lazy"
+      decoding="async"
+      onLoad={(event) => {
+        handleLoad(event);
+        onLoad?.(event);
+      }}
+      onError={(event) => {
+        handleError(event);
+        onError?.(event);
+      }}
+      {...props}
+    />
+  );
+};
 
 export const MdxH1: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
   className,

@@ -21,6 +21,12 @@
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.32s ease-out;
+}
+
+.loaded {
+  opacity: 1;
 }
 
 .content {
@@ -66,5 +72,12 @@
 
   :global(:root:not(.light)) .darkOnly {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    opacity: 1;
+    transition: none;
   }
 }

@@ -20,28 +20,50 @@ const CardImage: React.FC<{
   alt: string;
   className?: string;
   loading: "lazy" | "eager";
-}> = ({ picture, alt, className, loading }) => (
-  <picture>
-    {Object.entries(picture.sources).map(([format, srcSet]) => (
-      <source
-        key={format}
-        srcSet={srcSet}
-        sizes="(max-width: 640px) 45vw, 400px"
-        type={FORMAT_TO_MIME[format] ?? `image/${format}`}
+}> = ({ picture, alt, className, loading }) => {
+  const imageRef = React.useRef<HTMLImageElement | null>(null);
+  const [isLoaded, setIsLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsLoaded(false);
+
+    if (imageRef.current?.complete) {
+      setIsLoaded(true);
+    }
+  }, [picture.img.src]);
+
+  return (
+    <picture>
+      {Object.entries(picture.sources).map(([format, srcSet]) => (
+        <source
+          key={format}
+          srcSet={srcSet}
+          sizes="(max-width: 640px) 45vw, 400px"
+          type={FORMAT_TO_MIME[format] ?? `image/${format}`}
+        />
+      ))}
+      <img
+        ref={imageRef}
+        className={[className, isLoaded && styles.loaded]
+          .filter(Boolean)
+          .join(" ")}
+        src={picture.img.src}
+        alt={alt}
+        width={picture.img.w}
+        height={picture.img.h}
+        loading={loading}
+        decoding={loading === "eager" ? "sync" : "async"}
+        onLoad={() => {
+          setIsLoaded(true);
+        }}
+        onError={() => {
+          setIsLoaded(true);
+        }}
+        {...(loading === "eager" ? { fetchPriority: "high" as const } : {})}
       />
-    ))}
-    <img
-      className={className}
-      src={picture.img.src}
-      alt={alt}
-      width={picture.img.w}
-      height={picture.img.h}
-      loading={loading}
-      decoding={loading === "eager" ? "sync" : "async"}
-      {...(loading === "eager" ? { fetchPriority: "high" as const } : {})}
-    />
-  </picture>
-);
+    </picture>
+  );
+};
 
 export const TimelineCard: React.FC<TimelineCardProps> = ({
   entry,
