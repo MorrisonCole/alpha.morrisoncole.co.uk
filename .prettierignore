@@ -1,7 +1,9 @@
-.github
-.husky
-.yarn
-.pnp.cjs
-.pnp.loader.mjs
-.idea
-compiled-lang
+.husky/
+.idea/
+.image-cache/
+.lighthouseci/
+dist/
+dist-types/
+node_modules/
+playwright-report/
+storybook-static/
