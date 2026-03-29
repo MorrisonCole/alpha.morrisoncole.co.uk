@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             "Crafted with Vite, React, TypeScript (and a little help from my 🤖 friends)"
           }
         </p>
-        <p>{`\u{00A9} Morrison Cole ${currentYear}`}</p>
+        <p>{`\u{00A9} Morrison Cole ${String(currentYear)}`}</p>
       </div>
     </footer>
   );

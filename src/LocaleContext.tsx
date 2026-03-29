@@ -16,8 +16,8 @@ const dictionaries: Record<Locale, Dictionary> = {
   ja: jaDictionary,
 };
 
-export const getDictionary = (locale: Locale): Dictionary => {
-  return dictionaries[locale] ?? dictionaries.en;
+const getDictionary = (locale: Locale): Dictionary => {
+  return dictionaries[locale];
 };
 
 interface LocaleProviderProps {
@@ -38,6 +38,7 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components -- standard context+hook pattern
 export const useLocale = (): LocaleContextValue => {
   const context = useContext(LocaleContext);
   if (!context) {

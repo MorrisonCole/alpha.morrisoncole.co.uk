@@ -42,7 +42,9 @@ export const SwitchLocaleButton: React.FC = () => {
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [open]);
 
   return (
@@ -50,7 +52,9 @@ export const SwitchLocaleButton: React.FC = () => {
       <button
         className={styles.button}
         disabled={isPending}
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => {
+          setOpen((o) => !o);
+        }}
         aria-label="Change language"
         aria-expanded={open}
         aria-haspopup="menu"
@@ -84,7 +88,9 @@ export const SwitchLocaleButton: React.FC = () => {
             <li key={l} role="menuitem">
               <button
                 className={`${styles.menuItem} ${l === locale ? styles.menuItemActive : ""}`}
-                onClick={() => handleSelect(l)}
+                onClick={() => {
+                  handleSelect(l);
+                }}
                 type="button"
               >
                 {localeLabels[l]}

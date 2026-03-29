@@ -50,7 +50,9 @@ export const ThemeToggle = () => {
       }
     };
     mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    return () => {
+      mq.removeEventListener("change", handler);
+    };
   }, []);
 
   const inactiveTheme = dark ? "light" : "dark";

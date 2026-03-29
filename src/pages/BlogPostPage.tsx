@@ -31,7 +31,7 @@ import ParapraxisSuiteI, {
   frontmatter as parapraxisFrontmatter,
 } from "../content/blog/parapraxis-suite-i/parapraxis-suite-i.mdx";
 
-const blogPosts: Record<string, React.ComponentType> = {
+const blogPosts: Partial<Record<string, React.ComponentType>> = {
   fonts: Fonts,
   lighthouse: Lighthouse,
   "one-year-in-japan": OneYearInJapan,
@@ -42,7 +42,7 @@ const blogPosts: Record<string, React.ComponentType> = {
   "parapraxis-suite-i": ParapraxisSuiteI,
 };
 
-const frontmatters: Record<string, typeof fontsFrontmatter> = {
+const frontmatters: Partial<Record<string, typeof fontsFrontmatter>> = {
   fonts: fontsFrontmatter,
   lighthouse: lighthouseFrontmatter,
   "one-year-in-japan": oneYearInJapanFrontmatter,
@@ -57,21 +57,21 @@ export const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { locale } = useLocale();
 
-  if (!slug || !blogPosts[slug]) {
+  const PostContent = slug ? blogPosts[slug] : undefined;
+  const meta = slug ? frontmatters[slug] : undefined;
+
+  if (!PostContent || !meta) {
     return <Navigate to={`/${locale}/blog`} replace />;
   }
-
-  const PostContent = blogPosts[slug];
-  const meta = frontmatters[slug];
 
   return (
     <Layout>
       <Helmet>
-        <title>{meta?.title ?? "Blog"} | Morrison Cole</title>
-        <meta name="description" content={meta?.description ?? ""} />
+        <title>{meta.title} | Morrison Cole</title>
+        <meta name="description" content={meta.description} />
       </Helmet>
-      <Breadcrumb postTitle={meta?.title ?? "Post"} />
-      <BlogPost title={meta?.title ?? "Post"} date={meta?.date ?? ""}>
+      <Breadcrumb postTitle={meta.title} />
+      <BlogPost title={meta.title} date={meta.date}>
         <PostContent />
       </BlogPost>
     </Layout>

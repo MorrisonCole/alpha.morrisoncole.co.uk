@@ -4,6 +4,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import packageJson from "eslint-plugin-package-json";
+import { reactRefresh } from "eslint-plugin-react-refresh";
 
 export default defineConfig(
   [globalIgnores(["dist", "**/dist-types", "storybook-static", "e2e"])],
@@ -12,8 +13,9 @@ export default defineConfig(
 
     extends: [
       eslint.configs.recommended,
-      tseslint.configs.recommendedTypeChecked,
+      tseslint.configs.strictTypeChecked,
       reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite(),
     ],
 
     languageOptions: {
