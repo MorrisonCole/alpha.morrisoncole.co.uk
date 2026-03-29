@@ -51,7 +51,9 @@ export const TimelinePage: React.FC = () => {
             key={key}
             label={key}
             active={activeFilter === key}
-            onClick={() => setActiveFilter(key)}
+            onClick={() => {
+              setActiveFilter(key);
+            }}
           />
         ))}
       </div>

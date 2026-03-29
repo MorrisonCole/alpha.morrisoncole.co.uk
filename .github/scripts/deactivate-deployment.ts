@@ -1,8 +1,16 @@
 import { getOctokit, context } from "@actions/github";
 
-const octokit = getOctokit(process.env["GITHUB_TOKEN"]!);
+const token = process.env["GITHUB_TOKEN"];
+if (!token) {
+  throw new Error("GITHUB_TOKEN is not set");
+}
+const octokit = getOctokit(token);
 const { owner, repo } = context.repo;
-const environment = `pr-${process.env["PR_NUMBER"]}`;
+const prNumber = process.env["PR_NUMBER"];
+if (!prNumber) {
+  throw new Error("PR_NUMBER is not set");
+}
+const environment = `pr-${prNumber}`;
 
 const { data: deployments } = await octokit.rest.repos.listDeployments({
   owner,
@@ -20,5 +28,5 @@ for (const deployment of deployments) {
 }
 
 console.log(
-  `Deactivated ${deployments.length} deployment(s) for environment "${environment}"`,
+  `Deactivated ${String(deployments.length)} deployment(s) for environment "${environment}"`,
 );

@@ -6,11 +6,10 @@ interface SpotifyAlbumProps {
 
 export const SpotifyAlbum: React.FC<SpotifyAlbumProps> = ({ src }) => (
   <iframe
-    style={{ borderRadius: "12px", margin: "1rem 0" }}
+    style={{ borderRadius: "12px", margin: "1rem 0", border: 0 }}
     src={src}
     width="100%"
     height="352"
-    frameBorder="0"
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy"
     title="Spotify Album"
@@ -27,11 +26,10 @@ export const SpotifyTrack: React.FC<SpotifyTrackProps> = ({
   compact = false,
 }) => (
   <iframe
-    style={{ borderRadius: "12px", margin: "1rem 0" }}
+    style={{ borderRadius: "12px", margin: "1rem 0", border: 0 }}
     src={src}
     width="100%"
     height={compact ? 152 : 352}
-    frameBorder="0"
     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     loading="lazy"
     title="Spotify Track"

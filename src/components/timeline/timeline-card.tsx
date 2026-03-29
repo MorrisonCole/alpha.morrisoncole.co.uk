@@ -22,7 +22,7 @@ const CardImage: React.FC<{
   loading: "lazy" | "eager";
 }> = ({ picture, alt, className, loading }) => (
   <picture>
-    {Object.entries(picture.sources ?? {}).map(([format, srcSet]) => (
+    {Object.entries(picture.sources).map(([format, srcSet]) => (
       <source
         key={format}
         srcSet={srcSet}
@@ -32,10 +32,10 @@ const CardImage: React.FC<{
     ))}
     <img
       className={className}
-      src={picture.img?.src}
+      src={picture.img.src}
       alt={alt}
-      width={picture.img?.w}
-      height={picture.img?.h}
+      width={picture.img.w}
+      height={picture.img.h}
       loading={loading}
       decoding={loading === "eager" ? "sync" : "async"}
       {...(loading === "eager" ? { fetchPriority: "high" as const } : {})}
