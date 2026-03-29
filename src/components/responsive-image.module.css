@@ -6,6 +6,12 @@
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.32s ease-out;
+}
+
+.loaded {
+  opacity: 1;
 }
 
 @media (max-width: 640px) {
@@ -15,5 +21,12 @@
 
   .image {
     border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    opacity: 1;
+    transition: none;
   }
 }

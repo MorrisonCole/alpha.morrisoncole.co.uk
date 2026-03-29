@@ -8,6 +8,7 @@ import { ThreadsIcon } from "./social/threads-icon";
 import { StackOverflowIcon } from "./social/stackoverflow-icon";
 import profilePic from "../assets/morrison-cole.jpg?w=160;320&format=avif;webp;jpg&as=picture";
 import styles from "./header.module.css";
+import { useImageLoaded } from "./use-image-loaded";
 
 const FORMAT_TO_MIME: Record<string, string> = {
   avif: "image/avif",
@@ -16,6 +17,10 @@ const FORMAT_TO_MIME: Record<string, string> = {
 };
 
 export const Header: React.FC = () => {
+  const { imageRef, isLoaded, handleLoad, handleError } = useImageLoaded(
+    profilePic.img.src,
+  );
+
   return (
     <header className={styles.header} role="banner">
       <Logo className={styles.logo} />
@@ -30,12 +35,17 @@ export const Header: React.FC = () => {
           />
         ))}
         <img
-          className={styles.profileImage}
+          ref={imageRef}
+          className={[styles.profileImage, isLoaded && styles.loaded]
+            .filter(Boolean)
+            .join(" ")}
           src={profilePic.img.src}
           alt="Morrison Cole"
           width={profilePic.img.w}
           height={profilePic.img.h}
           decoding="async"
+          onLoad={handleLoad}
+          onError={handleError}
         />
       </picture>
 
