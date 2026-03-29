@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TimelineCard } from "./timeline-card";
 import { Category } from "./timeline-data";
-import unityBlackPic from "../../assets/timeline/unity-black.png?w=400;800&format=avif;webp;png&as=picture";
-import tokyoPic from "../../assets/timeline/tokyo.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import latentSignalPic from "../../assets/timeline/latent-signal.png?w=400;800&format=avif;webp;png&as=picture";
+import unityBlackPic from "../../assets/timeline/unity-black.png";
+import tokyoPic from "../../assets/timeline/tokyo.jpg";
+import latentSignalPic from "../../assets/timeline/latent-signal.png";
 
 const meta: Meta<typeof TimelineCard> = {
   component: TimelineCard,

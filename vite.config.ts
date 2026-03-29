@@ -7,7 +7,6 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeMdxImportMedia from "rehype-mdx-import-media";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
   plugins: [
@@ -56,7 +55,6 @@ export default defineConfig({
       ],
     }),
     react(),
-    imagetools(),
     ViteImageOptimizer({
       png: {
         quality: 80,

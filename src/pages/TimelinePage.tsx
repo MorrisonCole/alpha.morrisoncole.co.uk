@@ -36,11 +36,7 @@ export const TimelinePage: React.FC = () => {
           name="description"
           content="Software engineer, ex-product manager, and musician living in Tokyo."
         />
-        <link
-          rel="preload"
-          as="image"
-          href={timelineEntries[0].image.img.src}
-        />
+        <link rel="preload" as="image" href={timelineEntries[0].image} />
       </Helmet>
 
       <TimelineIntro />

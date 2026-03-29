@@ -1,16 +1,16 @@
-import unityBlackPic from "../../assets/timeline/unity-black.png?w=400;800&format=avif;webp;png&as=picture";
-import unityWhitePic from "../../assets/timeline/unity-white.png?w=400;800&format=avif;webp;png&as=picture";
-import tokyoPic from "../../assets/timeline/tokyo.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import medmainPic from "../../assets/timeline/medmain.png?w=400;800&format=avif;webp;png&as=picture";
-import kobePic from "../../assets/timeline/kobe.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import latentSignalPic from "../../assets/timeline/latent-signal.png?w=400;800&format=avif;webp;png&as=picture";
-import improbablePic from "../../assets/timeline/improbable.png?w=400;800&format=avif;webp;png&as=picture";
-import shazamPic from "../../assets/timeline/shazam.png?w=400;800&format=avif;webp;png&as=picture";
-import thirdnervePic from "../../assets/timeline/thirdnerve.png?w=400;800&format=avif;webp;png&as=picture";
-import uclPic from "../../assets/timeline/ucl.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import londonPic from "../../assets/timeline/london.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import wcsPic from "../../assets/timeline/wcs.jpg?w=400;800&format=avif;webp;jpg&as=picture";
-import falmouthPic from "../../assets/timeline/falmouth.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import unityBlackPic from "../../assets/timeline/unity-black.png";
+import unityWhitePic from "../../assets/timeline/unity-white.png";
+import tokyoPic from "../../assets/timeline/tokyo.jpg";
+import medmainPic from "../../assets/timeline/medmain.png";
+import kobePic from "../../assets/timeline/kobe.jpg";
+import latentSignalPic from "../../assets/timeline/latent-signal.png";
+import improbablePic from "../../assets/timeline/improbable.png";
+import shazamPic from "../../assets/timeline/shazam.png";
+import thirdnervePic from "../../assets/timeline/thirdnerve.png";
+import uclPic from "../../assets/timeline/ucl.jpg";
+import londonPic from "../../assets/timeline/london.jpg";
+import wcsPic from "../../assets/timeline/wcs.jpg";
+import falmouthPic from "../../assets/timeline/falmouth.jpg";
 
 export const Category = {
   Software: "Software",
@@ -20,15 +20,10 @@ export const Category = {
 
 export type Category = (typeof Category)[keyof typeof Category];
 
-export interface Picture {
-  sources: Record<string, string>;
-  img: { src: string; w: number; h: number };
-}
-
 export interface TimelineEntry {
   date: string;
-  image: Picture;
-  imageDark?: Picture;
+  image: string;
+  imageDark?: string;
   imageAlt: string;
   mainLink: string;
   subtitle1: string;
