@@ -30,6 +30,21 @@ import LatentSignalApart, {
 import ParapraxisSuiteI, {
   frontmatter as parapraxisFrontmatter,
 } from "../content/blog/parapraxis-suite-i/parapraxis-suite-i.mdx";
+import ReadingList2019, {
+  frontmatter as readingList2019Frontmatter,
+} from "../content/blog/2019-reading-list/2019-reading-list.mdx";
+import ReadingList2020, {
+  frontmatter as readingList2020Frontmatter,
+} from "../content/blog/2020-reading-list/2020-reading-list.mdx";
+import ReadingList2021, {
+  frontmatter as readingList2021Frontmatter,
+} from "../content/blog/2021-reading-list/2021-reading-list.mdx";
+import ReadingList2022, {
+  frontmatter as readingList2022Frontmatter,
+} from "../content/blog/2022-reading-list/2022-reading-list.mdx";
+import ReadingList2023, {
+  frontmatter as readingList2023Frontmatter,
+} from "../content/blog/2023-reading-list/2023-reading-list.mdx";
 
 const blogPosts: Partial<Record<string, React.ComponentType>> = {
   fonts: Fonts,
@@ -40,6 +55,11 @@ const blogPosts: Partial<Record<string, React.ComponentType>> = {
   "japanese-government-gender-breakdown": JapaneseGovernmentGender,
   "latent-signal-apart": LatentSignalApart,
   "parapraxis-suite-i": ParapraxisSuiteI,
+  "2019-reading-list": ReadingList2019,
+  "2020-reading-list": ReadingList2020,
+  "2021-reading-list": ReadingList2021,
+  "2022-reading-list": ReadingList2022,
+  "2023-reading-list": ReadingList2023,
 };
 
 const frontmatters: Partial<Record<string, typeof fontsFrontmatter>> = {
@@ -51,6 +71,11 @@ const frontmatters: Partial<Record<string, typeof fontsFrontmatter>> = {
   "japanese-government-gender-breakdown": japGovFrontmatter,
   "latent-signal-apart": latentSignalFrontmatter,
   "parapraxis-suite-i": parapraxisFrontmatter,
+  "2019-reading-list": readingList2019Frontmatter,
+  "2020-reading-list": readingList2020Frontmatter,
+  "2021-reading-list": readingList2021Frontmatter,
+  "2022-reading-list": readingList2022Frontmatter,
+  "2023-reading-list": readingList2023Frontmatter,
 };
 
 export const BlogPostPage: React.FC = () => {
