@@ -2,7 +2,8 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "checkJs": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "tsBuildInfoFile": "${configDir}/dist-types/tsconfig.src.tsbuildinfo"
   },
   "include": [
     "src/**/*.ts",

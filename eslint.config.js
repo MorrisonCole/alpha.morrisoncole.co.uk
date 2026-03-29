@@ -6,7 +6,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import packageJson from "eslint-plugin-package-json";
 
 export default defineConfig(
-  [globalIgnores(["dist", "storybook-static", "e2e"])],
+  [globalIgnores(["dist", "**/dist-types", "storybook-static", "e2e"])],
   {
     files: ["**/*.ts", "**/*.tsx"],
 

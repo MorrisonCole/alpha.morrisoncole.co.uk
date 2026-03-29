@@ -16,7 +16,7 @@
     "types": ["node"],
 
     // Emit
-    "declarationDir": "dist/types",
+    "declarationDir": "${configDir}/dist-types",
     "emitDeclarationOnly": true,
     "skipLibCheck": true,
 
