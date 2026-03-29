@@ -1,0 +1,44 @@
+[
+  {
+    "rating": 5,
+    "title": "Ain't I a Woman: Black Women and Feminism",
+    "author": "bell hooks",
+    "link": "https://www.goodreads.com/book/show/45037410-ain-t-i-a-woman",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555192208l/45037410._SX98_.jpg"
+  },
+  {
+    "rating": 3,
+    "title": "Wyrd Sisters (Discworld, #6; Witches, #2)",
+    "author": "Terry Pratchett",
+    "link": "https://www.goodreads.com/book/show/34504.Wyrd_Sisters",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1275974472l/34504._SX98_.jpg"
+  },
+  {
+    "rating": 3,
+    "title": "The Human Chair",
+    "author": "Edogawa Rampo",
+    "link": "https://www.goodreads.com/book/show/36155169-the-human-chair",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1520280854l/36155169._SX98_.jpg"
+  },
+  {
+    "rating": 2,
+    "title": "Chatter: The Voice in Our Head, Why It Matters, and How to Harness It",
+    "author": "Ethan Kross",
+    "link": "https://www.goodreads.com/book/show/53330118-chatter",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1606106010l/53330118._SX98_.jpg"
+  },
+  {
+    "rating": 2,
+    "title": "The Night Gardener",
+    "author": "Terry Fan",
+    "link": "https://www.goodreads.com/book/show/25785698-the-night-gardener",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1455468946l/25785698._SX98_.jpg"
+  },
+  {
+    "rating": 2,
+    "title": "Pageboy",
+    "author": "Elliot Page",
+    "link": "https://www.goodreads.com/book/show/60473073-pageboy",
+    "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1670327813l/60473073._SX98_.jpg"
+  }
+]

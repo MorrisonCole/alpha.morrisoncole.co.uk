@@ -13,6 +13,11 @@ import { frontmatter as denoV1Frontmatter } from "../content/blog/deno-v1/deno-v
 import { frontmatter as japGovFrontmatter } from "../content/blog/japanese-government-gender/japanese-government-gender.mdx";
 import { frontmatter as latentSignalFrontmatter } from "../content/blog/latent-signal-apart/latent-signal-apart.mdx";
 import { frontmatter as parapraxisFrontmatter } from "../content/blog/parapraxis-suite-i/parapraxis-suite-i.mdx";
+import { frontmatter as readingList2019Frontmatter } from "../content/blog/2019-reading-list/2019-reading-list.mdx";
+import { frontmatter as readingList2020Frontmatter } from "../content/blog/2020-reading-list/2020-reading-list.mdx";
+import { frontmatter as readingList2021Frontmatter } from "../content/blog/2021-reading-list/2021-reading-list.mdx";
+import { frontmatter as readingList2022Frontmatter } from "../content/blog/2022-reading-list/2022-reading-list.mdx";
+import { frontmatter as readingList2023Frontmatter } from "../content/blog/2023-reading-list/2023-reading-list.mdx";
 
 const allPosts = [
   japGovFrontmatter,
@@ -23,6 +28,11 @@ const allPosts = [
   denoV1Frontmatter,
   antidepressantsFrontmatter,
   lighthouseFrontmatter,
+  readingList2019Frontmatter,
+  readingList2020Frontmatter,
+  readingList2021Frontmatter,
+  readingList2022Frontmatter,
+  readingList2023Frontmatter,
 ].filter((post) => !post.draft);
 
 // Sort by date descending

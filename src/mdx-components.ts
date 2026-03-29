@@ -1,5 +1,6 @@
 import { Button } from "./components/button/button";
 import { SpotifyAlbum, SpotifyTrack } from "./components/blog/spotify-embed";
+import { ReadingList } from "./components/blog/reading-list";
 import { ResponsiveImage } from "./components/responsive-image";
 import type { MDXComponents } from "mdx/types";
 import {
@@ -18,6 +19,7 @@ export const mdxComponents: MDXComponents = {
   Button: Button,
   SpotifyAlbum: SpotifyAlbum,
   SpotifyTrack: SpotifyTrack,
+  ReadingList: ReadingList,
   ResponsiveImage: ResponsiveImage,
   img: MdxImage,
   h1: MdxH1,

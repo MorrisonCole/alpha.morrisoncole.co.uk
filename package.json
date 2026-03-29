@@ -60,6 +60,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "fetch:goodreads": "node scripts/fetch-goodreads.ts",
     "lint": "eslint .",
     "prepare": "husky",
     "preview": "vite preview",
