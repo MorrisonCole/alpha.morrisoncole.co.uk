@@ -2,7 +2,7 @@ import React from "react";
 import { SocialIcon } from "./social-icon";
 
 export const ThreadsIcon: React.FC = () => (
-  <SocialIcon href="https://www.threads.net/@morrisoncole" label="Threads">
+  <SocialIcon href="https://www.threads.com/@morrisoncole" label="Threads">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16"
