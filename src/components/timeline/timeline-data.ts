@@ -1,3 +1,17 @@
+import unityBlackPic from "../../assets/timeline/unity-black.png?w=400;800&format=avif;webp;png&as=picture";
+import unityWhitePic from "../../assets/timeline/unity-white.png?w=400;800&format=avif;webp;png&as=picture";
+import tokyoPic from "../../assets/timeline/tokyo.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import medmainPic from "../../assets/timeline/medmain.png?w=400;800&format=avif;webp;png&as=picture";
+import kobePic from "../../assets/timeline/kobe.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import latentSignalPic from "../../assets/timeline/latent-signal.png?w=400;800&format=avif;webp;png&as=picture";
+import improbablePic from "../../assets/timeline/improbable.png?w=400;800&format=avif;webp;png&as=picture";
+import shazamPic from "../../assets/timeline/shazam.png?w=400;800&format=avif;webp;png&as=picture";
+import thirdnervePic from "../../assets/timeline/thirdnerve.png?w=400;800&format=avif;webp;png&as=picture";
+import uclPic from "../../assets/timeline/ucl.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import londonPic from "../../assets/timeline/london.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import wcsPic from "../../assets/timeline/wcs.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import falmouthPic from "../../assets/timeline/falmouth.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+
 export const Category = {
   Software: "Software",
   Life: "Life",
@@ -6,10 +20,15 @@ export const Category = {
 
 export type Category = (typeof Category)[keyof typeof Category];
 
+export interface Picture {
+  sources: Record<string, string>;
+  img: { src: string; w: number; h: number };
+}
+
 export interface TimelineEntry {
   date: string;
-  image: string;
-  imageDark?: string;
+  image: Picture;
+  imageDark?: Picture;
   imageAlt: string;
   mainLink: string;
   subtitle1: string;
@@ -22,8 +41,8 @@ export interface TimelineEntry {
 export const timelineEntries: TimelineEntry[] = [
   {
     date: "2020 - Now",
-    image: "/static/images/timeline/unity-black.png",
-    imageDark: "/static/images/timeline/unity-white.png",
+    image: unityBlackPic,
+    imageDark: unityWhitePic,
     imageAlt: "Unity Logo",
     mainLink: "https://unity.com/",
     subtitle1: "Senior Software Engineer",
@@ -34,7 +53,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2019",
-    image: "/static/images/timeline/tokyo.jpg",
+    image: tokyoPic,
     imageAlt: "Tokyo at night",
     mainLink: "https://goo.gl/maps/7FFdpXCeUU3koAAv9",
     subtitle1: "Moved",
@@ -45,7 +64,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2019 - 2020",
-    image: "/static/images/timeline/medmain.png",
+    image: medmainPic,
     imageAlt: "Medmain logo",
     mainLink: "https://medmain.com/",
     subtitle1: "Software Engineer, Server",
@@ -56,7 +75,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2019",
-    image: "/static/images/timeline/kobe.jpg",
+    image: kobePic,
     imageAlt: "Kobe cityscape",
     mainLink: "https://goo.gl/maps/hURywEujBbYCqqbA6",
     subtitle1: "Moved",
@@ -67,7 +86,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2018 - Now",
-    image: "/static/images/timeline/latent-signal.png",
+    image: latentSignalPic,
     imageAlt: "Latent Signal channel art",
     mainLink: "https://www.youtube.com/@latentsignal",
     subtitle1: "Performer, Songwriter, Mixing Engineer, Video Editor",
@@ -78,7 +97,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2015 - 2019",
-    image: "/static/images/timeline/improbable.png",
+    image: improbablePic,
     imageAlt: "Improbable logo",
     mainLink: "https://www.crunchbase.com/organization/improbable",
     subtitle1: "Software Engineer & Product Manager",
@@ -89,7 +108,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2013 - 2015",
-    image: "/static/images/timeline/shazam.png",
+    image: shazamPic,
     imageAlt: "Shazam logo",
     mainLink: "https://www.crunchbase.com/organization/shazam",
     subtitle1: "Junior Software Engineer",
@@ -100,7 +119,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2013",
-    image: "/static/images/timeline/thirdnerve.png",
+    image: thirdnervePic,
     imageAlt: "Third Nerve logo",
     mainLink: "https://steamcommunity.com/sharedfiles/filedetails/?id=92967778",
     subtitle1: "Founder",
@@ -111,7 +130,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2010 - 2014",
-    image: "/static/images/timeline/ucl.jpg",
+    image: uclPic,
     imageAlt: "UCL quad",
     mainLink: "https://www.ucl.ac.uk/",
     subtitle1: "BSc Computer Science",
@@ -122,7 +141,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2010",
-    image: "/static/images/timeline/london.jpg",
+    image: londonPic,
     imageAlt: "London cityscape",
     mainLink: "https://goo.gl/maps/QoKpM98YJtjERNmY8",
     subtitle1: "Moved",
@@ -133,7 +152,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "2006 - 2010",
-    image: "/static/images/timeline/wcs.jpg",
+    image: wcsPic,
     imageAlt: "Wells Cathedral School alleyway",
     mainLink: "https://wells.cathedral.school/",
     subtitle1: "Specialist Musician",
@@ -144,7 +163,7 @@ export const timelineEntries: TimelineEntry[] = [
   },
   {
     date: "1992",
-    image: "/static/images/timeline/falmouth.jpg",
+    image: falmouthPic,
     imageAlt: "Falmouth townscape",
     mainLink: "https://goo.gl/maps/w7SRynhttGuu4Nst7",
     subtitle1: "Falmouth, Cornwall",

@@ -1,12 +1,52 @@
 import React from "react";
-import type { TimelineEntry } from "./timeline-data";
+import type { Picture, TimelineEntry } from "./timeline-data";
 import styles from "./timeline-card.module.css";
+
+const FORMAT_TO_MIME: Record<string, string> = {
+  avif: "image/avif",
+  webp: "image/webp",
+  jpeg: "image/jpeg",
+  jpg: "image/jpeg",
+  png: "image/png",
+};
 
 interface TimelineCardProps {
   entry: TimelineEntry;
+  loading?: "lazy" | "eager";
 }
 
-export const TimelineCard: React.FC<TimelineCardProps> = ({ entry }) => (
+const CardImage: React.FC<{
+  picture: Picture;
+  alt: string;
+  className?: string;
+  loading: "lazy" | "eager";
+}> = ({ picture, alt, className, loading }) => (
+  <picture>
+    {Object.entries(picture.sources).map(([format, srcSet]) => (
+      <source
+        key={format}
+        srcSet={srcSet}
+        sizes="(max-width: 640px) 100vw, 400px"
+        type={FORMAT_TO_MIME[format] ?? `image/${format}`}
+      />
+    ))}
+    <img
+      className={className}
+      src={picture.img.src}
+      alt={alt}
+      width={picture.img.w}
+      height={picture.img.h}
+      loading={loading}
+      decoding={loading === "eager" ? "sync" : "async"}
+      {...(loading === "eager" ? { fetchPriority: "high" as const } : {})}
+    />
+  </picture>
+);
+
+export const TimelineCard: React.FC<TimelineCardProps> = ({
+  entry,
+  loading = "lazy",
+}) => (
   <a
     className={styles.card}
     href={entry.mainLink}
@@ -15,32 +55,29 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({ entry }) => (
   >
     {entry.imageDark ? (
       <>
-        <img
+        <CardImage
+          picture={entry.image}
+          alt={entry.imageAlt}
           className={`${styles.image} ${styles.lightOnly}`}
-          src={entry.image}
-          alt={entry.imageAlt}
-          loading="lazy"
-          decoding="async"
+          loading={loading}
         />
-        <img
-          className={`${styles.image} ${styles.darkOnly}`}
-          src={entry.imageDark}
+        <CardImage
+          picture={entry.imageDark}
           alt={entry.imageAlt}
-          loading="lazy"
-          decoding="async"
+          className={`${styles.image} ${styles.darkOnly}`}
+          loading={loading}
         />
       </>
     ) : (
-      <img
-        className={styles.image}
-        src={entry.image}
+      <CardImage
+        picture={entry.image}
         alt={entry.imageAlt}
-        loading="lazy"
-        decoding="async"
+        className={styles.image}
+        loading={loading}
       />
     )}
     <div className={styles.content}>
-      <h4 className={styles.title}>{entry.title}</h4>
+      <h2 className={styles.title}>{entry.title}</h2>
       <p className={styles.subtitle}>
         {entry.subtitle1}
         {entry.subtitle2 && (

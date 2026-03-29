@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TimelineCard } from "./timeline-card";
 import { Category } from "./timeline-data";
+import unityBlackPic from "../../assets/timeline/unity-black.png?w=400;800&format=avif;webp;png&as=picture";
+import tokyoPic from "../../assets/timeline/tokyo.jpg?w=400;800&format=avif;webp;jpg&as=picture";
+import latentSignalPic from "../../assets/timeline/latent-signal.png?w=400;800&format=avif;webp;png&as=picture";
 
 const meta: Meta<typeof TimelineCard> = {
   component: TimelineCard,
@@ -12,7 +15,7 @@ export const SoftwareEntry: Story = {
   args: {
     entry: {
       date: "2020 - Now",
-      image: "/static/images/timeline/unity-black.png",
+      image: unityBlackPic,
       imageAlt: "Unity Logo",
       mainLink: "https://unity.com/",
       subtitle1: "Senior Software Engineer",
@@ -28,7 +31,7 @@ export const LifeEntry: Story = {
   args: {
     entry: {
       date: "2019",
-      image: "/static/images/timeline/tokyo.jpg",
+      image: tokyoPic,
       imageAlt: "Tokyo at night",
       mainLink: "https://goo.gl/maps/7FFdpXCeUU3koAAv9",
       subtitle1: "Moved",
@@ -44,7 +47,7 @@ export const MusicEntry: Story = {
   args: {
     entry: {
       date: "2018 - Now",
-      image: "/static/images/timeline/latent-signal.png",
+      image: latentSignalPic,
       imageAlt: "Latent Signal channel art",
       mainLink: "https://www.youtube.com/@latentsignal",
       subtitle1: "Performer, Songwriter, Mixing Engineer, Video Editor",

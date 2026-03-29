@@ -14,11 +14,14 @@
   justify-self: stretch;
 }
 
-.profileImage {
+.profilePicture {
   grid-row: 1;
   grid-column: 2;
   justify-self: center;
   align-self: center;
+}
+
+.profileImage {
   border-radius: 50%;
   width: 100%;
   max-width: 160px;
@@ -55,9 +58,12 @@
     grid-column: 1;
   }
 
-  .profileImage {
+  .profilePicture {
     grid-row: 1;
     grid-column: 2;
+  }
+
+  .profileImage {
     max-width: 64px;
   }
 

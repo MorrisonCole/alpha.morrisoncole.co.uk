@@ -9,7 +9,7 @@ interface TimelineProps {
 
 export const Timeline: React.FC<TimelineProps> = ({ entries }) => (
   <div className={styles.timeline}>
-    {entries.map((entry) => (
+    {entries.map((entry, index) => (
       <div className={styles.item} key={`${entry.title}-${entry.subtitle1}`}>
         <div className={styles.date}>{entry.date}</div>
         <div className={styles.separator}>
@@ -17,7 +17,7 @@ export const Timeline: React.FC<TimelineProps> = ({ entries }) => (
           <span className={styles.connector} />
         </div>
         <div className={styles.cardWrapper}>
-          <TimelineCard entry={entry} />
+          <TimelineCard entry={entry} loading={index < 2 ? "eager" : "lazy"} />
         </div>
       </div>
     ))}

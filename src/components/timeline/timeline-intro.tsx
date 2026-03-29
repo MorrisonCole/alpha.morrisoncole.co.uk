@@ -3,7 +3,7 @@ import styles from "./timeline-intro.module.css";
 
 export const TimelineIntro: React.FC = () => (
   <div className={styles.intro}>
-    <h2 className={styles.greeting}>Hello! 👋</h2>
+    <h1 className={styles.greeting}>Hello! 👋</h1>
     <p className={styles.bio}>
       I&apos;m a software engineer, ex-product manager, and (occasional)
       musician living in Tokyo.
