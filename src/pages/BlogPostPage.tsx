@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Layout } from "../components/layout";
 import { Breadcrumb } from "../components/blog/breadcrumb";
+import { BlogPost } from "../components/blog/blog-post";
 import { useLocale } from "../LocaleContext";
 
 import Fonts, {
@@ -70,7 +71,9 @@ export const BlogPostPage: React.FC = () => {
         <meta name="description" content={meta?.description ?? ""} />
       </Helmet>
       <Breadcrumb postTitle={meta?.title ?? "Post"} />
-      <PostContent />
+      <BlogPost title={meta?.title ?? "Post"} date={meta?.date ?? ""}>
+        <PostContent />
+      </BlogPost>
     </Layout>
   );
 };
