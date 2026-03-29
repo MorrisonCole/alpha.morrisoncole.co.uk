@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Layout } from "../components/layout";
 import { useLocale } from "../LocaleContext";
 import styles from "./BlogIndexPage.module.css";
 
@@ -44,7 +43,7 @@ export const BlogIndexPage: React.FC = () => {
   const { locale } = useLocale();
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Blog | Morrison Cole</title>
         <meta name="description" content="Blog posts by Morrison Cole" />
@@ -70,6 +69,6 @@ export const BlogIndexPage: React.FC = () => {
           </Link>
         ))}
       </div>
-    </Layout>
+    </>
   );
 };

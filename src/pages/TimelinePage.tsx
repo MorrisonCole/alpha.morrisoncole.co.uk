@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Layout } from "../components/layout";
 import { TimelineIntro } from "../components/timeline/timeline-intro";
 import { Timeline } from "../components/timeline/timeline";
 import { FilterChip } from "../components/timeline/filter-chip";
@@ -29,7 +28,7 @@ export const TimelinePage: React.FC = () => {
   );
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>Morrison Cole</title>
         <meta
@@ -59,6 +58,6 @@ export const TimelinePage: React.FC = () => {
       </div>
 
       <Timeline entries={filteredEntries} />
-    </Layout>
+    </>
   );
 };
