@@ -18,11 +18,11 @@ interface Book {
 
 function decodeXmlEntities(text: string): string {
   return text
-    .replaceAll("&amp;", "&")
     .replaceAll("&lt;", "<")
     .replaceAll("&gt;", ">")
     .replaceAll("&quot;", '"')
-    .replaceAll("&apos;", "'");
+    .replaceAll("&apos;", "'")
+    .replaceAll("&amp;", "&");
 }
 
 function getTextContent(xml: string, tag: string): string {
