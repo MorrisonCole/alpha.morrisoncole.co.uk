@@ -13,25 +13,24 @@ export const Header: React.FC = () => {
     <header className={styles.header} role="banner">
       <Logo className={styles.logo} />
 
-      <div className={styles.profileColumn}>
-        <img
-          className={styles.profileImage}
-          src="/static/morrison-cole.jpg"
-          alt="Morrison Cole"
-          width={120}
-          height={120}
-        />
-        <div className={styles.controls}>
-          <ThemeToggle />
-          <SwitchLocaleButton />
-        </div>
-      </div>
+      <img
+        className={styles.profileImage}
+        src="/static/morrison-cole.jpg"
+        alt="Morrison Cole"
+        width={160}
+        height={160}
+      />
 
       <div className={styles.socialRow}>
         <GitHubIcon />
         <LinkedInIcon />
         <ThreadsIcon />
         <StackOverflowIcon />
+      </div>
+
+      <div className={styles.controls}>
+        <ThemeToggle />
+        <SwitchLocaleButton />
       </div>
     </header>
   );

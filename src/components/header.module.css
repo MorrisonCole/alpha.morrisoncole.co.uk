@@ -2,73 +2,73 @@
   grid-area: header;
   padding: var(--spacing-4);
   display: grid;
-  grid-template-rows: minmax(min-content, 70%) auto;
-  grid-template-columns: 75% 25%;
+  grid-template-rows: auto auto;
+  grid-template-columns: 3fr 1fr;
   gap: var(--spacing-2);
 }
 
 .logo {
+  grid-row: 1;
+  grid-column: 1;
   align-self: center;
   justify-self: stretch;
-  grid-row: 1 / span 2;
-  grid-column: 1 / span 1;
-}
-
-.profileColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-2);
-  grid-row: 1 / span 2;
-  grid-column: 2 / span 1;
 }
 
 .profileImage {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
   border-radius: 50%;
   width: 100%;
-  max-width: 120px;
+  max-width: 160px;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
 }
 
-.controls {
-  display: flex;
-  gap: var(--spacing-1);
-  align-items: center;
-}
-
 .socialRow {
+  grid-row: 2;
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   gap: var(--spacing-1);
-  margin-bottom: var(--spacing-2);
+}
+
+.controls {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-1);
+  align-items: center;
 }
 
 @media (max-width: 640px) {
   .header {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
   }
 
   .logo {
-    grid-row: 2;
-    grid-column: 1;
-  }
-
-  .profileColumn {
     grid-row: 1;
     grid-column: 1;
-    flex-direction: row;
   }
 
   .profileImage {
+    grid-row: 1;
+    grid-column: 2;
     max-width: 64px;
   }
 
+  .controls {
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: end;
+  }
+
   .socialRow {
-    grid-column: 1;
+    grid-row: 2;
+    grid-column: 1 / -1;
   }
 }
