@@ -1,11 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import { Footer } from "./footer";
 import { Header } from "./header";
 import { Navbar } from "./navbar/navbar";
 import styles from "./layout.module.css";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => (
@@ -13,7 +14,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => (
     <Header />
     <Navbar />
     <main className={styles.content} role="main">
-      {children}
+      {children ?? <Outlet />}
     </main>
     <Footer />
   </span>

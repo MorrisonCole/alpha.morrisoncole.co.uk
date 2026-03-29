@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Layout } from "../components/layout";
 import { useLocale } from "../LocaleContext";
 import styles from "./HomePage.module.css";
 
@@ -9,7 +8,7 @@ export const HomePage: React.FC = () => {
   const { locale, dictionary } = useLocale();
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>{dictionary.home.title}</title>
         <meta name="description" content={dictionary.home.description} />
@@ -39,6 +38,6 @@ export const HomePage: React.FC = () => {
       >
         Life
       </Link>
-    </Layout>
+    </>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Layout } from "../components/layout";
 import { Breadcrumb } from "../components/blog/breadcrumb";
 import { BlogPost } from "../components/blog/blog-post";
 import { useLocale } from "../LocaleContext";
@@ -90,7 +89,7 @@ export const BlogPostPage: React.FC = () => {
   }
 
   return (
-    <Layout>
+    <>
       <Helmet>
         <title>{meta.title} | Morrison Cole</title>
         <meta name="description" content={meta.description} />
@@ -99,6 +98,6 @@ export const BlogPostPage: React.FC = () => {
       <BlogPost title={meta.title} date={meta.date}>
         <PostContent />
       </BlogPost>
-    </Layout>
+    </>
   );
 };
