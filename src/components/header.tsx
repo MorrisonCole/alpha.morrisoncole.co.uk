@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
       <Logo className={styles.logo} />
 
       <picture className={styles.profilePicture}>
-        {Object.entries(profilePic.sources).map(([format, srcSet]) => (
+        {Object.entries(profilePic.sources ?? {}).map(([format, srcSet]) => (
           <source
             key={format}
             srcSet={srcSet}
@@ -31,10 +31,10 @@ export const Header: React.FC = () => {
         ))}
         <img
           className={styles.profileImage}
-          src={profilePic.img.src}
+          src={profilePic.img?.src}
           alt="Morrison Cole"
-          width={profilePic.img.w}
-          height={profilePic.img.h}
+          width={profilePic.img?.w}
+          height={profilePic.img?.h}
           decoding="async"
         />
       </picture>
