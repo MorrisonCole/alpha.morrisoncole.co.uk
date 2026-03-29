@@ -5,6 +5,7 @@ import { defineConfig } from "vitest/config";
 import { playwright } from "@vitest/browser-playwright";
 import react from "@vitejs/plugin-react";
 
+import { imagetools } from "vite-imagetools";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 
 const dirname =
@@ -20,6 +21,7 @@ export default defineConfig({
         extends: true,
         plugins: [
           react(),
+          imagetools(),
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/writing-tests/integrations/vitest-addon#storybooktest
           storybookTest({ configDir: path.join(dirname, ".storybook") }),
