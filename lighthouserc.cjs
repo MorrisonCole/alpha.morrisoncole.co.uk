@@ -25,6 +25,8 @@ module.exports = {
         "render-blocking-resources": "warn",
         "render-blocking-insight": "warn",
         "lcp-discovery-insight": "warn",
+        "prioritize-lcp-image": "warn",
+        "image-delivery-insight": "warn",
       },
     },
   },

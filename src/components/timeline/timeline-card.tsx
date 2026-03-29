@@ -26,7 +26,7 @@ const CardImage: React.FC<{
       <source
         key={format}
         srcSet={srcSet}
-        sizes="(max-width: 640px) 100vw, 400px"
+        sizes="(max-width: 640px) 45vw, 400px"
         type={FORMAT_TO_MIME[format] ?? `image/${format}`}
       />
     ))}
