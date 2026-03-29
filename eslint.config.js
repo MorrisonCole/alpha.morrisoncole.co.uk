@@ -32,6 +32,15 @@ export default defineConfig(
         enforceForPrivate: false,
       },
     },
+
+    rules: {
+      "package-json/restrict-dependency-ranges": [
+        "error",
+        {
+          rangeType: "pin",
+        },
+      ],
+    },
   },
   {
     files: ["**/*.cjs"],
