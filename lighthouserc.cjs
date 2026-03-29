@@ -24,6 +24,7 @@ module.exports = {
         "unminified-css": "warn",
         "render-blocking-resources": "warn",
         "render-blocking-insight": "warn",
+        "lcp-discovery-insight": "warn",
       },
     },
   },
