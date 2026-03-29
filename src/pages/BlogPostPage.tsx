@@ -14,7 +14,7 @@ import Lighthouse, {
 } from "../content/blog/lighthouse.mdx";
 import OneYearInJapan, {
   frontmatter as oneYearInJapanFrontmatter,
-} from "../content/blog/one-year-in-japan.mdx";
+} from "../content/blog/one-year-in-japan/one-year-in-japan.mdx";
 import AntidepressantsInJapan, {
   frontmatter as antidepressantsFrontmatter,
 } from "../content/blog/antidepressants-in-japan/antidepressants-in-japan.mdx";

@@ -6,6 +6,8 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeMdxImportMedia from "rehype-mdx-import-media";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
   plugins: [
@@ -54,5 +56,25 @@ export default defineConfig({
       ],
     }),
     react(),
+    imagetools(),
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
+      },
+      jpeg: {
+        quality: 80,
+      },
+      jpg: {
+        quality: 80,
+      },
+      webp: {
+        quality: 80,
+      },
+      avif: {
+        quality: 50,
+      },
+      cache: true,
+      cacheLocation: ".image-cache",
+    }),
   ],
 });

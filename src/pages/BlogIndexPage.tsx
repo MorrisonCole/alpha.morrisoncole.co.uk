@@ -7,7 +7,7 @@ import styles from "./BlogIndexPage.module.css";
 
 import { frontmatter as fontsFrontmatter } from "../content/blog/fonts.mdx";
 import { frontmatter as lighthouseFrontmatter } from "../content/blog/lighthouse.mdx";
-import { frontmatter as oneYearInJapanFrontmatter } from "../content/blog/one-year-in-japan.mdx";
+import { frontmatter as oneYearInJapanFrontmatter } from "../content/blog/one-year-in-japan/one-year-in-japan.mdx";
 import { frontmatter as antidepressantsFrontmatter } from "../content/blog/antidepressants-in-japan/antidepressants-in-japan.mdx";
 import { frontmatter as denoV1Frontmatter } from "../content/blog/deno-v1/deno-v1.mdx";
 import { frontmatter as japGovFrontmatter } from "../content/blog/japanese-government-gender/japanese-government-gender.mdx";

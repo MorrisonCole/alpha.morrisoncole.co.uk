@@ -11,6 +11,8 @@ export const MdxImage: React.FC<ImageProps> = ({ alt, src, ...props }) => (
     className={styles.image}
     alt={alt ?? "Missing alt"}
     src={src}
+    loading="lazy"
+    decoding="async"
     {...props}
   />
 );

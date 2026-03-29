@@ -20,12 +20,14 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({ entry }) => (
           src={entry.image}
           alt={entry.imageAlt}
           loading="lazy"
+          decoding="async"
         />
         <img
           className={`${styles.image} ${styles.darkOnly}`}
           src={entry.imageDark}
           alt={entry.imageAlt}
           loading="lazy"
+          decoding="async"
         />
       </>
     ) : (
@@ -34,6 +36,7 @@ export const TimelineCard: React.FC<TimelineCardProps> = ({ entry }) => (
         src={entry.image}
         alt={entry.imageAlt}
         loading="lazy"
+        decoding="async"
       />
     )}
     <div className={styles.content}>

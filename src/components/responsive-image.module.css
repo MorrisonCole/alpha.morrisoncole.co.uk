@@ -1,0 +1,13 @@
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: var(--spacing-3) 0;
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .image {
+    border-radius: 0;
+  }
+}

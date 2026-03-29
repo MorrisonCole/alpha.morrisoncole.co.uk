@@ -19,6 +19,7 @@ export const Header: React.FC = () => {
         alt="Morrison Cole"
         width={160}
         height={160}
+        decoding="async"
       />
 
       <div className={styles.socialRow}>

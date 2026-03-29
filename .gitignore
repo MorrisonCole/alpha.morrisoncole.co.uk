@@ -56,3 +56,6 @@ compiled-lang
 e2e/screenshots/
 /test-results/
 /playwright-report/
+
+# Image optimization cache
+.image-cache/
