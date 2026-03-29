@@ -29,7 +29,8 @@
 }
 
 /* Paragraphs containing images bleed one column wider on each side */
-.body > p:has(> img) {
+.body > p:has(> img),
+.body > picture {
   grid-column: 2 / 5;
 }
 

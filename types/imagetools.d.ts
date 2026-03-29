@@ -1,11 +1,6 @@
 declare module "*&as=picture" {
-  interface PictureSource {
-    src: string;
-    w: number;
-  }
-
   interface Picture {
-    sources: Record<string, PictureSource[]>;
+    sources: Record<string, string>;
     img: { src: string; w: number; h: number };
   }
 

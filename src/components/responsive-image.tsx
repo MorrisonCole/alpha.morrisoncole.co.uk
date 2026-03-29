@@ -1,13 +1,8 @@
 import React from "react";
 import styles from "./responsive-image.module.css";
 
-interface PictureSource {
-  src: string;
-  w: number;
-}
-
 interface Picture {
-  sources: Record<string, PictureSource[]>;
+  sources: Record<string, string>;
   img: { src: string; w: number; h: number };
 }
 
@@ -32,11 +27,11 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   sizes = "(max-width: 768px) 100vw, 800px",
   className,
 }) => (
-  <picture>
-    {Object.entries(picture.sources).map(([format, images]) => (
+  <picture className={styles.picture}>
+    {Object.entries(picture.sources).map(([format, srcSet]) => (
       <source
         key={format}
-        srcSet={images.map((img) => `${img.src} ${img.w}w`).join(", ")}
+        srcSet={srcSet}
         sizes={sizes}
         type={FORMAT_TO_MIME[format] ?? `image/${format}`}
       />
