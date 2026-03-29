@@ -1,0 +1,45 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-4);
+  border: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  max-width: 36rem;
+  margin: 0 auto var(--spacing-4);
+}
+
+.greeting {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-2);
+}
+
+.bio {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-4);
+}
+
+.cvButton {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-4);
+  background: hsl(206, 89%, 38%);
+  color: white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.cvButton:hover {
+  background: hsl(206, 89%, 32%);
+}
+
+.cvButton:active {
+  transform: scale(0.98);
+}

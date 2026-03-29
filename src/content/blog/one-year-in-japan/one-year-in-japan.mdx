@@ -4,12 +4,15 @@ date: "2020-04-29"
 updated: "2022-11-18"
 description: "365 days exploring a culture on the other side of the world."
 category: "Japan"
-image: "/static/images/one-year-in-japan/kobe.jpg"
+image: "./kobe.jpg"
 imageAlt: "Kobe Skyline"
 linkText: "Or, life with a middle name..."
 draft: false
 slug: "one-year-in-japan"
 ---
+
+import kobeSklyline from "./kobe_skyline.jpg?w=480;800;1200&format=webp;jpg&as=picture";
+import gates from "./gates.jpg?w=480;800;1200&format=webp;jpg&as=picture";
 
 As Instagram so helpfully reminded me this morning: today marks the 1st
 anniversary of my arrival in Japan. I arrived stereotypically — with a backpack
@@ -24,10 +27,7 @@ failed to navigate life as a human being with a _middle name_.
 
 ### I: Kansai
 
-<img
-  alt={`Kobe Skyline`}
-  src={`/static/images/one-year-in-japan/kobe_skyline.jpg`}
-/>
+<ResponsiveImage picture={kobeSklyline} alt="Kobe Skyline" />
 
 When I arrived in Kobe, I had just finished around 6 months of making YouTube
 videos with my band in London. I had no plans to stop making videos. In fact, I
@@ -65,7 +65,7 @@ visitor read: "it's beautiful, but please translate your signs into English".
 
 Let's keep the linguistic imperialism off the mountains, please.
 
-<img alt={`Tori Gates`} src={`/static/images/one-year-in-japan/gates.jpg`} />
+<ResponsiveImage picture={gates} alt="Tori Gates" />
 
 ### III: Life With a Middle Name
 

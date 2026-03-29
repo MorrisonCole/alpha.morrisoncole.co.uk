@@ -1,7 +1,7 @@
 import type { RouteObject } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { LocaleLayout } from "./layouts/LocaleLayout";
-import { HomePage } from "./pages/HomePage";
+import { TimelinePage } from "./pages/TimelinePage";
 import { BlogIndexPage } from "./pages/BlogIndexPage";
 import { BlogPostPage } from "./pages/BlogPostPage";
 import { LifePage } from "./pages/LifePage";
@@ -19,7 +19,7 @@ export const routes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <TimelinePage />,
       },
       {
         path: "blog",

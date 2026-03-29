@@ -1,0 +1,53 @@
+.grid {
+  display: grid;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-text);
+  border: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
+  border-radius: 0.5rem;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--color-text) 10%, transparent);
+  transform: translateY(-2px);
+}
+
+.cardContent {
+  padding: var(--spacing-3);
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-1);
+}
+
+.date {
+  font-size: 0.8125rem;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: var(--spacing-1);
+}
+
+.description {
+  font-size: 0.9375rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  margin-top: var(--spacing-1);
+}

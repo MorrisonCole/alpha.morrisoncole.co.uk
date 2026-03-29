@@ -45,13 +45,13 @@ Always run `npm ci` before any other command. All commands run from the repo roo
 Always validate changes with this exact sequence:
 
 ```sh
-npm ci
 npm run typecheck
 npm run lint
 npm run build
+npm run test:storybook
 ```
 
-This matches the CI pipeline. If all three pass, the change is ready for PR.
+This matches the CI pipeline. If all pass, the change is ready for a PR.
 
 ## CI/CD Pipelines (`.github/workflows/`)
 

@@ -1,0 +1,22 @@
+.chip {
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: 1rem;
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.chip:hover {
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.chip.active {
+  background: var(--color-text);
+  color: var(--color-background);
+}
