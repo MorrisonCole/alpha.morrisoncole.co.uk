@@ -6,6 +6,6 @@
         "@actions/github": "9.0.0"
     },
     "devDependencies": {
-        "@types/node": "25.5.0"
+        "@types/node": "25.5.2"
     }
 }
