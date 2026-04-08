@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "dependencies": {
-        "@actions/github": "9.0.0"
+        "@actions/github": "9.1.0"
     },
     "devDependencies": {
         "@types/node": "25.5.2"
