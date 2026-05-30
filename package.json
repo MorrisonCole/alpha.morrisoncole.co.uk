@@ -5,7 +5,7 @@
   "type": "module",
   "dependencies": {
     "@mdx-js/react": "3.1.1",
-    "date-fns": "4.3.0",
+    "date-fns": "4.4.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "react-helmet-async": "3.0.0",
