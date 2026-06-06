@@ -28,7 +28,7 @@
     "@storybook/react": "10.4.2",
     "@storybook/react-vite": "10.4.2",
     "@types/css": "0.0.38",
-    "@types/mdx": "2.0.13",
+    "@types/mdx": "2.0.14",
     "@types/node": "25.9.2",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
