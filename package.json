@@ -33,9 +33,9 @@
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.2.1",
-    "@vitest/browser": "5.0.5",
-    "@vitest/browser-playwright": "5.0.5",
-    "@vitest/coverage-v8": "5.0.5",
+    "@vitest/browser": "5.1.0",
+    "@vitest/browser-playwright": "5.1.0",
+    "@vitest/coverage-v8": "5.1.0",
     "eslint": "10.14.0",
     "eslint-plugin-package-json": "1.13.0",
     "eslint-plugin-react-hooks": "7.0.1",
@@ -55,7 +55,7 @@
     "typescript-eslint": "8.72.1",
     "vite": "8.3.5",
     "vite-imagetools": "12.0.1",
-    "vitest": "5.0.5"
+    "vitest": "5.1.0"
   },
   "scripts": {
     "build": "vite build",
