@@ -43,7 +43,7 @@
     "globals": "17.14.0",
     "husky": "9.1.7",
     "jsonc-eslint-parser": "3.3.1",
-    "lint-staged": "17.6.2",
+    "lint-staged": "17.6.3",
     "playwright": "1.65.1",
     "prettier": "3.10.1",
     "remark-frontmatter": "5.0.0",
